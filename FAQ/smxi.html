@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title>antiX-FAQ Guide to smxi</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="wmii.html">wmii</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="smxi.html">Smxi</a></td><td>&#187;</td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connect shares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Guide to smxi</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">What is smxi?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_what_can_smxi_do">What can smxi do?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_how_do_you_use_smxi">How do you use smxi?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_what_about_sgfxi_what_does_that_do">What about sgfxi? What does that do?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_what_is_inxi">What is inxi?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_links">Links</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">What is smxi?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>smxi is a script written by a programmer named “h2” that enables users to
+keep their antiX OS installation up-to-date and running as a rolling release.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_can_smxi_do">What can smxi do?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>When run, smxi allows users to install a new kernel, install ATI and nVidia
+graphics drivers, run apt-get upgrade or apt-get dist-upgrade safely, change
+antiX to a Sid-based system, and lots more!</p></div>
+<div class="paragraph"><p>The script is self explanatory. For usage options, execute smxi -h.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_you_use_smxi">How do you use smxi?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>smxi is already installed in antiX and ready to run. smxi must be run
+outside of the X window system. To get out of X when on your desktop, press
+Ctrl-Alt-F1 to get to a terminal prompt, log in as root, and then type: smxi</p></div>
+<div class="paragraph"><p>smxi will stop X and ask a series of questions the first time it is run,
+including which system options you want to run (ie default, aptosid, sid).
+antiX developer anticapitalista suggests selecting the continue-no-changes option,
+using apt-get (rather than aptitude) and apt-get dist-upgrade.</p></div>
+<div class="paragraph"><p>If you want to run smxi before booting to the desktop, add 3 to the end of
+the kernel line in GRUB&#8217;s menu entry for antiX (type e when on the menu to
+be able to edit it) and it will boot directly to the console.
+After smxi has completed its operations it will ask if you want to start
+the desktop.</p></div>
+<div class="paragraph"><p>Running smxi -G in a root terminal while inside a running X session allows certain
+features of smxi to run, such as removing unwanted kernels etc.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_about_sgfxi_what_does_that_do">What about sgfxi? What does that do?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>sgfxi is the script in smxi that deals with installing graphical drivers.
+As with smxi, it must be run out of X desktop. Logged as root, type: sgfxi</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_inxi">What is inxi?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Also included in antiX is inxi, a script from h2 (the author of smxi and
+sgfxi). inxi is a convenient command line system information script. Run
+inxi -h for all the options available. To update, run inxi -U as root user
+to get the updated man page.</p></div>
+<div class="paragraph"><p>antiX also comes with a gui front end to inxi called inxi-gui. Find it in
+Control Centre-&#8594;Hardware-&#8594;PC Information or type inxi-gui in a terminal.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links">Links</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+&#91;<a href="http://smxi.org/">smxi home page</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="http://techpatterns.com/forums/forum-33.html">smxi forum</a>&#93;.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.1.1
+Last updated 2014-02-25 17:49:59 EET
+</div>
+</div>
+</div>
+</body>
+</html>

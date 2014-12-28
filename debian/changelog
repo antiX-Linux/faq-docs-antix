@@ -1,0 +1,71 @@
+faq-docs-antix (0.3.6) unstable; urgency=low
+ 
+  * Fixed wrong link to Droopy
+
+ -- anticapitalista <antiX@operamail.com>  Thu, 06 Mar 2014 19:00:00 +0200
+
+
+faq-docs-antix (0.3.5) unstable; urgency=low
+ 
+  * Includes Droopy
+
+ -- anticapitalista <antiX@operamail.com>  Tue, 25 Feb 2014 17:50:00 +0200
+
+
+faq-docs-antix (0.3.4) unstable; urgency=low
+ 
+  * Built using dpkg-buildpackage.
+  * xz comressed deb.
+
+ -- anticapitalista <antiX@operamail.com>  Fri, 18 October 2013 22:00:00 +0200
+
+
+faq-docs-antix (0.3.3) unstable; urgency=low
+ 
+  * New connectshares documentation and icons.
+  * Fixed broken links to rox.
+
+ -- anticapitalista <antiX@operamail.com>  Tues, 08 October 2013 15:00:00 +0200
+
+
+faq-docs-antix (0.3.2) unstable; urgency=low
+ 
+  * Removed dwm from FAQ.
+
+ -- anticapitalista <antiX@operamail.com>  Sat, 01 June 2013 23:10:00 +0200
+
+
+faq-docs-antix (0.3.1) unstable; urgency=low
+ 
+  * Minor edits.
+
+ -- anticapitalista <antiX@operamail.com>  Wed, 29 May 2013 13:50:00 +0200
+
+
+faq-docs-antix (0.3.0) unstable; urgency=low
+ 
+  * Updated and added contents for antiX-13 release.
+
+ -- anticapitalista <antiX@operamail.com>  Sun, 26 May 2013 20:30:00 +0200
+
+
+faq-docs-antix (0.2.1) unstable; urgency=low
+ 
+  * Fixed ownership bug.
+
+ -- anticapitalista <antiX@operamail.com>  Sun, 26 August 2012 15:40:00 +0200
+
+
+faq-docs-antix (0.2.0) unstable; urgency=low 
+ 
+  * Edits to index.html.
+
+ -- anticapitalista <antiX@operamail.com>  Fri, 27 July 2012 17:40:00 +0200
+
+
+faq-docs-antix (0.1.1) unstable; urgency=low 
+ 
+  * Initial Release.
+
+ -- anticapitalista <antiX@operamail.com>  Sun, 08 July 2012 22:30:00 +0200
+

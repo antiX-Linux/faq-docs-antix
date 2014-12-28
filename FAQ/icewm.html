@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.8" />
+<title>antiX-FAQ Guide to IceWM</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="icewm.html">IceWM</a></td><td>&#187;</td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="wmii.html">wmii</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connect shares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Guide to IceWM</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">First look</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_basic_configuration">Basic Configuration</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_basic_operation">Basic Operation</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_basic_customization">Basic Customization</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_advanced">Advanced</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_links">Links</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">First look</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><div class="title">What is this?</div><p>The desktop is run by IceWM, a lightweight window manager for the X Window
+System whose goal is speed, simplicity, and not getting in the user&#8217;s way.</p></div>
+<div class="paragraph"><div class="title">Where are the icons?</div><p>IceWM does not use icons, but antiX uses ROX to add icons.</p></div>
+<div class="paragraph"><p>ROX comes already preconfigured with some icons in antiX, open it in
+Menu -&#8594; Desktop -&#8594; Settings -&#8594; ROX-Pinboard on/off. For more information
+on ROX-Desktop&#8217;s operation, including icon management, see section on Rox.</p></div>
+<div class="paragraph"><p>In all three above cases it&#8217;s needed to set the respective apps in ~/.icewm/startup
+for them to start automatically at session&#8217;s start.
+Open CC -&#8594; Configure Icewm -&#8594; startup and uncomment the line rox --pinboard=antiX-ice &amp;
+below the line: ## Set desktop icons</p></div>
+<div class="paragraph"><div class="title">What&#8217;s that stuff in the upper right corner?</div><p>That is the output of Conky, a light-weight system monitor that gives
+you real-time information on various aspects of your computer.</p></div>
+<div class="paragraph"><div class="title">And that bar at the bottom?</div><p>That is called the toolbar or panel, and it displays (L -&#8594; R) the start
+button, Show Desktop, Home Folder, Terminal, Browser, Volume, Control Centre,
+Quit, Workspaces 1-4 (or desktops), and on the far right, the date/time.</p></div>
+<div class="paragraph"><p>(Note:  If you hover your mouse pointer over the items in the toolbar you
+will see the names, and we will refer to the start button as Menu, or Favourite
+Applications or start button.)</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_configuration">Basic Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph"><div class="title">How do I set up a wireless connection?</div><p>There are 4 options, all found in the antiX Control Centre: Wicd, rutilt,
+GRPS/UMTS and ceni.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+In  Control Centre -&#8594; Network -&#8594; you will find the wireless frontend
+Wicd that antiX uses to make its wireless connection.
+Hints on its use can be found here.  See also the detailed discussion in
+the MEPIS Wiki for more information, and search the MEPIS Community Forum
+for particular cards.
+</p>
+</li>
+<li>
+<p>
+The command-line (CLI) tool Ceni from the aptosid developers is a wrapper
+that is very efficient for setting up a connection: Choose under Hardware
+interfaces either your wired or wireless connection, click on your choice
+and you can then configure that choice, it is an intuitive application.
+</p>
+</li>
+<li>
+<p>
+Rutlit Wlan Manager is also included, located in the antiX CC and in
+Applications-&#8594; Network-&#8594; RutilT WLAN Manager.
+</p>
+</li>
+<li>
+<p>
+For those with GRPS/UMTS use the application in the antiX CC and in
+Applications-&#8594; Network-&#8594; Configure GRPS/UMTS Connection.
+</p>
+</li>
+<li>
+<p>
+Configure Dial-Up Connection using Gnome PPP
+</p>
+</li>
+<li>
+<p>
+wpa_gui is also included here: Applications-&#8594; Network-&#8594; wpa_gui.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">What about a DSL connection?</div><p>Start Menu -&#8594;Applications -&#8594;Preferences -&#8594; ADSL/PPPOE configuration this
+opens the PPPOE configuration tool. Input your username and password for
+your Internet provider and choose if you&#8217;d like or not to start the connection
+when the system boots. Answer <em>yes</em> (default) for any question you don&#8217;t
+know the answer yourself.</p></div>
+<div class="paragraph"><div class="title">What about dial-up?</div><p>Control Centre -&#8594; Network-&#8594;Configure Dial-Up Connection. This brings up
+Gnome PPP, a graphical frontend for the excellent WvDial tool. Intuitive
+interface makes it easy to use.</p></div>
+<div class="paragraph"><div class="title">How do I set up printing?</div><p>Unless you have an HP printer (see next entry), do one of the following:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+In antiX CC -&#8594; Hardware -&#8594; Setup a Printer.  A screen will open showing
+you the printers that have been found, with an icon to click for an assistant
+to add a new printer.
+</p>
+</li>
+<li>
+<p>
+Open up a browser (Menu -&#8594; Browser), and enter: <a href="http://localhost:631/">http://localhost:631/</a>
+This will take you to the CUPS interface, where you can set up your
+printer. For help on particular printers and drivers, check the OpenPrinting
+database.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">How do I set up an HP printer?</div><p>The easiest method is to use the Metapackage-Installer, located
+Applications -&#8594;Accessories-&#8594; metapackage-installer, then click on the
+arrow for Office and tick the check box for HP_printing, then Install.</p></div>
+<div class="paragraph"><p>If you prefer to do it yourself, then do the following, (Warning! This may
+be incomplete due to subsequent changes in packages —use at your own risk!)</p></div>
+<div class="paragraph"><p>You will need to install some additional packages:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>hpijs
+hpijs-ppd
+hplip-data
+hplip
+hplip-gui
+cups-pdf
+cupsys-client
+cupsys-driver-gutenprint
+gs-gpl
+lpr
+magicfilter
+gv
+xprint-utils</code></pre>
+</div></div>
+<div class="paragraph"><p>You should then be able to set up your printer by opening up a browser
+(Menu -&#8594; Browser), and entering: <a href="http://localhost:631/">http://localhost:631/</a></p></div>
+<div class="paragraph"><div class="title">What about a scanner?</div><p>This one should be easy. Connect your scanner to the computer, and click
+Menu -&#8594; Applications -&#8594; Graphics -&#8594; Scan (xsane) or you can dl via synaptic
+Xscanimage where, after installing and updating the menu, launch Xscanimage,
+then selecting from the scanners it has found (it may have multiple entries
+for your one scanner, so try them all until one works), you will see a
+very basic screen which is pretty self-evident. To adjust the values of
+your scanner, click Menu -&#8594; Run and type xcam.</p></div>
+<div class="paragraph"><p>You can then edit the scan in Mirage (Menu -&#8594; Applications -&#8594; Graphics).
+For details on using Mirage, check its User Manual.</p></div>
+<div class="paragraph"><div class="title">What application should I use for system setup?</div><p>antiX comes with two applications to make system configuration or managing
+users easier. They can be found in the antiX CC -&#8594; System-&#8594; Configure System
+or Manage Users.</p></div>
+<div class="paragraph"><div class="title">I want to configure my monitor&#8212;how do I do that?</div><p>The easiest method is to use the Set Screen Resolution in antiX CC -&#8594; Session-&#8594; Set Screen Resolution.</p></div>
+<div class="paragraph"><p>This will launch the application grandr.</p></div>
+<div class="paragraph"><div class="title">Are there any other antiX Assistants I should know about?</div><p>The antiX user-management script unites a number of tools having to do with
+user management. Found in antiX CC -&#8594; System</p></div>
+<div class="paragraph"><div class="title">Can I use a MP3 player such as an iPod with antiX?</div><p>You can play MP3 files with xmms, and you can view and edit ID3 tags by
+installing the program EasyTAG. But there is no simple way to synchronize
+your player with your host computer without installing Amarok and the KDE
+files it depends on.</p></div>
+<div class="paragraph"><div class="title">Is there a way to interact with a digital camera?</div><p>The easiest method is to just treat it as a storage device by using a USB
+card reader. Then when you connect it to the computer, it will be mounted
+and available as an entry in the directory /media. You can either click
+Menu -&#8594; Files to examine and move or delete the contents, or click
+Menu -&#8594; Applications -&#8594; Graphics and choose to bring up Gtkam or Mirage
+to manipulate your images with the program of your choice.</p></div>
+<div class="paragraph"><div class="title">How do I install nvidia/ATI driver for antiX?</div><p>The best way to do this is via the smxi script.</p></div>
+<div class="paragraph"><div class="title">Can I use a webcam?</div><p>Many web cams will work with antiX, see the discussion in the Mepis Wiki.</p></div>
+<div class="paragraph"><p>guvcview webcam application is located Applications-&#8594;Sound &amp; Video-&#8594;guvcview</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_operation">Basic Operation</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><div class="title">Where are my files?</div><p>As in all Linux versions, personal files are located in antiX by default
+in the /home directory of the Linux file system.</p></div>
+<div class="paragraph"><div class="title">How are files managed?</div><p>antiX has two graphical file managers, one of them is Rox-Filer which can be
+opened clicking on the Home Folder icon in IceWM&#8217;s taskbar or from Menu -&#8594; Home.
+Rox-Filer is a graphical file manager that is at the heart of the ROX desktop
+(see ROX FAQ section). It opens to your home directory, where you can change
+the view to include hidden system files by clicking on the eye icon up on
+the menu bar. Right-click a file to see management options. Among them is
+Options&#8230;, which manages ROX&#8217;s settings.</p></div>
+<div class="paragraph"><p>The other one is SpaceFM, found under Menu -&#8594;Tools -&#8594; Filers -&#8594; SpaceFM.
+SpaceFM is a multi-panel tabbed file manager for Linux with built-in VFS, udev-based
+device manager, customizable menu system, and bash integration.</p></div>
+<div class="paragraph"><p>For a command-line file manager, click Menu -&#8594; Tools -&#8594; Filers -&#8594; MC File Manager,
+which brings up Midnight Commander, whose main interface consists of
+two panels displaying the file system with numbered commands on the bottom.
+Press F1 for help.</p></div>
+<div class="paragraph"><div class="title">Can I synchronize files/folders?</div><p>Go to antiX CC -&#8594; Disks -&#8594; Synchronize Directories or to
+Menu -&#8594; Applications -&#8594; System tools -&#8594; Grsync.</p></div>
+<div class="paragraph"><div class="title">What if I need to edit a text file?</div><p>You have five good options in antiX, from the lightest, to the simplest,
+up to a full-featured one. Two are available by clicking Menu -&#8594; Tools -&#8594;  Editors.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Nano is a command-line application run by control keys listed at the
+bottom of the screen. Press Ctrl-G to access the help file.
+</p>
+</li>
+<li>
+<p>
+Ted was designed to make it possible to edit rich text documents on
+Unix/Linux in a wysiwyg way. RTF files from Ted are fully compatible with
+MS-Word. Additionally, Ted also is an RTF to PostScript and an RTF to Acrobat
+PDF converter.
+</p>
+</li>
+<li>
+<p>
+To get to Leafpad simply click Menu -&#8594; Editor .
+It&#8217;s a simple graphical application that includes essential features and
+uses familiar pull-down menus.
+</p>
+</li>
+<li>
+<p>
+Geany (Menu -&#8594; Applications -&#8594; Programming -&#8594; Geany) is a small and
+fast editor with basic features of an integrated development environment
+like syntax highlighting etc.
+</p>
+</li>
+<li>
+<p>
+LibreOffice  (Menu -&#8594;Applications -&#8594; Office -&#8594; LibreOffice Writer)
+LibreOffice is a power-packed free, libre and open source personal productivity
+suite for Windows, Macintosh and GNU/Linux. antiX-12 comes with five of its feature-rich
+applications for all your document production and data processing needs: Writer, Calc,
+Impress, Draw and Math.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>You can open any text for editing in the file managers Rox-filer, SpaceFM and MC.</p></div>
+<div class="paragraph"><div class="title">What if a file is compressed in some format such as tar, etc?</div><p>Click Menu -&#8594; Applications -&#8594; Accessories-&#8594;  Archive Manager to bring
+up File-Roller, migrate to the file location, highlight the file and click
+Extract on the icon bar.</p></div>
+<div class="paragraph"><div class="title">How do I install and manage software?</div><p>There are a number of methods of managing software in antiX, the most common
+of which are the command-line application Apt and the graphical user interface
+for it known as Synaptic.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+To get to Apt just click Menu -&#8594; Terminal and become root (type su
+followed by root&#8217;s password). For setup and use see the MEPIS Wiki or the
+Apt Howto.
+</p>
+</li>
+<li>
+<p>
+To get to Synaptic, which is sometimes easier for a newbie, open a root
+terminal as just described, then just type in the word synaptic. It is
+also found in the antiX CC -&#8594; System, called Manage Packages. Detailed
+directions can be found in Section 7.2 of the MEPIS 11.0 User&#8217;s Manual.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">How do I keep the system up-to-date?</div><p>Before either updating the system or installing software for the first time,
+it&#8217;s necessary to update the package database. Do this by opening Synaptic
+(see above) and clicking on the Reload button or opening a root terminal
+(Menu -&#8594; Applications -&#8594; Accessories -&#8594; Root Terminal) and type:
+apt-get update</p></div>
+<div class="paragraph"><p>Do not use Synaptic for a system upgrade! To upgrade software you will have
+to use the terminal, either with Apt, Aptitude (needs installing) or smxi.</p></div>
+<div class="paragraph"><p>antiX is based on the Debian Testing repositories. So to update the system (in a
+root terminal) type: apt-get update (followed by) apt-get dist-upgrade</p></div>
+<div class="paragraph"><p>If you receive any kind of error messages during the update, check antiX
+forums at <a href="http://antix.freeforums.org">http://antix.freeforums.org</a> or at MEPIS Community Forum to see
+if someone already posted a solution for it. If not, please don&#8217;t be shy
+and ask for help.</p></div>
+<div class="paragraph"><p>For an off-line overview of Apt usage and resources open the terminal and
+type man apt. Feel free to explore its subsections: man apt-get, man apt-cache,
+man sources.list etc.</p></div>
+<div class="ulist"><div class="title">After installing new programs how do I find them and how do I get them on the menu?</div><ul>
+<li>
+<p>
+Menu -&#8594; Desktop -&#8594; IceWM -&#8594; Update Menu (Auto). This will automagically
+update your menu and place the new programs in the menu.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">How can I get my email?</div><p>Clicking Menu -&#8594;Applications-&#8594; Internet -&#8594;Claws Mail  You enter
+setup by following the wizard that pops up the first time you use the
+application and filling in the blanks with the information for your email account(s).</p></div>
+<div class="paragraph"><div class="title">What does antiX offer for web browsing?</div><p>The default browser is the full-featured Iceweasel, a debranded version of Firefox.
+Click Menu -&#8594;Web Browser or the taskbar icon to launch it.
+It&#8217;s compatible with many Firefox extensions.</p></div>
+<div class="paragraph"><p>Two other lightweight browsers are also included under Menu -&#8594; Applications -&#8594; Internet -&#8594; Dillo
+is a fast, minimalistic multi-platform web browser that is highly secure,
+while the elinks browser is a graphics and text mode web browser that is
+also very fast and safe and has pull-down menus available by clicking on
+the top bar.</p></div>
+<div class="paragraph"><p>By launching the script exoodles from a root terminal it&#8217;s possible to install
+Google Chrome, Opera and Swiftfox browsers, among other multi-media options.</p></div>
+<div class="paragraph"><div class="title">Can I chat with antiX?</div><p>There are two chat programs that come installed with antiX, the first two
+are located under Menu -&#8594; Applications -&#8594; Internet -&#8594;</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Pidgin (formerly called Gaim) starts up, a multi-protocol Instant Messaging
+client that allows you to use all of your IM accounts at once. Setup is
+intuitive, and if you need help you can check these FAQs.
+</p>
+</li>
+<li>
+<p>
+Finally, clicking Menu-&#8594;Terminal Apps-&#8594; Network-&#8594;  Irssi Chat brings
+up a speedy and very capable command-line IRC client. Setup and use is not
+obvious, so be sure to check the Irssi documentation.
+</p>
+</li>
+</ul></div>
+<div class="ulist"><div class="title">What can I use to burn a CD/DVD?</div><ul>
+<li>
+<p>
+For a GUI app: click Menu -&#8594;Applications-&#8594;  Sound &amp; Video -&#8594; SimpleBurn
+</p>
+</li>
+<li>
+<p>
+For a CLI app: Click Menu-&#8594; Applications-&#8594; Sound &amp; Video -&#8594; cdw
+this will launch the CLI app cdw
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">What do I use for a news (RSS) reader?</div><p>You have a few good options:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Install a desktop aggregator from the repositories (use Synaptic and
+search on RSS feed).
+</p>
+</li>
+<li>
+<p>
+RSS/Atom Reader -&#8594;Menu-&#8594;Terminal Apps-&#8594; Network-&#8594;  a CLI app called newsbeuter.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">How do I play music?</div><p>To play an audio CD, pop it in your CD player, then (there is no autoplay)
+click Menu -&#8594;  Music Player. This brings up xmms, a multimedia player
+for Unix systems. Click on the forward button (second from left) to start
+the CD. It may be necessary to point the player to the correct device,
+i.e. /media/cdrom. (note: This “   ../   ” means “move up one directory level”.)</p></div>
+<div class="paragraph"><p>You can select a different source of the audio files to play in xmms. To
+do this, right-click on the xmms player top bar, and from the pop-up menu
+select Play File to select the audio file to play. To play an audio mp3 or
+ogg vorbis file, simply left-click on it and xmms opens automatically and
+starts playing the file.</p></div>
+<div class="paragraph"><p>There is also a mixer available by clicking Menu -&#8594; Control Centre-&#8594;Hardware Tab -&#8594; Adjust Mixer.
+The application is AlsaMixer and it is pretty evident how to use it.</p></div>
+<div class="paragraph"><p>If you want to use a CLI console music player for your music on hard drive:
+Menu-&#8594; Terminal Apps-&#8594; Multimedia-&#8594; Music Player will launch moc.</p></div>
+<div class="paragraph"><div class="title">What about playing music from an internet source?</div><p>If you want to be able to play an audio file from the Internet, open xmms
+and select Play Location, then enter the Internet location (URL) of the file.</p></div>
+<div class="paragraph"><p>Alternatively, you can use Menu -&#8594; Applications-&#8594; Sound &amp; Video -&#8594; Stream Tuner,
+which offers hundreds of thousands of music resources in a fast and clean
+common interface.</p></div>
+<div class="paragraph"><p>A nifty Music Manager is also installed: Goggles Music Manager
+(From its website:) “Goggles Music Manager is a music collection manager
+and player that automatically categorizes Ogg Vorbis, FLAC, MP3, MP4, ASF
+and Musepack files based on genre, artist, album, and song. It supports
+gapless playback, features easy tag editing, and allows scrobbling tracks
+to last-fm.”</p></div>
+<div class="ulist"><div class="title">Can I rip music with antiX?</div><ul>
+<li>
+<p>
+For a GUI app use Menu-&#8594; Applications-&#8594; Sound &amp; Video-&#8594; Asunder CD Ripper
+This application can save tracks from an Audio CD as WAV, MP3, OGG, FLAC,
+and/or Wavpack.
+</p>
+</li>
+<li>
+<p>
+For a CLI app click Menu-&#8594;Terminal Apps-&#8594; Multimedia-&#8594;CD Ripperto
+launch RipIT.
+</p>
+</li>
+<li>
+<p>
+There is also a cli ripping app in antiX called abcde.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">The movie DVD I put in did not work. How can I watch movies?</div><p>There is no autoplay feature, so after you put in your DVD you can play it
+with either gxine, or GNOME MPlayer. Menu -&#8594; Applications -&#8594; Sound &amp; Video -&#8594; GNOME MPlayer:
+navigate to File -&#8594; Disc to start playback.</p></div>
+<div class="paragraph"><p>Also Menu -&#8594; Applications -&#8594; Sound &amp; Video -&#8594; gxine or xine. They look
+for the DVD at /dev/dvd. Since antiX may identify your DVD player as a
+different device, please check if /dev/dvd exists and in case it doesn&#8217;t
+create a link from your DVD device to /dev/dvd (you may use ROX-Filer as
+root for that).</p></div>
+<div class="paragraph"><p>To play a video file (e.g., avi, mpeg etc.), simply left-click on it and
+GNOME MPlayer will open automatically and start playing the file.</p></div>
+<div class="paragraph"><div class="title">Is there a screensaver?</div><p>Yes, it defaults to a black screen, with or without locking. Alternatively,
+use the lock option in Exit. If you want you can add xscreensaver from
+synaptic, or of course the CLI.</p></div>
+<div class="paragraph"><div class="title">How do I manipulate an open window?</div><p>In addition to the standard operations with the three buttons in the upper-right corner
+(and in some themes also a fourth rollup/rolldown), other possibilities
+(tray icon, layers etc.) are available by right-clicking the titlebar.
+Double-clicking the title bar restores/maximizes. You can also resize it
+by dragging the lower right corner.</p></div>
+<div class="paragraph"><div class="title">What applications are available for standard office use?</div><p>All office applications are found by clicking Menu -&#8594; Applications-&#8594;Office.
+antiX-12 comes with LibreOffice.</p></div>
+<div class="paragraph"><p>Other office apps include a gui PDF reader, a cli PDF reader and a calculator.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_customization">Basic Customization</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><div class="title">How do you customize IceWM?</div><p>It is done by directly editing the configuration files to create your own
+preferences. Files are found in antiX CC -&#8594; Desktop -&#8594; Edit IceWM Settings.</p></div>
+<div class="paragraph"><p>To change  your IceWM preferences go to: Menu -&#8594; Desktop -&#8594; IceWM -&#8594; IceWM Control Center.
+Here you can adjust Taskbar, Applets, Workspaces, and Windows.</p></div>
+<div class="paragraph"><div class="title">What can I change?</div><p>You can change anything you want, following the guidelines in IceWM Manual.</p></div>
+<div class="paragraph"><div class="title">What are the most common changes people make to the panel?</div><p>Let&#8217;s focus on four common changes to what you see and how it functions.
+Open ROX-Filer as described earlier, click on the eyeball to see hidden files,
+click on .IceWM, and finally on Preferences to open that file in a text editor.
+When you are done with your changes, save and exit. They will take effect
+the next time you log into IceWM, or if you restart IceWM: Menu-&#8594;Logout-&#8594; Restart IceWM.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Change to a 12-hr clock: click on  Search on the menu bar, and enter:
+timeformat
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Look for the entry that reads Clock Time format and change the entry below
+that so it reads:</p></div>
+<div class="paragraph"><p>TimeFormat="%I:%M"</p></div>
+<div class="paragraph"><p>Note that the line has been uncommented and the text in quotes has been changed.
+* Change the number of workspaces: click on Search on the menu bar, and enter:</p></div>
+<div class="paragraph"><p>workspacenames</p></div>
+<div class="paragraph"><p>Change the entry as you would like; for instance, it could read:</p></div>
+<div class="paragraph"><p>WorkspaceNames=" 1 ", " 2 "
+* Get the mailbox icon to work: click on Search on the menu bar, and enter</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>mailbox</code></pre>
+</div></div>
+<div class="paragraph"><p>Change the entry below to read</p></div>
+<div class="paragraph"><p>MailCommand="your mail program"</p></div>
+<div class="paragraph"><p>Note that the line has been uncommented and the text in quotes has been changed.
+* Make the panel autohide, click on Search on the menu bar, and enter</p></div>
+<div class="paragraph"><p>autohide</p></div>
+<div class="paragraph"><p>Change the line below it to read</p></div>
+<div class="paragraph"><p>TaskBarAutoHide=1 # 0/1</p></div>
+<div class="paragraph"><p>Note that the line has been uncommented and the value changed to “1” (true).</p></div>
+<div class="paragraph"><div class="title">How do I change the menu and the toolbar?</div><p>You  do it the same way you did with Preferences</p></div>
+<div class="paragraph"><div class="title">What about the keyboard shortcuts?</div><p>CC -&#8594; Desktop -&#8594; Edit IceWM Settings -&#8594; keys. The syntax is simple. Alt+Ctrl
+is equivalent to the “Super” key.</p></div>
+<div class="paragraph"><div class="title">How do I change the desktop wallpaper?</div><p>Via  antiX CC -&#8594; Desktop -&#8594; Choose Wallpaper. Note you can set a different
+wallpaper for each WM!</p></div>
+<div class="paragraph"><div class="title">How do I turn off Conky?</div><p>Click Menu -&#8594; Desktop -&#8594; Settings-&#8594;Conky on/off.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced">Advanced</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><div class="title">Is there a compression utility?</div><p>Click Menu -&#8594; Applications -&#8594; Accessories to bring up File Roller, a
+simple wrapper for whatever command-line tools such as tar, rpm, zip, etc.
+are installed.</p></div>
+<div class="paragraph"><div class="title">Are there other themes available?</div><p>Lots! Check the Bookmarks Toolbar Folder in Iceape, where many good sources
+are already linked.</p></div>
+<div class="paragraph"><div class="title">What other customization can I consider?</div><p>Almost anything you want. Again, the IceWM User&#8217;s Manual is your best guide.</p></div>
+<div class="paragraph"><div class="title">Are there any development tools in antiX?</div><p>A good selection is available</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Click Menu -&#8594; Applications-&#8594; Development to get to Geany, a text
+editor with the basic features of an integrated development environment (IDE).
+</p>
+</li>
+<li>
+<p>
+Click Menu -&#8594; Tools-&#8594; Programming to get to the Python shell, as well
+as the Tcl/Tk tools Tclsh8.5, and TkWish8.5.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">What other system tools are provided?</div><p>Click Menu -&#8594;Applications -&#8594; System Tools to get to System Profiler and
+Benchmark, and Htop, an interactive process viewer.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links">Links</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+&#91;<a href="http://www.icewm.org/">IceWM Home page</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="http://www.icewm.org/manual/">IceWM User&#8217;s Manual</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="http://forums.debian.net/viewtopic.php?t=5450">A good basic configuration post</a>&#93;.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.1.1
+Last updated 2014-02-25 17:49:58 EET
+</div>
+</div>
+</div>
+</body>
+</html>
