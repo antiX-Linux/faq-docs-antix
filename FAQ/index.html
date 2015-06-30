@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>antiX-FAQ antiX-FAQ</title>
 <link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
 </head>
@@ -25,15 +25,15 @@
   <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
   <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
   <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
-  <tr><td><a href="wmii.html">wmii</a></td><td> </td></tr>
   <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
   <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
   <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
   <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
   <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
   <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
-  <tr><td><a href="connectshares.html">Connect shares</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
   <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
 <tr><td></td> </tr>
 
 </table>
@@ -82,7 +82,7 @@
 </li>
 <li>
 <p>
-<a href="#_antix13">antiX13</a>
+<a href="#_antix15">antiX-15</a>
 </p>
 </li>
 <li>
@@ -104,8 +104,8 @@ FAQs will give you a basic orientation to antiX and its window
 managers, and provide the means to explore further on your own.</p></div>
 <div class="paragraph"><p>antiX comes in three flavours for 32 and 64 bit boxes.
 antiX comes as a <em>full</em> distro (c700MB),
-a <em>base</em> distro (c400MB) and a <em>core</em> distro (c140MB) all with a kernel
-that will boot "antique" PI, PII and K5/K6 AMD as well as the latest
+a <em>base</em> distro (c540MB) and a <em>core</em> distro (c200MB) all with a kernel
+that will boot "antique" PII, PIII computers as well as the latest
 "modern" processors.</p></div>
 <div class="paragraph"><p>By default, antiX loads into a Rox-icewm desktop (antiX-base into a
 Rox-fluxbox desktop) with a few icons on the desktop. Use F6 at the boot menu
@@ -118,15 +118,15 @@ external hard drive. Of course, you can install to internal and
 external drives, sticks, cards etc. You can even run it live,
 add/remove applications, customize it, remaster it and then install.
 All your changes will carry over to install!</p></div>
-<div class="paragraph"><p>antiX is based on Debian Testing and comes with a custom kernel.
+<div class="paragraph"><p>antiX is based on Debian and comes with a custom kernel.
 antiX also has its own custom scripts and repository to enhance user
-experience. antiX is a <em>rolling release</em> distro ie you should be able
+experience. antiX can be used as a <em>rolling release</em> distro ie you should be able
 to keep your applications up to date by regularly upgrading. If you
 wish you can enable the Debian unstable repositories and live on the
 <em>bleeding-edge</em>! For those that prefer stability, keep to the Debian
-Stable/Wheezy repositories.</p></div>
+Stable/jessie repositories.</p></div>
 <div class="paragraph"><p>A further feature of antiX is that you can install kernels from a
-variety of sources including MEPIS, Debian, siduction, aptosid and liquorix.
+variety of sources including Debian, siduction, aptosid and liquorix.
 This is especially useful if you have a new box as newer hardware is more
 likely to be detected and work with newer kernels.</p></div>
 </div>
@@ -151,11 +151,11 @@ pre-configured 128MB swap to the latest powerful boxes.</p></div>
 <div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
 <div class="paragraph"><div class="title">Which flavour should I use?</div><p>Most users will be happy to use antiX-full as it offers a full desktop experience
 on legacy and modern computers.</p></div>
-<div class="paragraph"><p>If you have a very old desktop/laptop with less than 256MB RAM (PI,PII, PIII
-or K5/6), or you want a desktop with "the basics", it is probably best to use antiX-base.</p></div>
+<div class="paragraph"><p>If you have a very old desktop/laptop with less than 256MB RAM (PII, PIII), or you want
+a desktop with "the basics", it is probably best to use antiX-base.</p></div>
 <div class="paragraph"><p>If you want complete control over what applications to install and know the Debian
 system fairly well, then use antiX-core.</p></div>
-<div class="paragraph"><div class="title">Why are there so many options in the boot menu?</div><p>Choice! antiX tries to make it easy to boot on any hardware ranging from old boxes where
+<div class="paragraph"><div class="title">Why are there so many F options in the boot menu?</div><p>Choice! antiX tries to make it easy to boot on any hardware ranging from old boxes where
 booting with xvesa is needed to boxes with nvidia, radeon and intel drivers.</p></div>
 <div class="paragraph"><div class="title">I don&#8217;t want icons on the desktop, how do I disable them?</div><p>Use F6 to set the desktop.</p></div>
 <div class="paragraph"><div class="title">Can I install applications when running <em>live</em>?</div><p>Yes you can and if you decide to install during that <em>live</em> session, they will carry over to installation.</p></div>
@@ -167,14 +167,13 @@ booting with xvesa is needed to boxes with nvidia, radeon and intel drivers.</p>
 <div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
 <div class="paragraph"><div class="title">I have an old laptop with very low RAM, what should I do?</div><p>If you have less than 128MB RAM, it is best to use the cli-installer from the boot menu to install.</p></div>
 <div class="paragraph"><p>It is also a good idea to create a swap partition before installation.</p></div>
-<div class="paragraph"><div class="title">Why is antiX still using grub-legacy?</div><p>At the moment, grub-legacy is much easier to edit than grub2 for those that need to edit the boot menu.lst</p></div>
 <div class="paragraph"><div class="title">Where should I install grub?</div><p>If users are happy with their present bootloader, grub-legacy, grub2 or whatever else, then
 it is best to install grub to the root partition or don&#8217;t install it at all and then make
 the necessary changes after installation.</p></div>
 <div class="paragraph"><p>If you are installing only antiX over another OS, or dual booting with windows, then install
-grub to the MBR. You may have to edit /boot/grub/menu.lst to correctly boot Windows.</p></div>
+grub to the MBR.</p></div>
 <div class="paragraph"><div class="title">Will the language, keyboard settings I chose at boot menu carry over to install?</div><p>Yes, in fact this is the best way to install your <em>localised</em> antiX.</p></div>
-<div class="paragraph"><p>Set your options via the F keys and if you use a writable device, use F7 to save your choices.</p></div>
+<div class="paragraph"><p>Set your options via the F keys and if you use a writable device, use F8 to save your choices.</p></div>
 <div class="paragraph"><p>Alernatively, you can do this manually by setting a variety of <em>cheats.</em> For example: <em>lang=en</em>
 <em>kbd=us,gr</em>  <em>tz=Europe/Athens</em> will give a US English desktop, a toggled Greek, English keyboard
 and the timezone set to Athens, Greece.</p></div>
@@ -185,7 +184,8 @@ and the timezone set to Athens, Greece.</p></div>
 <div class="sectionbody">
 <div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
 <div class="paragraph"><div class="title">How to Setup nvidia/ATI graphics drivers?</div><p>antiX suggests using the smxi tools. See smxi section.</p></div>
-<div class="paragraph"><div class="title">How to autologin?</div><p>Control Centre-&#8594;Session-&#8594;Set auto-login
+<div class="paragraph"><div class="title">How to autologin?</div><p>The installer gives you the option to set auto-login
+Control Centre-&#8594;Session-&#8594;Set auto-login
 You will need to reboot for changes to take effect.</p></div>
 <div class="paragraph"><div class="title">How to set the correct date and time?</div><p>There are 3 possible issues:</p></div>
 <div class="paragraph"><p>1) wrong timezone
@@ -286,24 +286,11 @@ the very minimalist manager SpaceFM-JWM.
 <div class="paragraph"><p>All window managers can be run with or without the ROX or SpaceFM Desktop
 environment that provides drag-and-drop functionality or the Conky
 system monitor that displays real-time information.</p></div>
-<div class="paragraph"><p>antiX also comes with wmii, which support classic and tiling
-windows.</p></div>
-<div class="paragraph"><div class="title">How do I change from one WM to another?</div><p>In IceWM:</p></div>
-<div class="paragraph"><p>You can switch from the default IceWM by right clicking anywhere on the
-desktop -&#8594; Logout -&#8594; Logout, which will take you back to the slim
-login box. Toggle F1 until you see the wmm of choice, then log in.</p></div>
-<div class="paragraph"><p>In Fluxbox:</p></div>
-<div class="paragraph"><p>You can switch from Fluxbox to IceWM by right clicking on the
-desktop -&#8594;Exit-&#8594;Log Out, which will return you to the slim login box,
-the default is for IceWM, simply login and your back to IceWM. F1
-toggles the WM choices, other than IceWM and Fluxbox, you will not be
-able to login into one of these until you install those WMs. The
-metapackage installer will install a number of WMs.</p></div>
-<div class="paragraph"><p>In JWM:</p></div>
-<div class="paragraph"><p>You can switch from JWM by clicking on the menu -&#8594; Logout -&#8594; Logout,
-which will take you back to the slim login box. Toggle F1 until you see
-the wmm of choice, then log in.</p></div>
-<div class="paragraph"><div class="title">And how to set the default one?</div><p>antiX CC -&#8594; Session -&#8594; Edit Login Options.</p></div>
+<div class="paragraph"><p>antiX also comes with herbstluftwm,a manual tiling window manager .</p></div>
+<div class="paragraph"><div class="title">What are the min- options?</div><p>If you want to keep RAM usage as low as possible, you can choose one of the
+min- options. There is no wallpaper, no desktop icons and no applications running in the panel.</p></div>
+<div class="paragraph"><div class="title">How do I change from one WM to another?</div><p>You can switch from by clicking on the menu -&#8594; Desktop -&#8594; Other Desktops,</p></div>
+<div class="paragraph"><div class="title">And how to set the default one?</div><p>Whichever one you have running before reboot, will be the default.</p></div>
 <div class="paragraph"><div class="title">Toggling Conky on/off:</div><p>In IceWM:</p></div>
 <div class="paragraph"><p>Right click on Desktop -&#8594; Desktop-&#8594; Settings-&#8594; Conky on/off</p></div>
 <div class="paragraph"><p>In Fluxbox:</p></div>
@@ -311,15 +298,13 @@ the wmm of choice, then log in.</p></div>
 <div class="paragraph"><p>In JWM:</p></div>
 <div class="paragraph"><p>Right click on Desktop -&#8594; Desktop -&#8594; Settings-&#8594; Conky on/off</p></div>
 <div class="paragraph"><div class="title">How do I get out of antiX?</div><p>IceWM:</p></div>
-<div class="paragraph"><p>On the toolbar you will see an icon (red) that is the quit icon, with
-same choices as below. Also if you right click on the Desktop-&#8594;Logout
+<div class="paragraph"><p>Click on the Desktop-&#8594;Logout
 there are several options including shutdown.</p></div>
 <div class="paragraph"><p>Fluxbox:</p></div>
 <div class="paragraph"><p>Right Click anywhere on the Desktop -&#8594; Exit, which will present you
 with the choice to lock screen, hibernate, reboot, logout, suspend, or shut down.</p></div>
 <div class="paragraph"><p>JWM:</p></div>
-<div class="paragraph"><p>On the toolbar you will see an icon (red) that is the quit icon, with
-same choices as below. Also if you right click on the Desktop-&#8594;Logout
+<div class="paragraph"><p>Click on the Desktop-&#8594;Logout
 there are several options including shutdown.</p></div>
 </div>
 </div>
@@ -336,29 +321,29 @@ you can choose to have a liveusb with persistence.
 You can do the same from a live cd/live usb or an installed system using
 an antiX, MEPIS or Debian iso file.</p></div>
 <div class="paragraph"><p>Metapackage-installer:</p></div>
-<div class="paragraph"><p>Located in Menu-&#8594; Applications-&#8594; Accessories-&#8594; metapackage-installer
+<div class="paragraph"><p>Located in Menu-&#8594; Applications-&#8594; -&#8594; metapackage-installer
 You can install packages for Disk-Recovery, Web Browsers, Graphics, Kids, Language, LaTex,
 Network, Non-free, Office, Server, WindowManager . . . simply choose the package you want, and
 the installer will do the rest. (internet connection required)</p></div>
 <div class="paragraph"><p>LuckyBackup:</p></div>
 <div class="paragraph"><p>Can be found in Control Centre-&#8594; Disks-&#8594; Backup Your System
 or in Menu-&#8594; Applications-&#8594;System Tools-&#8594; luckyBackup</p></div>
-<div class="paragraph"><p>antiX-snapshot:</p></div>
+<div class="paragraph"><p>iso-snapshot:</p></div>
 <div class="paragraph"><p>Want to make a live iso backup of what you have installed on your hard drive?
 Then, this is for you! Simple, but effective.</p></div>
 <div class="paragraph"><p>Remaster and Persistence:</p></div>
 <div class="paragraph"><p>Not only have we made it easy to set up antiX live with persistence, we also make it
 easy to create a remaster of the running live system!</p></div>
 <div class="paragraph"><p>Customised gfxboot menu:</p></div>
-<div class="paragraph"><p>Use the F keys to set up how you want antiX to boot in live mode and F7 to save the changes
+<div class="paragraph"><p>Use the F keys to set up how you want antiX to boot in live mode and F8 to save the changes
 for future live boots!</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_antix13">antiX13</h2>
+<h2 id="_antix_15">antiX-15</h2>
 <div class="sectionbody">
 <div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
-<div class="paragraph"><div class="title">So, what&#8217;s new in antiX-13?</div><p>Lots! Explore!</p></div>
+<div class="paragraph"><div class="title">So, what&#8217;s new in antiX-15?</div><p>Lots! Explore!</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -436,14 +421,12 @@ many more!
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><div class="title">Why is antiX-13 using an old kernel?</div><p>Since antiX is designed to work on old boxes, our tests have shown that some users cannot
-boot with a newer kernel.</p></div>
-<div class="paragraph"><p>Latest 3.9 series kernel (including the free gnu version) is available in the antiX repositories.</p></div>
-<div class="paragraph"><div class="title">Does flash work?</div><p>Yes, OOTB! For some PII/PIII boxes, the latest flash will not work so antiX-13 32 bit isos ship with
+<div class="paragraph"><div class="title">What kernel is antiX-15 using?</div><p>A customised 4.0.5 version.</p></div>
+<div class="paragraph"><div class="title">Does flash work?</div><p>Yes, OOTB! For some PII/PIII boxes, the latest flash will not work so antiX-15 32 bit isos ship with
 a working older version as default.</p></div>
-<div class="paragraph"><div class="title">The default Debian repository is set to Wheezy. Does this mean antiX is no longer based on Debian Testing?</div><p>antiX remains a <em>rolling</em> release distro based on Debian Testing. Since Wheezy/Stable has just been released
+<div class="paragraph"><div class="title">The default Debian repository is set to jessie. Does this mean antiX is no longer based on Debian Testing?</div><p>antiX remains a <em>rolling</em> release distro based on Debian Testing. Since jessie/Stable has just been released
 we have decided to give our users the option of sticking to Stable with this release or upgrading to Testing or
-Sid. Future releases eg antiX-13.1 will default to Debian Testing.</p></div>
+Sid. Future releases will default to Debian Testing.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -468,7 +451,7 @@ Sid. Future releases eg antiX-13.1 will default to Debian Testing.</p></div>
 <div id="footer">
 <div id="footer-text">
 Version: 0.1.1
-Last updated 2014-02-25 17:50:00 EET
+Last updated 2015-06-29 16:32:06 EEST
 </div>
 </div>
 </div>

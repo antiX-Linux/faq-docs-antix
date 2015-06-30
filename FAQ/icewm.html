@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>antiX-FAQ Guide to IceWM</title>
 <link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
 </head>
@@ -25,15 +25,15 @@
   <tr class="chosen"><td><a href="icewm.html">IceWM</a></td><td>&#187;</td></tr>
   <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
   <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
-  <tr><td><a href="wmii.html">wmii</a></td><td> </td></tr>
   <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
   <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
   <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
   <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
   <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
   <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
-  <tr><td><a href="connectshares.html">Connect shares</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
   <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
 <tr><td></td> </tr>
 
 </table>
@@ -90,8 +90,7 @@
 <div class="paragraph"><div class="title">What is this?</div><p>The desktop is run by IceWM, a lightweight window manager for the X Window
 System whose goal is speed, simplicity, and not getting in the user&#8217;s way.</p></div>
 <div class="paragraph"><div class="title">Where are the icons?</div><p>IceWM does not use icons, but antiX uses ROX to add icons.</p></div>
-<div class="paragraph"><p>ROX comes already preconfigured with some icons in antiX, open it in
-Menu -&#8594; Desktop -&#8594; Settings -&#8594; ROX-Pinboard on/off. For more information
+<div class="paragraph"><p>ROX comes already preconfigured with some icons in antiX by default. For more information
 on ROX-Desktop&#8217;s operation, including icon management, see section on Rox.</p></div>
 <div class="paragraph"><p>In all three above cases it&#8217;s needed to set the respective apps in ~/.icewm/startup
 for them to start automatically at session&#8217;s start.
@@ -110,7 +109,7 @@ Applications or start button.)</p></div>
 <div class="sect1">
 <h2 id="_basic_configuration">Basic Configuration</h2>
 <div class="sectionbody">
-<div class="paragraph"><div class="title">How do I set up a wireless connection?</div><p>There are 4 options, all found in the antiX Control Centre: Wicd, rutilt,
+<div class="paragraph"><div class="title">How do I set up a wireless connection?</div><p>There are 4 options, all found in the antiX Control Centre: Wicd (full only), wpa_supplicant,
 GRPS/UMTS and ceni.</p></div>
 <div class="ulist"><ul>
 <li>
@@ -132,32 +131,20 @@ and you can then configure that choice, it is an intuitive application.
 </li>
 <li>
 <p>
-Rutlit Wlan Manager is also included, located in the antiX CC and in
-Applications-&#8594; Network-&#8594; RutilT WLAN Manager.
+For those with GRPS/UMTS use the application in the antiX CC.
 </p>
 </li>
 <li>
 <p>
-For those with GRPS/UMTS use the application in the antiX CC and in
-Applications-&#8594; Network-&#8594; Configure GRPS/UMTS Connection.
+Configure Dial-Up Connection using Gnome PPP in the antiXCC.
 </p>
 </li>
 <li>
 <p>
-Configure Dial-Up Connection using Gnome PPP
-</p>
-</li>
-<li>
-<p>
-wpa_gui is also included here: Applications-&#8594; Network-&#8594; wpa_gui.
+wpa_gui is also included in the antiX Control Centre.
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><div class="title">What about a DSL connection?</div><p>Start Menu -&#8594;Applications -&#8594;Preferences -&#8594; ADSL/PPPOE configuration this
-opens the PPPOE configuration tool. Input your username and password for
-your Internet provider and choose if you&#8217;d like or not to start the connection
-when the system boots. Answer <em>yes</em> (default) for any question you don&#8217;t
-know the answer yourself.</p></div>
 <div class="paragraph"><div class="title">What about dial-up?</div><p>Control Centre -&#8594; Network-&#8594;Configure Dial-Up Connection. This brings up
 Gnome PPP, a graphical frontend for the excellent WvDial tool. Intuitive
 interface makes it easy to use.</p></div>
@@ -179,12 +166,12 @@ database.
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><div class="title">How do I set up an HP printer?</div><p>The easiest method is to use the Metapackage-Installer, located
-Applications -&#8594;Accessories-&#8594; metapackage-installer, then click on the
+<div class="paragraph"><div class="title">How do I set up an HP printer?</div><p>The easiest method is to use the MetaPackage-Installer, located
+in the antiX CC -&#8594;System-&#8594; Meta Package-installer, then click on the
 arrow for Office and tick the check box for HP_printing, then Install.</p></div>
 <div class="paragraph"><p>If you prefer to do it yourself, then do the following, (Warning! This may
 be incomplete due to subsequent changes in packages —use at your own risk!)</p></div>
-<div class="paragraph"><p>You will need to install some additional packages:</p></div>
+<div class="paragraph"><p>You may need to install some additional packages:</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>hpijs
@@ -204,7 +191,7 @@ xprint-utils</code></pre>
 <div class="paragraph"><p>You should then be able to set up your printer by opening up a browser
 (Menu -&#8594; Browser), and entering: <a href="http://localhost:631/">http://localhost:631/</a></p></div>
 <div class="paragraph"><div class="title">What about a scanner?</div><p>This one should be easy. Connect your scanner to the computer, and click
-Menu -&#8594; Applications -&#8594; Graphics -&#8594; Scan (xsane) or you can dl via synaptic
+Menu -&#8594; Applications -&#8594; Graphics -&#8594; Simple Scan (xsane) or you can dl via synaptic
 Xscanimage where, after installing and updating the menu, launch Xscanimage,
 then selecting from the scanners it has found (it may have multiple entries
 for your one scanner, so try them all until one works), you will see a
@@ -247,10 +234,10 @@ Rox-Filer is a graphical file manager that is at the heart of the ROX desktop
 the view to include hidden system files by clicking on the eye icon up on
 the menu bar. Right-click a file to see management options. Among them is
 Options&#8230;, which manages ROX&#8217;s settings.</p></div>
-<div class="paragraph"><p>The other one is SpaceFM, found under Menu -&#8594;Tools -&#8594; Filers -&#8594; SpaceFM.
+<div class="paragraph"><p>The other one is SpaceFM, found under Menu -&#8594;Applications -&#8594; System Tools -&#8594; SpaceFM.
 SpaceFM is a multi-panel tabbed file manager for Linux with built-in VFS, udev-based
 device manager, customizable menu system, and bash integration.</p></div>
-<div class="paragraph"><p>For a command-line file manager, click Menu -&#8594; Tools -&#8594; Filers -&#8594; MC File Manager,
+<div class="paragraph"><p>For a command-line file manager, click Menu -&#8594; Terminal -&#8594; and type mc,
 which brings up Midnight Commander, whose main interface consists of
 two panels displaying the file system with numbered commands on the bottom.
 Press F1 for help.</p></div>
@@ -291,7 +278,7 @@ like syntax highlighting etc.
 <p>
 LibreOffice  (Menu -&#8594;Applications -&#8594; Office -&#8594; LibreOffice Writer)
 LibreOffice is a power-packed free, libre and open source personal productivity
-suite for Windows, Macintosh and GNU/Linux. antiX-12 comes with five of its feature-rich
+suite for Windows, Macintosh and GNU/Linux. antiX-15 comes with five of its feature-rich
 applications for all your document production and data processing needs: Writer, Calc,
 Impress, Draw and Math.
 </p>
@@ -316,8 +303,7 @@ Apt Howto.
 <p>
 To get to Synaptic, which is sometimes easier for a newbie, open a root
 terminal as just described, then just type in the word synaptic. It is
-also found in the antiX CC -&#8594; System, called Manage Packages. Detailed
-directions can be found in Section 7.2 of the MEPIS 11.0 User&#8217;s Manual.
+also found in the antiX CC -&#8594; System, called Manage Packages.
 </p>
 </li>
 </ul></div>
@@ -337,11 +323,10 @@ and ask for help.</p></div>
 <div class="paragraph"><p>For an off-line overview of Apt usage and resources open the terminal and
 type man apt. Feel free to explore its subsections: man apt-get, man apt-cache,
 man sources.list etc.</p></div>
-<div class="ulist"><div class="title">After installing new programs how do I find them and how do I get them on the menu?</div><ul>
+<div class="ulist"><div class="title">After installing new programs do they appear in the menu?</div><ul>
 <li>
 <p>
-Menu -&#8594; Desktop -&#8594; IceWM -&#8594; Update Menu (Auto). This will automagically
-update your menu and place the new programs in the menu.
+Yes. This is a new feature included in antiX-15. Menus are automatically updated.
 </p>
 </li>
 </ul></div>
@@ -363,14 +348,12 @@ are located under Menu -&#8594; Applications -&#8594; Internet -&#8594;</p></div
 <div class="ulist"><ul>
 <li>
 <p>
-Pidgin (formerly called Gaim) starts up, a multi-protocol Instant Messaging
-client that allows you to use all of your IM accounts at once. Setup is
-intuitive, and if you need help you can check these FAQs.
+Hexchat - an IRC client based on XChat.
 </p>
 </li>
 <li>
 <p>
-Finally, clicking Menu-&#8594;Terminal Apps-&#8594; Network-&#8594;  Irssi Chat brings
+Finally, clicking Menu-&#8594;Terminal-&#8594; and typing irssi -&#8594;  brings
 up a speedy and very capable command-line IRC client. Setup and use is not
 obvious, so be sure to check the Irssi documentation.
 </p>
@@ -379,12 +362,12 @@ obvious, so be sure to check the Irssi documentation.
 <div class="ulist"><div class="title">What can I use to burn a CD/DVD?</div><ul>
 <li>
 <p>
-For a GUI app: click Menu -&#8594;Applications-&#8594;  Sound &amp; Video -&#8594; SimpleBurn
+For a GUI app: click Menu -&#8594;Applications-&#8594;  Sound &amp; Video -&#8594; Xfburn
 </p>
 </li>
 <li>
 <p>
-For a CLI app: Click Menu-&#8594; Applications-&#8594; Sound &amp; Video -&#8594; cdw
+For a CLI app: Click Menu -&#8594;Terminal-&#8594; and type cdw
 this will launch the CLI app cdw
 </p>
 </li>
@@ -399,12 +382,12 @@ search on RSS feed).
 </li>
 <li>
 <p>
-RSS/Atom Reader -&#8594;Menu-&#8594;Terminal Apps-&#8594; Network-&#8594;  a CLI app called newsbeuter.
+RSS/Atom Reader -&#8594;Menu-&#8594;Terminal-&#8594; and type newsbeuter-&#8594;  a CLI app called newsbeuter.
 </p>
 </li>
 </ul></div>
 <div class="paragraph"><div class="title">How do I play music?</div><p>To play an audio CD, pop it in your CD player, then (there is no autoplay)
-click Menu -&#8594;  Music Player. This brings up xmms, a multimedia player
+click Menu -&#8594;Applications-&#8594;Sound and Video-&#8594;xmms. This brings up xmms, a multimedia player
 for Unix systems. Click on the forward button (second from left) to start
 the CD. It may be necessary to point the player to the correct device,
 i.e. /media/cdrom. (note: This “   ../   ” means “move up one directory level”.)</p></div>
@@ -416,30 +399,18 @@ starts playing the file.</p></div>
 <div class="paragraph"><p>There is also a mixer available by clicking Menu -&#8594; Control Centre-&#8594;Hardware Tab -&#8594; Adjust Mixer.
 The application is AlsaMixer and it is pretty evident how to use it.</p></div>
 <div class="paragraph"><p>If you want to use a CLI console music player for your music on hard drive:
-Menu-&#8594; Terminal Apps-&#8594; Multimedia-&#8594; Music Player will launch moc.</p></div>
+Menu-&#8594; Terminal-&#8594;and type mocp-&#8594; will launch moc.</p></div>
 <div class="paragraph"><div class="title">What about playing music from an internet source?</div><p>If you want to be able to play an audio file from the Internet, open xmms
 and select Play Location, then enter the Internet location (URL) of the file.</p></div>
-<div class="paragraph"><p>Alternatively, you can use Menu -&#8594; Applications-&#8594; Sound &amp; Video -&#8594; Stream Tuner,
+<div class="paragraph"><p>Alternatively, you can use Menu -&#8594; Applications-&#8594; Sound &amp; Video -&#8594; Streamruner2,
 which offers hundreds of thousands of music resources in a fast and clean
 common interface.</p></div>
-<div class="paragraph"><p>A nifty Music Manager is also installed: Goggles Music Manager
-(From its website:) “Goggles Music Manager is a music collection manager
-and player that automatically categorizes Ogg Vorbis, FLAC, MP3, MP4, ASF
-and Musepack files based on genre, artist, album, and song. It supports
-gapless playback, features easy tag editing, and allows scrobbling tracks
-to last-fm.”</p></div>
 <div class="ulist"><div class="title">Can I rip music with antiX?</div><ul>
 <li>
 <p>
 For a GUI app use Menu-&#8594; Applications-&#8594; Sound &amp; Video-&#8594; Asunder CD Ripper
 This application can save tracks from an Audio CD as WAV, MP3, OGG, FLAC,
 and/or Wavpack.
-</p>
-</li>
-<li>
-<p>
-For a CLI app click Menu-&#8594;Terminal Apps-&#8594; Multimedia-&#8594;CD Ripperto
-launch RipIT.
 </p>
 </li>
 <li>
@@ -451,11 +422,6 @@ There is also a cli ripping app in antiX called abcde.
 <div class="paragraph"><div class="title">The movie DVD I put in did not work. How can I watch movies?</div><p>There is no autoplay feature, so after you put in your DVD you can play it
 with either gxine, or GNOME MPlayer. Menu -&#8594; Applications -&#8594; Sound &amp; Video -&#8594; GNOME MPlayer:
 navigate to File -&#8594; Disc to start playback.</p></div>
-<div class="paragraph"><p>Also Menu -&#8594; Applications -&#8594; Sound &amp; Video -&#8594; gxine or xine. They look
-for the DVD at /dev/dvd. Since antiX may identify your DVD player as a
-different device, please check if /dev/dvd exists and in case it doesn&#8217;t
-create a link from your DVD device to /dev/dvd (you may use ROX-Filer as
-root for that).</p></div>
 <div class="paragraph"><p>To play a video file (e.g., avi, mpeg etc.), simply left-click on it and
 GNOME MPlayer will open automatically and start playing the file.</p></div>
 <div class="paragraph"><div class="title">Is there a screensaver?</div><p>Yes, it defaults to a black screen, with or without locking. Alternatively,
@@ -467,7 +433,7 @@ synaptic, or of course the CLI.</p></div>
 Double-clicking the title bar restores/maximizes. You can also resize it
 by dragging the lower right corner.</p></div>
 <div class="paragraph"><div class="title">What applications are available for standard office use?</div><p>All office applications are found by clicking Menu -&#8594; Applications-&#8594;Office.
-antiX-12 comes with LibreOffice.</p></div>
+antiX-15 comes with LibreOffice.</p></div>
 <div class="paragraph"><p>Other office apps include a gui PDF reader, a cli PDF reader and a calculator.</p></div>
 </div>
 </div>
@@ -540,12 +506,6 @@ Click Menu -&#8594; Applications-&#8594; Development to get to Geany, a text
 editor with the basic features of an integrated development environment (IDE).
 </p>
 </li>
-<li>
-<p>
-Click Menu -&#8594; Tools-&#8594; Programming to get to the Python shell, as well
-as the Tcl/Tk tools Tclsh8.5, and TkWish8.5.
-</p>
-</li>
 </ul></div>
 <div class="paragraph"><div class="title">What other system tools are provided?</div><p>Click Menu -&#8594;Applications -&#8594; System Tools to get to System Profiler and
 Benchmark, and Htop, an interactive process viewer.</p></div>
@@ -578,7 +538,7 @@ Benchmark, and Htop, an interactive process viewer.</p></div>
 <div id="footer">
 <div id="footer-text">
 Version: 0.1.1
-Last updated 2014-02-25 17:49:58 EET
+Last updated 2015-06-29 16:32:04 EEST
 </div>
 </div>
 </div>

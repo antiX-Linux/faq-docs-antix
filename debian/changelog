@@ -1,3 +1,20 @@
+faq-docs-antix (0.4.1) unstable; urgency=low
+ 
+  * Updated content.
+  * Removed wmii
+  * Work in progress
+
+ -- anticapitalista <antiX@operamail.com>  Mon, 29 Jun 2015 16:35:00 +0200
+
+
+faq-docs-antix (0.4.0) unstable; urgency=low
+ 
+  * Updated content for antiX-15 release
+  * Include link on desktop
+
+ -- anticapitalista <antiX@operamail.com>  Wed, 14 Jan 2015 16:00:00 +0200
+
+
 faq-docs-antix (0.3.6) unstable; urgency=low
  
   * Fixed wrong link to Droopy

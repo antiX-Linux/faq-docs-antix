@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>antiX-FAQ Guide to JWM</title>
 <link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
 </head>
@@ -25,15 +25,15 @@
   <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
   <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
   <tr class="chosen"><td><a href="jwm.html">jwm</a></td><td>&#187;</td></tr>
-  <tr><td><a href="wmii.html">wmii</a></td><td> </td></tr>
   <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
   <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
   <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
   <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
   <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
   <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
-  <tr><td><a href="connectshares.html">Connect shares</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
   <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
 <tr><td></td> </tr>
 
 </table>
@@ -92,8 +92,7 @@ JWM is written in C and uses only Xlib at a minimum.</p></div>
 <div class="paragraph"><div class="title">Where are the icons?</div><p>JWM does not use icons, but antiX has an application that can manage
 desktop icons for it ie ROX.</p></div>
 <div class="paragraph"><p>ROX comes already preconfigured with some icons in antiX, open it in
-Menu -&#8594; Desktop -&#8594; Desktop -&#8594; ROX-Pinboard on/off. For more information
-on ROX-Desktop&#8217;s operation, including icon management, see ROX FAQ section.</p></div>
+Menu -&#8594; Desktop -&#8594; Other Desktops</p></div>
 <div class="paragraph"><div class="title">What&#8217;s that stuff in the upper right corner?</div><p>That is the output of Conky, a light-weight system monitor that gives you
 real-time information on various aspects of your computer.</p></div>
 <div class="paragraph"><div class="title">And that bar at the bottom?</div><p>That is called the toolbar or panel, and it displays current info such as
@@ -104,7 +103,7 @@ the workspace, open applications, background applications and the date/time.</p>
 <h2 id="_basic_configuration">Basic Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
-<div class="paragraph"><div class="title">How do I set up a wireless connection?</div><p>There are 4 options, all found in the antiX Control Centre (CC): Wicd, rutilt,
+<div class="paragraph"><div class="title">How do I set up a wireless connection?</div><p>There are 4 options, all found in the antiX Control Centre (CC): Wicd (full only), wpa_supplicant,
 GPRS/UMTS and ceni.</p></div>
 </div>
 </div>
@@ -115,18 +114,19 @@ GPRS/UMTS and ceni.</p></div>
 <div class="paragraph"><div class="title">Where&#8217;s the sound volume control?</div><p>Simply click on the sound icon in the toolbar.</p></div>
 <div class="paragraph"><div class="title">Where are my files?</div><p>As in all Linux versions, personal files are located in antiX by default
 in the /home directory of the Linux file system.</p></div>
-<div class="paragraph"><div class="title">Is there an easy way to find a specific file?</div><p>Click Menu -&#8594; System -&#8594;File Tools-&#8594;Search for files or folders, Rox filer
-and MC File Manager are also located here.</p></div>
+<div class="paragraph"><div class="title">Where are my files?</div><p>As in all Linux versions, personal files are located in antiX by default
+in the /home directory of the Linux file system.</p></div>
+<div class="paragraph"><div class="title">Is there an easy way to find a specific file?</div><p>Click Menu -&#8594; Applications -&#8594;accessories-&#8594;Searchmonkey for files or folders.</p></div>
 <div class="paragraph"><div class="title">How are files managed?</div><p>Click Menu -&#8594; Files to open a graphical file manager that is at the heart
 of the ROX desktop (see ROX section). It opens to your home directory,
 where you can change to view to include hidden system files by clicking
 on the eye icon up on the menu bar. Right-click a file to see management
 options.</p></div>
-<div class="paragraph"><p>For a command-line file manager, click Menu -&#8594; System-&#8594; File Tools -&#8594; MC Filer
-to bring up Midnight Commander, whose main interface consists of two panels
+<div class="paragraph"><p>For a command-line file manager, click Menu -&#8594; Terminal - Type mc to bring
+up Midnight Commander, whose main interface consists of two panels
 displaying the file system with numbered commands on the bottom.
 Press F1 for help.</p></div>
-<div class="paragraph"><p>SpaceFM is another excellent file manager included with antiX-12.
+<div class="paragraph"><p>SpaceFM is another excellent file manager included with antiX.
 SpaceFM is a multi-panel tabbed file manager for Linux with built-in VFS, udev-based
 device manager, customizable menu system, and bash integration.
 click Menu -&#8594; Applications -&#8594; System Tools -&#8594; SpaceFM</p></div>
@@ -175,7 +175,7 @@ Menu-&#8594; Files and then clicking on the eye symbol to show hidden files.</p>
 <div id="footer">
 <div id="footer-text">
 Version: 0.1.1
-Last updated 2014-02-25 17:50:01 EET
+Last updated 2015-06-29 16:32:07 EEST
 </div>
 </div>
 </div>
