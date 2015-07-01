@@ -1,0 +1,245 @@
+= Wingrid User Guide 
+:wingrid-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+* link:#under-toc[Conventions]
+* link:#_what_is_wingrid[What is Wingrid?]
+* link:#_placing_a_window_into_the_grid[Placing a Window into the Grid]
+* link:#_fine_tuning[Fine Tuning]
+* link:#_changing_the_key_combinations[Changing the Key Combinations]
+* link:#_summary_of_files[Summary of Files]
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+[[under-toc]]
+== Conventions
+{top}
+[icon="./images/icons/info.png"]
+[NOTE]
+This is additional information
+
+[icon="./images/icons/tip2.png"]
+[NOTE]
+This is a tip
+
+[icon="./images/icons/settings.png"]
+[NOTE]
+This is an example configuration or setting
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+== What is Wingrid?
+{top}
+
+It is a convenient and speedy way to place the active window into a predetermined position and size on screen.
+
+When working with multiple open windows, you often need to drag them around the desktop to put them into optimal locations.  Wingrid can help by automating the relocation.  
+
+The screen is notionally divided into 4 equally sized invisible rectangles in a 2x2 grid. Via a key press, the active window is moved within the grid.  Each window may occupy any 1, any 2 adjacent, or all 4 rectangles.  You can choose whether the window is to be at the top, bottom, left, or right of the screen, or maximized.  You can also change the position and size of any window at any time.
+
+This flexibility enables you to put multiple windows into a layout that suits your way of working.  It is easy to have one layout for your current task and a different one when you switch to your next task.
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+== Placing a Window into the Grid
+{top}
+
+The window to be acted upon is always the active window.  It is sometimes known as the window that has the focus.
+
+Placing the window into the grid is done by a combined key press, i.e. the control key (Ctrl) and a number key (1-9). +
+Each number key represents a different placement within the grid as shown in the following diagram.
+
+image:wingrid/ctrl1-9.jpg[]
+
+{nbsp}
+
+Various permutations can be created to suit your preferred layout, for example
+
+image:wingrid/ctrl-permutations.jpg[]
+
+{nbsp}
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+If your vertically stacked windows overlap, +
+refer to the section named Fine Tuning
+
+{nbsp}
+
+You may also gracefully close a window
+
+image:wingrid/ctrl0.jpg[]
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+== Fine Tuning
+{top}
+
+You can control Wingrid by changing its settings.
+
+[icon="./images/icons/info.png"]
+[NOTE]
+Settings are held in a single hidden file in your home folder +
+.config/wingrid/wingrid.conf
+
+In any layout in which windows are stacked vertically, they might be slightly misaligned and produce overlap.  This can be corrected by increasing/reducing the height of the windows in wingrid.conf.  Adjustments are usually set-and-forget.  Once they have been done to your satisfaction, they will work for all window layouts that Wingrid stacks vertically.
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+A simple way to open wingrid.conf for editing is +
+1. Switch your file manager to show hidden files +
+2. Browse to .config/wingrid/wingrid.conf +
+3. Select the file and open it in your text editor
+
+=== Correcting Overlapping Windows
+
+The method uses two windows stacked vertically via Ctrl3 and Ctrl4 respectively. +
+In wingrid.conf
+
+1. Change WINHEIGHT_LESS from zero to a value of your choice
+2. Save the change
+3. Click on the top window in the stack to make it active
+4. Press Ctrl3 to refresh the window +
+_The bottom edge of the top window has moved up the screen_
+5. Change WINHEIGHT_MORE from zero to a value of your choice
+6. Save the change
+7. Click on the bottom window in the stack to make it active
+8. Press Ctrl4 to refresh the window +
+_The top edge of the bottom window has moved up the screen_
+
+Repeat the adjustment process using refined values if neccessary until the windows abut correctly.
+
+{nbsp}
+
+=== Example Adjustment of Window Heights
+On the author's system the following creates top and bottom windows of equal height 
+
+[icon="./images/icons/settings.png"]
+[NOTE]
+==== 
+wingrid.conf
+----
+
+# All adjustment values below are pixels
+
+# Reduce Window Height
+# The top edge of the window remains unchanged
+# The bottom edge of the window moves towards the top edge
+# Applies when putting a window in the following grid positions
+#   Bottom
+#   Bottom Left
+#   Bottom Right
+#   Top
+#   Top Left
+#   Top Right  
+# Default: WINHEIGHT_LESS=0
+WINHEIGHT_LESS=35
+
+
+# Increase Window Height
+# The bottom edge of the window remains unchanged
+# The top edge of the window moves away from the bottom edge
+# Applies when putting a window in the following grid positions
+#   Bottom
+#   Bottom Left
+#   Bottom Right
+# Default: WINHEIGHT_MORE=0
+WINHEIGHT_MORE=10
+
+
+# Increase Gap from Top Edge of Screen to Top Edge of Top Window 
+# The window dimensions remain unchanged
+# The entire window moves vertically down the screen
+# Applies when putting a window in the following grid positions
+#   Top
+#   Top Left
+#   Top Right
+# Default: GAPTOP=0
+GAPTOP=0
+
+
+# Increase Gap from Left Edge of Screen to Left Edge of Left Window
+# The window dimensions remain unchanged
+# The entire window moves horizontally across the screen
+# Applies when putting a window in the following grid positions
+#   Left
+#   Left Top
+#   Left Bottom
+# Default: GAPLEFT=0
+GAPLEFT=0
+----
+====
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+== Changing the Key Combinations
+{top}
+
+The assignment of a combined keypress is handled by the window manager.  In your antiX system this will often be one of the following  Fluxbox, IceWM, or JWM. 
+
+[icon="./images/icons/info.png"]
+[NOTE]
+Key assignments are held in a hidden file in your home folder +
+.fluxbox/keys +
+.icewm/keys +
+.jwm/keys
+
+Each of them assigns combined keystrokes in its own way. Changing assignments is best done after referring to the user manual of the your chosen window manager.
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+== Summary of Files
+{top}
+
+Configuration file is located in /home/USERNAME/.config/wingrid/
+
+* wingrid.conf is the default configuration file
+
+Executable files are located in /usr/local/bin/
+
+* wingrid-left.sh
+* wingrid-right.sh
+* wingrid-top.sh
+* wingrid-bottom.sh
+* wingrid-topleft.sh
+* wingrid-topright.sh
+* wingrid-bottomleft.sh
+* wingrid-bottomright.sh
+* wingrid-maximize.sh
+* wingrid-close.sh

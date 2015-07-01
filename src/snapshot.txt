@@ -1,0 +1,32 @@
+= Snapshot
+:snapshot-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[Snapshot]
+
+**  link:#_how_it_works[How it Works]
+
+
+[[under-toc]]
+== Snapshot
+{top}
+
+The primary purpose of Snapshot is to make it as safe, easy, and
+convenient as possible for users to make a live bootable iso of their own 
+installed version of antiX. The idea is that you when you are ready to 
+take a snapshot for whatever reason, just use use the iso-snapshot application
+and once it is finished, you will have an iso file ready for booting.
+
+Menu-->Applications-->System Tools-->iso-snapshot
+
+
+== How it Works
+{top}
+
+Before performing a snapshot, you should make sure you have enough space
+and consult the documentation in order to best set up your configuaration files.
+
+

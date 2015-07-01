@@ -1,0 +1,196 @@
+= Persistence Options 
+:sist-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[What is Persistence?]
+*  link:#_four_kinds_of_persistence[Four Kinds of Persistence]
+** link:#_home_persistence[Home Persistence]
+** link:#_root_persistence[Root Persistence]
+** link:#_static_root_persistence[Static Root Persistence]
+** link:#_frugal[frugal Installation]
+** link:#_remastering[Remastering]
+
+*  link:#_how_does_it_work[How does it Work?]
+
+*  link:#_how_do_I_create_persistence_files[How do I Create Persistence Files?]
+
+*  link:#_using_the_antix2usb_gui_app[Using the antix2usb gui app]
+
+[[under-toc]]
+== What is Persistence?
+{top}
+
+Persistence is a hybrid between a LiveCD/USB and a full install.  One
+of the beauties of a LiveCD is that it allows you to boot Linux
+without touching any hard drives so you can have a "test-drive" without
+fear of altering your current system.  Another feature of a LiveCD is
+that once it is burned, it is close to impossible for it to get infected
+with a virus or a Trojan horse. Every time you boot it, you start off
+with a system that is clean and pristine.
+
+Persistence gives you a way of remembering things between boots.  In
+order to do so, it needs access to a read-write device, typically
+either a hard drive or a USB stick.  If you are only using one
+machine that is yours then you can put the persistence file(s)s on one
+of your hard drives.
+
+== Four Kinds of Persistence
+{top}
+
+The {antix} distribution offers up to four different forms of persistence on
+our Live Media (LiveCD/DVD/USB, etc).  Remastering is only available on
+writable media such as a LiveUSB  or a LiveHD (frugal install)  _not_ a CD or
+DVD.  All four forms can be used together if desired.  They each have
+different strengths and weakness which are important to understand in order
+choose the right method or methods for your purposes.
+
+=== Home Persistence
+{top}
+
+Home persistence is the simplest and safest.  The +homefs+ persistence file
+is mounted at ++/home++.  Any changes made to files under +/home+ are (nearly)
+instantly stored on +homefs+ filesystem.  It is good if you want to save
+settings (such as bookmarks or changes to your desktop) but it doesn't save
+changes made to the system (such as installing packages).  Generally, if you
+need the root password to do it then it is not saved.  Home persistence is
+also ideal if you want to download and save a lot of data.   It is the safest
+precisely because you can't save any system changes with it.  Even if your
+system gets compromised, it will be very difficult for the bad guys to make
+any permanent changes to your system. 
+
+=== Root Persistence
+{top}
+
+Root persistence allows you to save changes to the system _in addition_ to
+saving personal settings.  It has two significant limitations.  These
+limitations are due to the fact that as the system is running the changes are
+stored in RAM and will be lost unless they are specifically copied back to the
++rootfs+ file.  If your computer crashes before the changes are copied back
+then your changes will be lost.  The other limitation is that the amount of
+new information you can store is limited by how much free RAM you have.  
+
+Dynamic root persistence saves file system changes in RAM (just like a normal LiveCD/USB). 
+The persist-save program must be run to copy these changes to the rootfs file so 
+they can be remembered across reboots. Use persist-config to have the program run 
+automatically on shutdown/reboot. 
+
+
+=== Static Root Persistence
+{top}
+
+Static root persistence is another way to use persistence. Static root persistence saves file system
+changes directly in the rootfs file. It does not use any RAM so the only size limit 
+is the size of the rootfs file. This makes it good for doing an "apt-get upgrade" 
+or for installing a bunch of packages. It is usually best to follow up with a Live
+remaster to consolidate the file system changes into the compressed squashfs file. 
+On many systems, static root persistence can be annoyingly slow. You are free to 
+switch between static and dynamic root persistence each time you boot. 
+
+=== Frugal Installation
+{top}
+
+If you have access to a hard drive, you may wish to run antiX from it 'live' with or
+without persistence. Using persistence is recommended. The main advantage of running
+frugally is that it is very fast and saves space since it uses the compressed squashfs
+(linuxfs) which is typically 4 times smaller than installed to hard drive.
+antiX has made setting up frugal very easy. Just press F5 at the boot menu and choose
+the frugal option. See How do I Create Persistence Files? below for further details.
+
+=== Remastering
+{top}
+
+We include remastering as a form of persistence for purposes of comparison.
+The link:remaster.html[Remastering page] contains implementation details.  If
+root persistence is like using a piton while climbing up a cliff, remastering
+is more like setting up a camp or bivouac site.  
+
+
+== How does it Work?
+{top}
+
+The information for both root and home persistence is stored in two files
+called +rootfs+ and +homefs+.  Unlike previous versions of antiX, there is no longer
+an option to use a entire partition for root or home persistence.  The default
+location for these files is right next to the squashfs file, on the same
+device and in the same directory.  We suggest that you use this default
+location whenever possible, but sometimes it is not possible (such as when
+booting from a LiveCD or LiveDVD).  For these cases you can specify which
+device the persistence files are on.  You can also specify a different
+directory.  
+
+
+==  How do I Create Persistence Files?
+{top}
+
+=== Automatically
+
+The +homefs+ and +rootfs+ persistence files can be created when booting at 
+the live desktop menu. Press F5, choose the persist option and on boot you 
+will be prompted to set it up. You will be first asked where you want to save
+the persistent file(s). You just need to decide how large you want 
+to make the file(s). The ext4 file system will be used.
+Once the +homefs+ and +rootfs+ files have been created, you will be prompted to
+make changes to the root and user passwords. This is for security.
+The final step will ask you how you want to set the save mode for root 
+persistence. Options include: Automatic, Semi_Automatic and Manual Save. 
+On reboot/halt any changes will be saved.
+
+Note: If you have your persistence file(s) on a separate device to the one you
+boot from, you must specify your persistence device. You can use the following:
+* pdev=sda1 ie persist device
+* plab=antiX-Persist ie label of the device where persistence files are kept
+* puuid=xxxxxxx ie the uuid of the device.
+
+
+=== Manually by Using the antix2usb gui app
+{top}
+
+You can run antiX live from a usb stick.
+To install to usb stick you can use our tool antix2usb or UNetbootin.
+Both will work, but our tool enables users to also set up persistence prior to running.
+If using UNetbootin you will have to set up persistence once running from the stick/device.
+
+Using antix2usb gui.
+
+* Plugin your usb stick.
+* If it auto-mounts, unmount it.
+* Open antix2usb from antixcc -> disks -antiX2usb
+* Select ISO file.
+Navigate to where the ISO file is and click Open.
+
+* Install to USB device should automatically detect your usb device
+and show how much space is available.
+
+* System partition.
+antix2usb allows users to either use the full disk or part of the disk space
+by creating a partition.
+If you do not want to use persistence, then minimum recommended size for a partition
+is shown below.
+
+ - antiX-full:1GB
+ - antiX-base:700MB
+ - antiX-core:350MB
+
+* You can set the language here or at the boot menu.
+
+Options:
+
+* Format.
+This refers to the usb device partition.
+ext4 is recommended.
+
+* Bootloader.
+This gets installed into the MBR of the usb device.
+syslinux is only used with fat32.
+
+* Persistence.
+There are four options here.
+
+ - No persistence - just leave as default.
+ - home persistence - check home and select size
+ - root persistence - check root and select size
+ - Both home and root persistence - check both home and root and select sizes.
+{top}

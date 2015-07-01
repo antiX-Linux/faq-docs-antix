@@ -1,0 +1,652 @@
+= 1-to-1 Assistance User Guide
+:1-to-1_assistance-page:
+
+anchor:table_of_contents[]
+
+{start-toc}
+
+[[toc]]
+[compact]
+* link:#under-toc[Conventions]
+* link:#_what_is_1_to_1_assistance[What is 1 to 1 Assistance]
+* link:#_typical_use_case[Typical Use Case]
+* link:#_scenario_private_session_via_the_internet[Scenario Private Session via the Internet]
+* link:#_receive_assistance[Receive Assistance]
+* link:#_provide_assistance[Provide Assistance]
+* link:#_utilities_available_when_providing_assistance[Utilities Available When Providing Assistanace]
+* link:#_fine_tuning[Fine Tuning]
+* link:#_summary_of_files[Summary of Files]
+* link:#_references[References]
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+[[under-toc]]
+== Conventions
+{top}
+[icon="./images/icons/info.png"]
+[NOTE]
+This is additional information
+
+[icon="./images/icons/tip2.png"]
+[NOTE]
+This is a tip
+
+[icon="./images/icons/settings.png"]
+[NOTE]
+This is an example configuration or setting
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+== What is 1 to 1 Assistance
+{top}
+
+It is a simple way to privately share the desktop of one system with another system.
+
+A system may perform either of two roles:
+
+* Receive assistance from someone else
+* Provide assistance to someone else
+
+The receiver allows their local desktop to be shared.  
+The provider is allowed to share the remote desktop.
+Both receiver and provider see the same desktop on their screens.
+
+The receiver and provider make contact across either the internet or local network.  The connection is automatically encrypted to provide privacy during the session. The provider can operate the desktop of the receiver system, even though it may be on the other side of the world, or in the same room.
+
+It is self contained.  Except for an ISP, connections across the internet do not depend upon the availability of third party services. Creation of external facilities or registration with their providers are not required.  Additional financial commitment is not needed.
+
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+== Typical Use Case
+{top}
+
+The user prefers to work by clicking buttons rather than by typing commands.  Their interest is in using their system rather than understanding its technicalities. Beyond the applications they normally use day-to-day, they have low levels of confidence in their abilities.  When something unforeseen occurs, they rely upon the expertise of someone else to resolve it.
+
+A glitch happens to the system, or the user wants advice/guidance about something they do not know how to do.  The user asks someone with the needed expertise for help.  Together they agree the best way to fix the glitch, or demonstrate the unknown skill, is by sharing the desktop of the user.
+
+{nbsp}
+
+
+
+
+
+anchor:scenario_private_session_via_the_internet[]
+
+=== Scenario Private Session via the Internet
+
+* The receiver system is behind a local network firewall/router that the user cannot or does not want to configure +
+* The receiver system might or might not be running a firewall that the user does not want to configure +
+* The provider system is behind a local network firewall/router that forwards the required ports to their system +
+* If a firewall is running on the provider system, it allows connections to the forwarded ports +
+* The receiver and the provider systems are many miles apart and will connect across the internet +
+* The connection is automatically encrypted before the 1-to-1 session is allowed to start +
+* The session is automatically started and all traffic passes within the encrypted tunnel +
+* The receiver operator explicity approves an on-screen request to begin sharing their desktop +
+* Transfer of files to/from both systems is enabled +
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+If you are connecting via a local network rather than the internet, there is no need to forward any ports to the provider system.  In that case, both provider and receiver systems must be in the same local network i.e. behind the same local network firewall/router.
+
+{nbsp}
+
+.Links
+
+<<table_of_contents,Table of Contents>> +
+<<receive_assistance,Receive Assistance>> +
+<<provide_assistance,Provide Assistance>>
+ 
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+anchor:receive_assistance[]
+
+== Receive Assistance
+
+=== Security Measures
+
+* Automatically uses reverse SSL to create an encrypted connection +
+Alleviates the requirement to independently distribute and verify certificates for every potential receiver system
+* You will explicity approve an on-screen request to begin sharing your desktop +
+Gives you the absolute control to grant or deny each session
+* Approval of the on-screen request to begin sharing your desktop is subject to a timeout of approximately 30 seconds +
+The connection will automatically close if you do not approve the session
+
+{nbsp}
+
+=== Pre-Connection Requirements
+
+* The provider system is listening for a connection +
+* The provider system operator has supplied you the IP address to contact
+
+{nbsp}
+
+=== Starting Receive Assistance
+
+From the antiX menu select +
+image:1-to-1_assistance/1-to-1_assistance.png[]^1-to-1 Assistance ^
+
+{nbsp}
+
+{nbsp}
+
+A window opens asking which mode is wanted.
+
+image:1-to-1_assistance/r_select_mode_receive.jpg[]
+
+If a buton is not pressed, _Receive_ is automatically started after a timeout
+
+{nbsp}
+
+{nbsp}
+
+A window opens asking whether to make your desktop fit within the provider desktop.
+
+image:1-to-1_assistance/r_select_mode_resize.jpg[]
+
+If a button is not pressed, _Resize_ is automatically started after a timeout
+
+{nbsp}
+
+{nbsp}
+
+A window opens asking what IP address to contact
+
+image:1-to-1_assistance/r_ip_address_to_contact.jpg[]
+
+Enter the IP Address supplied by the provider system operator
+
+{nbsp}
+
+{nbsp}
+
+A window opens asking you to approve the sharing of your desktop
+
+image:1-to-1_assistance/r_approval_to_share_desktop.jpg[]
+
+Press the _Yes_ button or press the _Y_ key to begin the session
+
+{nbsp}
+
+{nbsp}
+
+To indicate your desktop is being shared an icon is displayed in the taskbar
+
+image:1-to-1_assistance/r_icon_taskbar.jpg[]
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+Refer to section _Fine Tuning_ for an alternative to an icon in the taskbar
+
+{nbsp}
+
+=== Stopping Receive Assistance
+
+Click on the X11VNC icon in the taskbar to display a popup menu +
+image:1-to-1_assistance/r_icon_taskbar_menu.jpg[]
+
+Select _Stop x11vnc_ to close the session and the connection
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+If some of the taskbar icon popup menu is hidden off-screen, drag-and-drop the icon from the taskbar to the center of the desktop
+
+{nbsp}
+
+.Links
+
+<<table_of_contents,Table of Contents>> +
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+anchor:provide_assistance[]
+
+== Provide Assistance
+
+=== Security Measures
+
+* Automatically uses reverse SSL to create an encrypted connection +
+Alleviates the requirement to independently distribute and verify certificates for every potential receiver system
+
+{nbsp}
+
+=== Pre-Connection Requirements
+
+* Your local network firewall/router forwards ports to the provider system +
+5500 which is used to listen for a session request from the receiver system +
+5900 which is used to share the desktop of the receiver system
+* You have started provider mode before the receiver system requests a connection
+* You have supplied the receiver system operator your external IP address
+
+[icon="./images/icons/info.png"]
+[NOTE]
+Each firewall/router handles port forwarding in its own way, this means there is no single description that can cover all variations.  You should refer to the user manual to do the setting up. +
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+If you are connecting via a local network rather than the internet, there is no need to forward any ports to the provider system.
+
+=== IP Address
+
+To share the desktop of the receiver system across the internet, a connection must be made to the external IP address of your local network firewall/router. This is different from the internal address it uses on your local network.
+
+A home firewall/router will usually have its external IP address assigned by your ISP.  Often the ISP can change this external address without your knowlege and without affecting your access to the internet. This means your external address must be found before each session can be started.
+
+{nbsp}
+
+=== To Discover Your External IP Address
+
+Open a web (internet) browser +
+Enter the address http://whatismyip.com
+
+Supply the IP address to the person operating the receiver system, via 'phone, email or some other means.
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+If you are connecting via a local network rather than the internet, supply to the receiver system operator the IP address of the provider system.
+
+=== Starting Provide Assistance
+
+From the antiX menu select +
+image:1-to-1_assistance/1-to-1_assistance.png[]^1-to-1 Assistance ^
+
+{nbsp}
+
+{nbsp}
+
+A window opens asking which mode is wanted.
+
+image:1-to-1_assistance/p_select_mode_provide.jpg[]
+
+Press the _Provide_ button
+
+{nbsp}
+
+{nbsp}
+
+The first time you run provide mode, a window will open advising you to create the SSL certificate.
+
+image:1-to-1_assistance/p_certificate_create.jpg[]
+
+Press the _OK_ button
+
+{nbsp}
+
+{nbsp}
+
+Either accept the default settings or enter your own
+
+image:1-to-1_assistance/p_certificate_configure.jpg[]
+
+Press the _Generate Cert_ button
+
+[icon="./images/icons/info.png"]
+[NOTE]
+It is important the certificate is saved in the default location, using the default name of _listen.pem_ 
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+A simple way to reconfigure a certificate is to delete _listen.pem_ and _listen.crt_ from the default location. +
+You will be prompted to create new ones the next time 1-to-1 Assistance is started in provide mode.
+
+
+{nbsp}
+
+{nbsp}
+
+Accept or decline the opportunity to view the certificate and key
+
+image:1-to-1_assistance/p_certificate_view.jpg[]
+
+{nbsp}
+
+{nbsp}
+
+A window opens to indicate provide mode is listening for a receiver system to request a connection
+
+image:1-to-1_assistance/p_listening.jpg[]
+
+Leave this window running while awaiting a connection request 
+
+{nbsp}
+
+{nbsp}
+
+When you close the listening window, or when the shared desktop session ends,  a window opens asking what you want to do
+
+image:1-to-1_assistance/p_select_listen_or_exit.jpg[]
+
+Press the _Listen_ button to wait for a further connection request, or the _Exit_ button to close
+
+{nbsp}
+
+{nbsp}
+
+.Links
+
+<<table_of_contents,Table of Contents>> +
+<<scenario_private_session_via_the_internet,Scenario Private Session via the Internet>> +
+<<utilities_available_when_providing_assistance,Utilities Available When Providing Assistance>> 
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+anchor:utilities_available_when_providing_assistance[]
+
+== Utilities Available When Providing Assistance
+
+When the desktop of the receiver is displayed on the screen of the provider, a range of built-in utilities become available. +
+Move the cursor of the provider system into the shared desktop and press F8. +
+A popup menu is displayed
+
+image:1-to-1_assistance/p_utilities_popup_menu.jpg[]
+
+Select _Dismiss popup_ to close the popup menu +
+Select _Quit viewer_ to close the session and the connection to the receiver system
+
+The remaining entries are described in the installed or on-line manuals of X11VNC and SSVNC. +
+Some provide enhanced functionality, others affect perceived performance.
+
+.Some of the most useful enhancemets
+
+* _Text Chat_ opens a window on both systems which enables both operators to communicate
+* _File Transfer_ opens a window on the provider screen that enables 2 way movement of files
+* _Clipboard_ enables the provider system to send/receive the contents of either clipboard
+
+.Some that might improve perceived performance
+
+* _8 Bit Color_ reduces the number of colors on shared desktop displayed on the provider screen
+* _Grey Scale_ displays only shades of grey on shared desktop displayed on the provider screen
+
+.Some that will probably degrade perceived performance
+
+* _Full Color_ displays the maximum number of colors in the shared desktop displayed on the provider screen
+* _Scale Viewer_ adjusts the size of the shared desktop displayed on the provider screen
+* _Set 1/n Server Scale_ adjusts the size of the shared desktop displayed on the provider screen
+* _Toggle Tight/ZRLE_ adjusts the way in which changes on the receiver desktop are handled on the provider screen
+
+[icon="./images/icons/info.png"]
+[NOTE]
+Quality level, Compress level, and Disable JPEG only apply +
+when using Tight encoding rather than the default ZRLE
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+The amount by which performance changes will vary from +
+system to system and network to network. +
+Refer to the section _Fine Tuning_ for more details.
+
+{nbsp}
+
+.Links
+
+<<table_of_contents,Table of Contents>> +
+<<fine_tuning,Fine Tuning>>
+
+{nbsp}
+
+{nbsp}
+
+
+
+anchor:fine_tuning[]
+
+== Fine Tuning
+
+Usually the default settings do not have to be changed for 1-to-1 Assistance to work.
+
+The percieved performance of a system can be influenced by any combination of, the vast range of potential kit, the huge variety of software that might be installed, the way applications are used, the enormous number of ISPs.  These mean there is no single set up that can optimally cover every permutation.  Tweaking is possible and might help handle local variations.
+
+This section covers 3 main areas:
+
+* External influences that cannot be tuned by 1-to-1 Assistance
+* Tuning that might improve performance
+* Tuning that does not affect performance
+
+{nbsp}
+
+=== External influences that cannot be tuned by 1-to-1 Assistance
+
+Any or all of the following might be present and constraining performance
+
+{nbsp}
+
+.Factors that might be present in either or both of the provider and receiver locations
+
+* Capability and resources of the local computer e.g.
+** Video adaptor and driver
+** CPU power
+** Amount of physical RAM
+** Storage read/write speed
+** Network adaptor speed
+* Reliability of connection to the local network
+* Congestion of the local network e.g.
+** The number of concurrent network users
+** The nature of the tasks the network users are conducting
+* Quality of service settings on the local network
+
+{nbsp}
+
+.Factors that might be ISP dependent
+
+* Speed of the modem making the connection to the ISP
+* Upload/Download speeds governed by the ISP
+* Congestion of the ISP network
+* Any other traffic shaping model imposed by the ISP
+
+{nbsp}
+
+=== Tuning that might improve performance
+
+Optimising performance is based on 2 ideas
+
+* Have both provider and receiver systems do as little work as practicable
+* Whenever possible have the necessary work done on the most capable system
+
+The default set up incorporates these ideas but is able to be enhanced when wanted. Implement any/all the following for the duration of the session.
+
+{nbsp}
+
+.Receiver System
+
+These tweaks are visible on both the receiver and provider screens.  They may be performed by either
+
+* The receiver operator before a connection is established
+* The provider operator after a connection is established
+
+{nbsp}
+
+_Desktop Wallpaper or Colour_ +
+Colourful and highly detailed images require more work to process.  The more plain and undecorated the desktop background, the less work is needed to reproduce it. Prefer a wallpaper having a single non-graduated colour.  Alternatively, switch off the desktop wallpaper and use a solid colour for the background.
+
+Example ::
+Switch off whichever you are using to manage the desktop +
+Desktop->Settings +
+*{nbsp}RoxPinboard +
+*{nbsp}SpaceFM-Desktop +
++
+Substitute the wallpaper image with a colour +
+Control Center->Choose Wallpaper->Static->No Wallpaper->Select Color +
+Set to solid grey +
+*{nbsp}Red:   160 +
+*{nbsp}Green: 160 +
+*{nbsp}Blue:  160
+
+{nbsp}
+
+_Desktop Size/Screen Resolution_ +
+In cases where the receiver system is a more capable system than the provider system, it is beneficial to change the screen resolution of the receiver system in order to resize the shared desktop.  Doing this is preferable to scaling the shared desktop on only the provider screen via _Scale Viewer_ or _Set 1/n Server Scale_.  Using either of these places an extra workload on the provider system which might be seen as degraded performance.
+
+{nbsp}
+
+_Unnecessary Applications_ +
+Close all applications that are not required for the session.  It is particularly beneficial to shut down any application that might produce any form of on-screen movement.  Unnecessary on-screen movement requires extra workload to be handled during the session which in turn results in degraded performance.
+
+Examples
+
+* Web browser  (ads and embedded video etc)
+* Video player (films of any sort)
+* Music player (artwork, and/or progress bars)
+* Conky        (graphs or other indicators)
+
+{nbsp}
+
+_Window Manager Theme & Icon Set_ +
+The beneficial affect of switching these might be apparent only on the oldest, least capable kit. Switch to a very plain, low colour version of both.  Colourful themes and icon sets that use fancy images and gradients result in a higher bandwidth use which can degrade performance. 
+
+{nbsp}
+
+.Provider System
+
+These tweaks are visible on only the provider screen.  They may be performed by the provider operator after a connection is established.
+
+{nbsp}
+
+_8 Bit Color_ +
+The higher the bit colour, the greater is the number of colours displayed which might be seen as degraded performance.  8 bit colour is a low colour mode which requires less work to process.  The reduced number of colours are often acceptable for many tasks during a short session.
+
+{nbsp}
+
+_Grey Scale_ +
+The receiver system will usually display its desktop in colour mode.  This means the provider system has to handle the corresponding workload in order to display the shared desktop in colour mode.  Using _Grey Scale_ enables this workload to be reduced as no colours are reproduced.  The entire contents of the shared desktop are displayed in shades of grey, whilst retaining the same clarity and usability as colour mode.
+
+{nbsp}
+
+=== Tuning that does not affect performance
+
+{nbsp}
+
+_Taskbar Icon_ +
+When running in receive mode, by default an icon is placed in the taskbar (panel) to indicate the provider is sharing your desktop.  The X11VNC application window can be shown on your desktop instead by changing a setting.
+
+[icon="./images/icons/info.png"]
+[NOTE]
+Settings are held in a hidden file in your home folder +
+.1-to-1_assistance_receive_rc
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+A simple way to open .1-to-1_assistance_receive_rc for editing is +
+1. Switch your file manager to show hidden files +
+2. Browse your home folder +
+3. Select the file and open it in your text editor
+
+In the file, find the line that refers to setting the _gui_. +
+Remove the reference to the default value of _tray_ and save the file.
+
+[icon="./images/icons/settings.png"]
+[NOTE]
+==== 
+Example setting to display the X11VNC window
+----
+...
+-gui simple
+...
+----
+====
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+== Summary of Files
+
+Receive Mode
+
+* Configuration file is located in /home/USERNAME/.1-to-1_assistance_receive_rc
+* Log file is located in /home/USERNAME/.1-to-1_assistance_receive.log
+
+Provide Mode
+
+* Configuration file is located in /home/USERNAME/.vnc/profiles/1-to-1_assistance_provide.vnc
+* SSL security certificates are located in /home/USERNAME/.vnc/certs/listen.crt and listen.pem
+* Global settings file for all SSVNC viewers is located in /home/USERNAME/.ssvncrc
+
+Executable files are located in /usr/local/bin/
+
+* 1-to-1_assistance.sh is the launcher script
+* 1-to-1_assistance_receive.sh is the wrapper script for X11VNC Server
+* 1-to-1_assistance_provide.sh is the wrapper script for SSVNC Viewer
+
+Menu file is located in /usr/share/applications/antix/
+
+* 1-to-1_assistance.desktop 
+
+Icon file is located in /usr/share/pixmaps/
+
+* 1-to-1_assistance.png
+
+{nbsp}
+
+{nbsp}
+
+
+
+
+
+== References
+
+X11VNC Server
+http://www.karlrunge.com/x11vnc
+
+SSVNC Viewer
+http://www.karlrunge.com/x11vnc/ssvnc.html
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
