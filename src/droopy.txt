@@ -13,6 +13,7 @@
 * link:#_transferring_files[Transferring Files]
 * link:#_fine_tuning[Fine Tuning]
 * link:#_summary_of_files[Summary of Files]
+* link:#_video[Video] 
 
 {nbsp}
 
@@ -302,3 +303,7 @@ Menu files are located in /usr/share/applications/antix/
 Icon file is located in /usr/share/pixmaps/
 
 * droopy.png
+
+== Video
+antiX 13 - Droopy - A Simple Way to Transfer Files  by runwiththedolphin
+https://www.youtube.com/watch?v=J2I0okt7mIU

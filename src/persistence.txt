@@ -18,10 +18,13 @@
 *  link:#_how_do_I_create_persistence_files[How do I Create Persistence Files?]
 
 *  link:#_using_the_antix2usb_gui_app[Using the antix2usb gui app]
+*  link:#_video[Video] 
+
 
 [[under-toc]]
 == What is Persistence?
 {top}
+image:persistence.jpg"[]
 
 Persistence is a hybrid between a LiveCD/USB and a full install.  One
 of the beauties of a LiveCD is that it allows you to boot Linux
@@ -194,3 +197,7 @@ There are four options here.
  - root persistence - check root and select size
  - Both home and root persistence - check both home and root and select sizes.
 {top}
+
+== Video
+ by runwiththedolphin
+

@@ -11,7 +11,7 @@
 *  link:#_installation[Installation]
 *  link:#_post_installation[Post Installation]
 *  link:#_some_great_features_in_antix[Some Great Features in antiX]
-*  link:#_antix15[antiX-15]
+*  link:#_antix16[antiX-16]
 *  link:#_links[Links]
 
 
@@ -20,7 +20,7 @@
 {top}
 image:default_desktop.png"[]
 
-If you're a first-time user of antiX   — welcome!
+If you're a first-time user of antiX  — welcome!
 
 Instead of a heavy common Desktop Environment, antiX uses window
 managers to control what the end-user can see and do. We hope these
@@ -28,13 +28,13 @@ FAQs will give you a basic orientation to antiX and its window
 managers, and provide the means to explore further on your own.
 
 antiX comes in three flavours for 32 and 64 bit boxes.
-antiX comes as a 'full' distro (667MB), 
-a 'base' distro (567MB) and a 'core' distro (c222MB) all with a kernel 
+antiX comes as a 'full' distro (<700MB), 
+a 'base' distro (c520MB) and a 'core' distro (<200MB) all with a kernel 
 that will boot "antique" PII, PIII computers as well as the latest 
 "modern" processors. 
  
-By default, antiX loads into a Rox-icewm desktop (antiX-base into a
-Rox-fluxbox desktop) with a few icons on the desktop. Use F6 at the boot menu
+By default, antiX loads into a Rox-IceWM desktop ('antiX-base' into a
+Rox-fluxbox desktop) with a few icons on the desktop. Use 'F6' at the boot menu
 screen to choose your desktop. 
 What you choose running live will automatically transfer if/when installed.
 
@@ -46,8 +46,8 @@ external drives, sticks, cards etc. You can even run it live,
 add/remove applications, customize it, remaster it and then install. 
 All your changes will carry over to install!
 
-antiX is based on Debian and comes with a custom kernel. 
-antiX also has its own custom scripts and repository to enhance user
+antiX is based on 'Debian' but is totally free of 'systemd'! It comes with 
+a custom kernel, its own custom scripts and repository to enhance user
 experience. antiX can be used as a 'rolling release' distro ie you should be able
 to keep your applications up to date by regularly upgrading. If you
 wish you can enable the Debian testing or unstable repositories and live on the
@@ -58,6 +58,8 @@ A further feature of antiX is that you can install kernels from a
 variety of sources including Debian, siduction, aptosid and liquorix. 
 This is especially useful if you have a new box as newer hardware is more
 likely to be detected and work with newer kernels. 
+
+Don't forget - antiX is systemd free!
 
 == System requirements.
 {top}
@@ -70,7 +72,7 @@ pre-configured 128MB swap to the latest powerful boxes.
 'antiX-core' and 'antiX-base' will run with '128MB RAM plus swap', but don't expect miracles!
 
 '192MB RAM' is the 'recommended minimum' for antiX. 
-'256MB RAM' and above is 'preferred' especially for antiX-full.
+'256MB RAM' and above is 'preferred' especially for 'antiX-full'.
 
 'antiX-full' needs a '2.8GB' minimum hard disk size. 
 'antiX-base' needs '1.6GB' and 
@@ -81,17 +83,17 @@ pre-configured 128MB swap to the latest powerful boxes.
 
 === Which flavour should I use?
 
-Most users will be happy to use antiX-full as it offers a full desktop experience
+Most users will be happy to use 'antiX-full' as it offers a full desktop experience
 on legacy and modern computers.
 
 If you have a very old desktop/laptop with less than 256MB RAM (PII, PIII), or you want 
-a desktop with "the basics", it is probably best to use antiX-base.
+a desktop with "the basics", it is probably best to use 'antiX-base'.
 
 If you want complete control over what applications to install and know the Debian
-system fairly well, then use antiX-core.
+system fairly well, then use 'antiX-core'.
 
 
-=== Why are there so many F options in the boot menu?
+=== Why are there so many 'F' options in the boot menu?
 
 Choice! antiX tries to make it easy to boot on any hardware ranging from old boxes where 
 booting with xvesa is needed to boxes with nvidia, radeon and intel drivers.
@@ -99,7 +101,7 @@ booting with xvesa is needed to boxes with nvidia, radeon and intel drivers.
 
 === I don't want icons on the desktop, how do I disable them?
 
-Use F6 to set the desktop.
+Use 'F6' to set the desktop and do not choose any of the 'Rox-' or 'Space-' options.
 
 
 === Can I install applications when running 'live'?
@@ -111,7 +113,8 @@ Yes you can and if you decide to install during that 'live' session, they will c
 
 === I have an old laptop with very low RAM, what should I do?
 
-If you have less than 128MB RAM, it is best to use the cli-installer from the boot menu to install.
+If you have less than 128MB RAM, and want to test antiX live, choose one of the 'min-' options at 'F6'.
+To install to hard drive, at the live boot menu, type 3, login as root and type cli-installer.
 
 It is also a good idea to create a swap partition before installation.
 
@@ -130,9 +133,9 @@ grub to the MBR.
 
 Yes, in fact this is the best way to install your 'localised' antiX.
 
-Set your options via the F keys and if you use a writable device, use F8 to save your choices.
+Set your options via the 'F2' and 'F3' keys and if you use a writable device, use 'F8' to save your choices.
 
-Alernatively, you can do this manually by setting a variety of 'cheats.' For example: 'lang=en'  
+Alernatively, you can do this manually by setting a variety of 'cheats'. For example: 'lang=en'  
 'kbd=us,gr'  'tz=Europe/Athens' will give a US English desktop, a toggled Greek, English keyboard 
 and the timezone set to Athens, Greece.
 
@@ -141,7 +144,7 @@ and the timezone set to Athens, Greece.
 
 === How to Setup nvidia/ATI graphics drivers? 
 
-antiX suggests using the smxi tools. See smxi section.
+antiX suggests using the 'smxi' tools. See smxi section.
 
 
 === How to autologin?
@@ -153,10 +156,13 @@ You will need to reboot for changes to take effect.
 
 === How to set the correct date and time?
 
-The best way is to do so at fist boot when running live. F4 has these options.
+The best way is to do so at first boot when running live. 'F4' has these options.
 
-*hwclock=utc
-*hwclock=local
+* hwclock=ask
+
+* hwclock=utc
+
+* hwclock=local
 
 Default is set to UTC.
 
@@ -165,7 +171,9 @@ You are also given an option during installation to set the hwclock.
 If you missed the above, then there are 3 possible issues:
 
 1) wrong timezone
+
 2) wrong selection of UTC versus local time
+
 3) BIOS clock set wrong 
 
 The first issue is addressed with 'sudo dpkg-reconfigure tzdata'. Do this first. You should also be able 
@@ -192,29 +200,32 @@ But you have to first go through the steps above before 'ntp' will work correctl
 
 === How to edit sources list? 
      
-Either via synaptic (for antiX-full) Control Centre--> System--> Manage Packages--> Settings--> Repositories 
-or edit individual files in /etc/apt/sources.d/ (for antiX-base and antiX-core)
+Either via synaptic (for 'antiX-full') Control Centre--> System--> Manage Packages--> Settings--> Repositories 
+or edit individual files in /etc/apt/sources.d/ (for 'antiX-base' and 'antiX-core')
 
 
 === How to enable the Firewall?
 
-Gufw is installed, but not enabled.
+'Gufw' is installed, but not enabled.
 Open Control Centre--> Network--> Manage Firewall
 
 
 === How do I find which applications to install?
 
-antiX-full comes with synaptic so searching for applications is easy.
-To search for applications in antiX-base and antiX-core use 'apt-cache search' in a terminal.
+Both 'antiX-full' and 'antiX-base' come with 'metapackage-installer', which makes it easy to install
+popular applications. See below for more information.
+
+'antiX-full' comes with 'synaptic' so searching for applications is easy.
+To search for applications in 'antiX-base' and 'antiX-core' use 'apt-cache search' in a terminal.
 
 For example:  'apt-cache search video player'
 
 
 === How do I keep the system up-to-date?
 
-antiX is set up using Debian Stable repositories by default. This allows 
+antiX is set up using 'Debian Stable' repositories by default. This allows 
 users to keep their system up to date with regular upgrades. antiX recommends
-using apt-get update followed by apt-get dist-upgrade. Alternatively, use smxi.
+using 'apt-get update' followed by 'apt-get dist-upgrade'. Alternatively, use smxi.
 
 
 === DVD videos don't play. How come?
@@ -226,7 +237,7 @@ the command line.
  * apt-get update
  * apt-get install libdvdcss2
 
-Alternatively, use the meta-installer application.
+The easiest way is to use the 'metapackage-installer' application as it automatically does the above for you.
 
 antiX strongly advises users not to keep the deb-multimedia repository enabled as there may be
 conflicts.
@@ -234,11 +245,11 @@ conflicts.
 
 === What window managers are available in antiX?
 
-These window manager options come installed and ready to use (no IceWM in antiX-base):
+These window manager options come installed and ready to use (no IceWM in 'antiX-base'):
 
-* the lightweight Rox-IceWM (default) (antiX-full only)
-* the lightweight IceWM (antiX-full only)
-* the lightweight SpaceFM-IceWM (antiX-full only)
+* the lightweight Rox-IceWM (default) ('antiX-full' only)
+* the lightweight IceWM ('antiX-full' only)
+* the lightweight SpaceFM-IceWM ('antiX-full' only)
 * the minimalist manager Rox-Fluxbox
 * the minimalist manager Fluxbox
 * the minimalist manager SpaceFM-Fluxbox
@@ -250,18 +261,18 @@ All window managers can be run with or without the ROX or SpaceFM Desktop
 environment that provides drag-and-drop functionality or the Conky 
 system monitor that displays real-time information.
 
-antiX also comes with herbstluftwm,a manual tiling window manager .
+antiX also comes with 'herbstluftwm', a manual tiling window manager .
 
 
-=== What are the min- options?
+=== What are the 'min-' options?
 
 If you want to keep RAM usage as low as possible, you can choose one of the
-min- options. There is no wallpaper, no desktop icons, no conky and no applications running in the panel. 
+'min-' options. There is no wallpaper, no desktop icons, no conky and no applications running in the panel. 
 
 
 === How do I change from one WM to another?
 
-You can switch from by clicking on the menu --> Desktop --> Other Desktops, 
+You can switch by clicking on the menu --> Desktop --> Other Desktops, 
 
 
 === And how to set the default one?
@@ -303,7 +314,7 @@ there are several options including shutdown.
 == Some Great Features in antiX
 {top}
 
-antiX2usb:     
+=== antiX2usb:     
 
 For those familiar with the option in Puppy for persistent home via live USB, 
 liveCD or fromiso: welcome! antiX now has a similar feature called antiX2usb 
@@ -313,46 +324,53 @@ you can choose to have a liveusb with persistence.
 You can do the same from a live cd/live usb or an installed system using 
 an antiX, MEPIS or Debian iso file.
 
-Metapackage-installer:
+=== Metapackage-installer:
 
 Located in Menu--> Applications-->System Tools --> metapackage-installer 
 You can install packages for Disk-Recovery, Web Browsers, Graphics, Kids, Language, LaTex, 
 Network, Non-free, Office, Server, WindowManager . . . simply choose the package you want, and 
 the installer will do the rest. (internet connection required)
 
-LuckyBackup:
+=== LuckyBackup:
 
 Can be found in Control Centre--> Disks--> Backup Your System 
 or in Menu--> Applications-->System Tools--> luckyBackup
 
-iso-snapshot:
+=== iso-snapshot:
 
 Want to make a live iso backup of what you have installed on your hard drive?
 Then, this is for you! Simple, but effective.
 
-Remaster and Persistence:
+=== Remaster and Persistence:
 
 Not only have we made it easy to set up antiX live with persistence, we also make it
 easy to create a remaster of the running live system! 
 
-Customised gfxboot menu:
+=== Customised gfxboot menu:
 
-Use the F keys to set up how you want antiX to boot in live mode and F8 to save the changes
+Use the 'F' keys to set up how you want antiX to boot in live mode and 'F8' to save the changes
 for future live boots!
 
 *F1 - Help
+
 *F2 - Language
+
 *F3 - Time zone
+
 *F4 - Various hardware options
+
 *F5 - Persistence options
-*F6 - Desktop options
+
+*F6 - Desktop and font size options
+
 *F7 - Console resolution options
+
 *F8 - Save changes (only on writable media)
 
 
 === I don't like that splash image. It takes up too much of my small screen space. How do I boot without it?  
 
-Easy. Just press F7 console (F6 on core) and choose the 'default' option.
+Easy. Just press 'F7' console ('F6' on core) and choose the 'default' option.
 
 
 === What do you mean by Safe Video Mode and Failsafe in the menu?
@@ -365,124 +383,120 @@ Failsafe Boot
 In addition to forcing safe video, also load all drivers early in the boot process. 
 Try this option if the system does not boot at all. 
 
-    
-== antiX-15
+
+== antiX-16 
 {top}
 
-=== So, what's in antiX-15?
+=== So, what's in antiX-16?
 
 Lots! Explore!
 
-*Based on Debian Jessie, but without systemd nor systemd-shim.
-*Customised 4.0.5 kernel with fbcondecor splash
-*libreoffice 4.3.3
-*iceweasel 31.7.0esr
-*claws-mail 3.11.1-3
-*xmms -for audio
-*gnome-mplayer - for playing video
-*smtube - play youtube videos without a using a browser
-*streamlight-antix - new application to stream videos with very low RAM usage.
+* Based on Debian Jessie, but without systemd nor systemd-shim.
+* Customised 4.4.10 LTS kernel with fbcondecor splash
+* libreoffice 4.3.3
+* firefox-esr
+* claws-mail 3.11.1-3
+* xmms -for audio
+* gnome-mplayer - for playing video
+* smtube - play youtube videos without a using a browser
+* streamlight-antix - stream videos with very low RAM usage.
 
 File managers and desktop:
-*spacefm
-*rox-filer
+
+* spacefm
+* rox-filer
 
 Convert your video and audio files with:
-*winff 
-*asunder
 
-Connect to the net with
-*wicd  
-*ceni
-*or gnome-ppp if you are still on dial-up
+* winff 
+* asunder
 
-Editors
-*geany 
-*leafpad
+Connect to the net with:
+
+* wicd  
+* ceni
+* or gnome-ppp if you are still on dial-up
+
+Editors:
+
+* geany 
+* leafpad
+* Midnight Commander
 
 Tools for remastering and creating snapshots of installed system:
-*iso-snapshot
-*remaster tools
-*Unetbootin
-*antix2usb
+
+* iso-snapshot
+* remaster tools
+* Unetbootin
+* antix2usb
 
 Others:
-* grub-customizer -as it says, customise your grub menu
+
 * hexchat - gui chat
 * luckybackup - excellent backup tool. There's nothing lucky about it!
 * simple-scan - for scanning documents
 * transmission-gtk - torrent downloader
-* wingrid-antix - Turn the stacking window managers into tilers.
+* wingrid-antix - turn the stacking window managers into tilers.
 * xf86-video-sis-antix - added since it is not in Debian jessie
 * Xfburn for burning cd/dvd 
 * connectshares-antix for network shares
 * droopy-antix - an easy way to transfer files over the net. 
 * flashplugin-nonfree - flash video
 * install-meta-antix - install applications easily and safely
-* antiX Control Centre - An easy way to 
+* antiX Control Centre - an easy way to do just about anything!
 
-Why not try out our included cli apps:
+Why not try out our included 'cli' apps:
 
-*Editors: nano and vim
-*Newsreader: newsbeuter
-*Chat: irssi
-*Audio player: mocp
-*Video player: mpv
-*Email: alpine
-*Audio ripper: abcde
-*Torrent: rtorrent
-*Cd burner: cdw
-*Writer: Wordgrinder
- 
-
-=== What other changes since antiX-13?
-
-*No longer using .xinitrc to set the desktop. We now use 'daves-desktop' session scripts
-*Desktop is automatically set to use the one rebooted or halted from
-*iso-snapshot replaces snapshot-antix
-*menu-manager - a great tool to personalise your menus
-*fbcondecor/fbsplash on console (optional)
-*Tidied up menus and desktop
-*sudo is now default so opening gui apps needing a password, type username password
-(This can be changed back to using root password via Control Centre)
-*Set up your preferred applications via Preferred Applications in Control Centre
-*Soundcard detector
-*Streamlight - another great tool for streaming videos with very low RAM usage.
-*Desktop session settings in Control Centre
-
+* Editors: nano and vim
+* Newsreader: newsbeuter
+* Chat: irssi
+* Audio player: mocp
+* Video player: mpv
+* Audio ripper: abcde
+* Torrent: rtorrent
+* Cd burner: cdw
+* Writer: Wordgrinder
 
 === Tell me more about those Desktop Settings
 
 Since antiX is designed to work on older boxes, we have attempted to make the desktop session more robust.
 Also, we have tried to make it as easy as possible for new users and highlight its features.
 However, depending on your hardware and tastes, you may wish/need to make some changes.
-For example, by removing the 'Session is loading' popup and/or increasing/decreasing the desktop startup delay.
-The configuration files are found in Control Centre-->Session-->Global Desktop Session
+For example, increasing/decreasing the desktop startup delay.
+The configuration files are found in Control Centre-->Session-->User Desktop Session
 
 
 === Can you give me an example?
 
-Ok, I want to use icewm without desktop icons, choose a colour background, and only have the volume icon on the taskbar.
+Ok, I want to use IceWM without desktop icons, choose a colour background, and only have the volume icon on the taskbar.
 My box is new, so I want to reduce the startup delay and keep conky on the desktop.
 
 1.Boot using IceWM option or change to it via Menu-->Desktop-->Other Desktops
-2.Control Centre-->Session-->Global Desktop Session click on 'startup' tab and comment # entries you do not want to use
-3.Control Centre-->Session-->Global Desktop Session click on 'desktop-session.conf' and make the following changes
+
+2.Control Centre-->Session-->User Desktop Session click on 'startup' tab and comment # entries you do not want to use
+
+3.Control Centre-->Session-->User Desktop Session click on 'desktop-session.conf' and make the following changes
 Startup delay "0"
 Notification dialog "false"
+
 4.Use the Wallpaper application in Control Centre-->Desktop to set 'No wallpaper' and a background colour.
+
 5.Logout and log back in to your customised desktop. They will be saved on reboot.
 
 
-=== What kernel is antiX-15 using? 
+=== What kernel is antiX-16 using? 
 
-A customised 4.0.5 version.
+A customised 4.4.10 version.
+
+There are several other kernels available via the 'metapackage-installer' application. Such as:
+
+* custom-4.6.2 non-PAE and PAE for both stable and testing/sid
+* various non-PAE and PAE 'libre' kernels for both stable and testing/sid
 
 
 === Does flash work?
 
-Yes, OOTB! For some PII/PIII boxes, the latest flash will not work so antiX-15 32 bit isos ship with
-a working older version as default.
+Yes, OOTB! For some PII/PIII boxes, you may need to use an older version of flashplugin.
 
 
 === The default Debian repository is set to jessie. Does this mean antiX is no longer based on Debian Testing?

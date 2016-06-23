@@ -11,11 +11,12 @@
 *  link:#_basic_customization[Basic Customization]
 *  link:#_advanced[Advanced]
 *  link:#_links[Links]
-
+* link:#_video[Video]
 
 [[under-toc]]
 == First look
 {top}
+image:rox-icewm.jpg"[]
 
 .What is this desktop?
 
@@ -199,3 +200,6 @@ a single or at most 2 clicks.
 * {ob}link:http://roscidus.com/desktop/hints_and_tips[Desktop tips and hints]{cb}.
 * {ob}link:http://rox.sourceforge.net/Manual/Manual/Manual.html[ROX-Filer Guidebook]{cb}.
      
+== Video
+AntiX 13 - The File Managers Part 1 - ROX by runwiththedolphin
+https://www.youtube.com/watch?v=Stnh4NvzCX0

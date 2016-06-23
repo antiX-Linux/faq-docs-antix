@@ -7,11 +7,12 @@
 [compact]
 *  link:#under-toc[First look]
 *  link:#_links[Links]
-
+* link:#_video[Video]
 
 [[under-toc]]
 == First look
 {top}
+image:space-icewm.jpg"[]
 
 .What is this desktop?
 
@@ -36,4 +37,9 @@ Everything you want/need to know about SpaceFm is in its manual see link below.
 {top}
 
 * http://ignorantguru.github.io/spacefm/spacefm-manual-en.html
-    
+
+== Video
+{top}
+AntiX 13 - The File Managers Part 2 - SpaceFM by runwiththedolphin
+https://www.youtube.com/watch?v=BJN9j8KHRZE
+ 

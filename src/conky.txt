@@ -16,6 +16,7 @@
 [[under-toc]]
 == First look
 {top}
+image:conky.jpg"[]
 
 .What is this stuff I see in the upper right corner?
 

@@ -15,6 +15,7 @@
 [[under-toc]]
 == First look
 {top}
+image:jwm.jpg"[]
 
 .What is this?
 

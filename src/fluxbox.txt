@@ -15,6 +15,7 @@
 [[under-toc]]
 == First look
 {top}
+image:rox-fluxbox.jpg"[]
 
 .Where do I start? I don't see a Start or Menu button.
 

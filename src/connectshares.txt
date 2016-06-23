@@ -15,6 +15,7 @@
 * link:#_disconnecting_from_remote_shares[Disconnecting from Remote Shares]
 * link:#_shares_on_multiple_remote_systems[Shares on Multiple Remote Systems]
 * link:#_summary_of_files[Summary of Files]
+* link:#_video[Video]
 
 {nbsp}
 
@@ -504,3 +505,7 @@ All icon files are located in /usr/share/pixmaps/
 * connectshares.png
 * connectshares-config.png
 * disconnectshares.png
+
+== Video
+antiX 15 - Find and Mount Network Shares by runwiththedolphin
+https://www.youtube.com/watch?v=pp95SzXLp7Q

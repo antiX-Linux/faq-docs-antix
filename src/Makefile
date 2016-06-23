@@ -2,7 +2,7 @@
 EDITOR  := gvim -p
 BROWSER := firefox
 
-FILES := conky fluxbox icewm smxi rox spacefm index jwm persistence remaster snapshot connectshares droopy wingrid
+FILES := conky fluxbox icewm smxi rox spacefm index jwm persistence remaster snapshot streamlight boot-params connectshares droopy 1-to-1_assistance 1-to-1_voice wingrid 
 FILES := $(FILES) 
 
 HTML_FILES := $(FILES:%=%.html)
