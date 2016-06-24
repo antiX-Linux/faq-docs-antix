@@ -1,3 +1,41 @@
+faq-docs-antix (0.4.6) unstable; urgency=medium
+
+  * Documentation for antiX-16 - incomplete
+
+ -- anticapitalista <antix@operamail.com>  Fri, 24 Jun 2016 00:12:48 +0300
+
+faq-docs-antix (0.4.5) unstable; urgency=medium
+
+  * Updated boot menu html document
+  * Updated FAQ
+
+ -- anticapitalista <antix@operamail.com>  Mon, 23 May 2016 13:05:31 +0300
+
+faq-docs-antix (0.4.4) unstable; urgency=low
+ 
+  * Included 1-to-1 apps documentation.
+
+ -- anticapitalista <antiX@operamail.com>  Mon, 26 Oct 2015 18:24:00 +0200
+
+
+faq-docs-antix (0.4.3) unstable; urgency=low
+ 
+  * Minor edits to antiX-boot.css
+  * Added boot-params
+  * Removed 1-to-1 apps documentation.
+
+ -- anticapitalista <antiX@operamail.com>  Sun, 05 July 2015 12:59:00 +0200
+
+
+faq-docs-antix (0.4.2) unstable; urgency=low
+ 
+  * Included Snapshot, Streamlight
+  * Edited Persistence, Remaster, Index.
+  * antiX-boot.conf to allow to installation of 1-to-1 apps.
+
+ -- anticapitalista <antiX@operamail.com>  Fri, 03 July 2015 16:55:00 +0200
+
+
 faq-docs-antix (0.4.1) unstable; urgency=low
  
   * Updated content.
