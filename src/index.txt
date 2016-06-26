@@ -393,17 +393,17 @@ Lots! Explore!
 
 * Based on Debian Jessie, but without systemd nor systemd-shim.
 * Customised 4.4.10 LTS kernel with fbcondecor splash
-* libreoffice 4.3.3
-* firefox-esr
-* claws-mail 3.11.1-3
+* libreoffice 4.3.3-2
+* firefox-esr 45.2.0
+* claws-mail 3.13.0
 * xmms -for audio
 * gnome-mplayer - for playing video
-* smtube - play youtube videos without a using a browser
+* smtube 16.3.0 - play youtube videos without a using a browser
 * streamlight-antix - stream videos with very low RAM usage.
 
 File managers and desktop:
 
-* spacefm
+* spacefm 
 * rox-filer
 
 Convert your video and audio files with:
@@ -514,6 +514,6 @@ Sid. Future releases will default to Debian Testing.
 Users really should have a look at the absolutely wonderful videos made by dev team member dolphin_oracle. 
 
 * {ob}link:https://www.youtube.com/watch?v=G8Aw2zzBE-g&feature=youtu.be[Introducing antiX-16]{cb}
-* {ob}link:https://www.youtube.com/watch?v=0drtAQkE61M&feature=youtu.be[What's new in antiX-16]{cb}
+* {ob}link:https://www.youtube.com/watch?v=a9kaIoieEbk[What's new in antiX-16]{cb}
 * {ob}link:https://www.youtube.com/watch?v=H_uoEdhr9dk&feature=youtu.be[Installing antiX-16]{cb}
 * {ob}link:https://www.youtube.com/user/runwiththedolphin[antiX Videos]{cb}
