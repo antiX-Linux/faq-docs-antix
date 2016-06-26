@@ -1,3 +1,9 @@
+faq-docs-antix (0.4.7) unstable; urgency=medium
+
+  * Minor changes to show antiX-16 verions of firefox-esr etc
+
+ -- anticapitalista <antix@operamail.com>  Sun, 26 Jun 2016 18:02:13 +0300
+
 faq-docs-antix (0.4.6) unstable; urgency=medium
 
   * Documentation for antiX-16 - incomplete
