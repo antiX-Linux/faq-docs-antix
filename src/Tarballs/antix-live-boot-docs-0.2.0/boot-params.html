@@ -1,0 +1,1156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ Live Boot Parameters</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="boot-params.html">Boot Params</a></td><td>&#187;</td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Live Boot Parameters</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">Synopsis</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_new_for_antix_15">New for antiX-15!</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_boot_livecd_usb">Boot LiveCD/USB</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#_the_boot_device">The Boot Device</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_the_boot_directory">The Boot Directory</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_debugging">Debugging</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_loading_modules">Loading Modules</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_other_booting_options">Other Booting options</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#_persistence">Persistence</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#_the_persistence_device">The Persistence Device</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#boot-options">Other Persistence Options</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#_remastering">Remastering</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_frugal_install">Frugal Install</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#_the_frugal_device">The Frugal Device</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#_x_windows">X-Windows</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#_keyboard_options">Keyboard Options</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_x_windows_video_options">X-Windows Video Options</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#_mounting">Mounting</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_personalization">Personalization</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_other_live_system_features">Other Live System Features</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#_disable_some_systemv_services">Disable Some SystemV Services</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_other_live_options">Other Live Options</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#_list_of_all_boot_parameters_described">List of All Boot Parameters Described</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">Synopsis</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>This page explains many of the boot parameters that are used by antiX
+Live systems.  Most users will get by just fine by making selections
+in the bootloader menus.  The boot menus provide a convenient GUI for
+setting some of the options documented here.  Use the <span class="cheat">F12</span> key
+in the bootloader to see what boot options are selected by your
+current menu choices.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_new_for_antix_15">New for antiX-15!</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>These boot parameters have been recently added.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">blacklist=&lt;list&gt;</span>
+   A list of kernel modules to blacklist.  These modules won&#8217;t get
+   automatically loaded.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">blacklist=VIDEO</span>
+   If you add <span class="cheat">VIDEO</span> to the list then all KMS video modules will
+   get blacklisted.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">bootchart</span>  Create /var/log/bootchart.tgz.  Use the program
+   +pybootchartgui to convert this to a .png image to view what happens
+   when the Live system boots.  It is designed to stop recording a few
+   seconds after conky starts.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">desktheme=dark|light</span>
+   Choose either a dark theme or a light theme for the desktop.  Use
+   the command <code>set-desktop-theme</code> to change the theme from the
+   command line.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">earlyvid</span>
+   Try to load KMS video modules earlier in the boot process.  This
+   is mainly for debugging but if it works, it may give a a higher
+   resolution console slighter earlier in the boot process.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">failsafe</span>
+   This has the effect of combining several different boot parameters
+   that should allow antiX to boot on most systems and get to
+   X-Windows.  Some older system may need to use <span class="cheat">acpi=off</span> and
+   so forth.  These options are not enabled by default because they
+   may be rarely needed and each one has a cost associated with it
+   such as poorer graphics resolution and performance in X-Windows.
+   We hope on one will ever need to use the <span class="cheat">failsafe</span> option.
+   These are the boot options it enables:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>load=all
+blacklist=VIDEO
+from=all
+xorg=safe</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+<span class="cheat">hwclock=local|utc</span>
+   Assume that the hardware clock is set to either UTC or to localtime.
+   If you are dual booting with Windows then you should set the hardware
+   clock to localtime.  Otherwise, UTC is preferred.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">menus</span>
+   Enable a series of text-based menus to make the selections that are
+   normally made by the function key popup menus in the Live bootloader.
+   This is primarily for booting via UEFI since the UEFI bootloaders
+   don&#8217;t provide support for separate menus.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">plink</span>
+   Enable pseudo-links in the AUFS file system.  If you don&#8217;t know
+   what this means then you probably don&#8217;t want to use it although
+   it shouldn&#8217;t do any harm.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">private</span>
+   Get prompted for new root and demo passwords during the boot process.
+   The well known and well advertised default passwords for the root and
+   demo accounts on the Live system are a security risk.  Using your
+   own passwords instead of the defaults should make your system a little
+   safer.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">savestate</span> (<strong>LiveUSB Only</strong>)
+   Save certain "state" files across reboots even without persistence
+   enabled.  Also save certain machine-specific state files across
+   reboots.  You can control which files get saved by editing the
+   files <code>/live/boot-dev/antiX/state/general-state-files</code> and
+   <code>/live/boot-dev/antiX/state/machine-state-files</code>.  Those files and
+   the directory they are in will be created automatically the first
+   time you boot the LiveUSB.  This is enabled by default and it is
+   "sticky" so once you enable it it will stay enabled until you turn
+   it off.  See below.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">nosavestate</span> (<strong>LiveUSB Only</strong>)
+   disable saving state files.  See description above.  This too
+   is sticky so when you use it saving state will stay disabled
+   until you re-enable it.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_boot_livecd_usb">Boot LiveCD/USB</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>These options control how the Live media boots.  In particular the
+control where we look for the <code>linuxfs</code> file.  The location of this
+file will be used for other Live features such as persistence and
+remastering.</p></div>
+<div class="sect2">
+<h3 id="_the_boot_device">The Boot Device</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>The primary job of Live initrd is to find the compressed file system
+called a <strong>squashfs</strong> file.  For antiX and MX this file is normally
+named <code>linuxfs</code>.   We need to find the device this file is on and find
+the file on that device.</p></div>
+<div class="paragraph"><p>Normally we scan all cdrom (and dvd) and usb devices for that file.
+This default behavior can be modified with the following options.  The
+easiest way to specify the boot device is the <span class="cheat">from</span> option which
+specifies what type of device to boot from.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">from=&lt;list&gt;</span> The type of boot device.  Valid values:
+   <span class="cheat">cd hd usb</span>, and <span class="cheat">all</span>.  More than one is allowed.  The
+   default is <span class="cheat">usb,cd</span> so by default we will only look at
+   cdrom/dvd devices and usb devices to for the boot directory.  You
+   can also specify a device more specifically by giving a device
+   name (like <code>sda1</code>), a partition label, or a partition UUID.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>The <span class="cheat">bdev</span>, <span class="cheat">blab</span>, and <span class="cheat">buuid</span> options allow you
+to specify which device we look on to find the <code>linuxfs</code> file.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">bdev=&lt;name&gt;</span> The name of the boot device.  For example
+   <span class="cheat">bdev=sda</span>..
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">blab=&lt;label&gt;</span> The partition label of the boot device.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">buuid=&lt;uuid&gt;</span> The UUID of the boot device.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><strong>New for antiX-15:</strong> the <span class="cheat">buuid</span> option accepts simple wildcards
+such as <span class="cheat">*</span> and <span class="cheat">?</span>.  For example: <span class="cheat">buuid</span>1234*" will
+instruct us to look on all partitions that have a UUID that starts
+with "1234".</p></div>
+<div class="paragraph"><p>You can combine <span class="cheat">from</span> with <span class="cheat">bdev</span>, <span class="cheat">blab</span>, or
+<span class="cheat">buuid</span>.  For example: <span class="cheat">from=usb blab=antiX-LiveUSB</span> will
+instruct us to only look for partitions on usb/removable devices that
+have the label <code>antiX-LiveUSB</code>.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_the_boot_directory">The Boot Directory</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>By default, we look for the <code>linuxfs</code> file and and persistence
+files in the <code>antiX</code> directory on the boot device.   If you want
+to boot more than one Live system on the same device or if you
+want to do a frugal install, you should change that directory
+and use the <span class="cheat">bdir</span> parameter to point to the new directory.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">bdir=&lt;dir&gt;</span> The boot directory.  This is the directory where
+   we look for the <code>linuxfs</code> (squashfs) file, persistence files and
+   live-remaster files.  The default is <code>/antiX</code>.   The leading slash
+   is optional.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">sq=&lt;dir/file&gt;</span> Specify the linuxfs file plus the boot directory
+   all at once.  The default is <code>/antiX/linuxfs</code> but the leading slash
+   is optional.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_debugging">Debugging</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Sometimes booting problems can be tracked down to a missing driver or
+a driver that is not getting loaded.  These two boot parameters can be
+helpful in tracking down such problems.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">bp=N</span> Set one or more breakpoints in the live-init script
+   separated by commas.  Use <span class="cheat">bp=?</span> to get a list of breakpoints
+   to choose from.  The meanings may change with different versions so
+   use <span class="cheat">bp=?</span> be sure.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>breakpoint 1  before welcome
+breakpoint 2  before coldplug
+breakpoint 3  before looking for linuxfs file
+breakpoint 4  after mounting boot device
+breakpoint 5  after mounting persistence device
+breakpoint 6  after mounting aufs
+breakpoint 7  before prepare switch_root
+breakpoint 8  before running init.d scripts
+breakpoint 9  right before starting init</code></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>breakpoint F  After fsck
+breakpoint F  Before fsck
+breakpoint e  On possibly fatal error
+breakpoint f  in frugal install
+breakpoint i  after init= chroot
+breakpoint m  before makefs
+breakpoint r  After resize homefs rsync
+breakpoint r  Before resize homefs rsync
+breakpoint tr After copy to ram
+breakpoint u  final umount
+breakpoint v  before check VID
+breakpoint x  before select device</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+<span class="cheat">verb=M</span> Control how much gets printed out during the early
+   boot process.  The default level is <span class="cheat">verb=5</span>.  Lower numbers
+   print less, higher numbers print more.  Usually <span class="cheat">6</span> or
+   <span class="cheat">7</span> will show you more info without being too obnoxious.  The
+   full output is available in the <code>/var/log/live/bootloader.log</code>
+   file.  A partial version of the log file is available at
+   <code>/init.log</code> from within most breakpoints.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_loading_modules">Loading Modules</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>One of the primary tasks of the live-initrd is to mount the device
+that holds the <code>linuxfs</code> file which contains the final file system.
+Modules (also called drivers) sometimes need to be loaded to allow
+the kernel to talk to certain types of hardware.  Most of the time
+this is taken care of automatically but if you have very old or
+unusual hardware, there might be a glitch.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">load=&lt;list&gt;</span> Load one or more specific modules, separated by
+   commas. You need to know the name of the module or modules that you
+   want loaded for this to be useful.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">load=all</span> Load all modules in the initrd.  This is a shotgun
+   approach just in case there is module that is available in the
+   initrd that needs to be manually loaded for your system to boot
+   that is not getting loaded automatically.  In addition, extra
+   debugging information is added to the <code>initrd.log</code> file.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_other_booting_options">Other Booting options</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>These options affect the boot process but the don&#8217;t fit into any of
+the categories above.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">fromiso=&lt;file&gt;</span> Use this to boot from a iso file.  This
+   feature is deprecated because it defaults some of the more advanced
+   features of the Live system but is supported due to popular (or
+   otherwise) demand.  This can be abbreviated as <span class="cheat">iso=&lt;file&gt;</span>.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">try=NN</span> The maximum number of seconds to try finding the
+   <code>linuxfs</code> file.  The default is 15 seconds.  This replaces
+   <span class="cheat">rootdelay</span> which is no longer used.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_persistence">Persistence</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>These options enable and control Live persistence which allows you to
+make changes that will persist across reboots.  These options are
+normally used on LiveUSBs but if you specify a persistence device (or
+use the default LiveCD persistence device) then you can make use
+persistence on a LiveCD.  In this case, the changes will have to be
+saved on some other device that allows for read-write access.</p></div>
+<div class="paragraph"><p><strong>New for antiX-15:</strong> If you enable persistence on a LiveCD and and
+device with the label <strong>antiX-Persist</strong> is not found then we will give
+you a list of partitions to choose from and offer to give that device
+the label <strong>antiX-Persist</strong>.  If a form of persistence is <strong>required</strong> but
+the persistence file is not found then we will offer to create it for
+you.  We do not offer to create a persistence file if it is merely
+<strong>requested</strong> with one exception.  If root persistence is required and
+home persistence is requested and neither <code>rootfs</code> nor <code>homefs</code>
+persistence files exist then we will offer to create both a <code>rootfs</code>
+file and a <code>homefs</code> file.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">persist=&lt;list&gt;</span> This is the main option for controlling Live
+   persistence. It can be given one or more of the following
+   parameters, separated by commas:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">auto,a</span> Automatically create <code>rootfs</code> and/or <code>homefs</code> files
+   if they don&#8217;t already exist and they are required.  Normally, we
+   will prompt the user for size and file system type.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">hd</span> Only look on internal hard drives for the persistence
+   device. This is analogous to <span class="cheat">from=hd</span> for finding the boot
+   device.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">home!,h!</span>  Enable and require home persistence.  The exclamation
+   point means this form of persistence is required.  A non-fatal
+   error will be thrown if it cannot be enabled.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">home,h</span> Request home persistence but don&#8217;t require it.  We
+   will try to enable home persistence but if we can&#8217;t then this fact
+   is briefly noted and the boot continues normally.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">root!,r!</span>  Enable and require root persistence.  The exclamation
+   point means this form of persistence is required.  A non-fatal
+   error will be thrown if it cannot be enabled.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">root,r</span> Request root persistence but don&#8217;t require it.  We
+   will try to enable root persistence but if we can&#8217;t then this fact
+   is briefly noted and the boot continues normally.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">static,s</span> If root persistence is enabled then use the static
+   version of root persistence.  Normally, dynamic root persistence is
+   used.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">usb</span> Only look on usb partitions for the persistence device.
+   This is analogous to <span class="cheat">from=usb</span> for finding the boot device.
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_the_persistence_device">The Persistence Device</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Just like the boot device can be specified generally with the
+<span class="cheat">from=</span> option and more specifically with options like
+<span class="cheat">bdev=</span> the same choices are available for specifying the
+persistence device.</p></div>
+<div class="paragraph"><p>On a LiveUSB or a frugal install, the default persistence device is
+the boot device which is what you would expect.  Normally the
+persistence files will sit alongside the <code>linuxfs</code> file that we are
+booting from.</p></div>
+<div class="paragraph"><p>On a LiveCD the default persistence device is whatever device has the
+disk label <strong>antiX-Persist</strong>.  If you specify a persistence device with
+one of the three options below then the defaults are ignored.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">pdev=&lt;dev&gt;</span> The name of the persistence device.  For example:
+   <span class="cheat">pdev=sdb2</span>.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">plab=&lt;label&gt;</span> The partition label of the persistence device.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">puuid=&lt;uuid&gt;</span> The UUID of the persistence device.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_other_persistence_options">Other Persistence Options</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">ptry=NN</span> How many seconds to wait for the persistence device
+   to appear.  This is only relevant if the peristence device is
+   different from the boot device.  The default is 10 seconds.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_remastering">Remastering</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>These two options affect remastering.  Normally, remastering is done
+automatically whenever there is a <code>linuxfs.new</code> file in the same
+directory as the <code>linuxfs</code> file.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">noremaster</span> (<strong>LiveUSB Only</strong>) Disable remastering even when
+   a <code>linuxfs.new</code> file is found.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">rollback</span> (<strong>LiveUSB Only</strong>) Roll back to the previous version
+   of <code>linuxfs</code>.   If you remaster and for some reason things go
+   horribly wrong, then use this feature to get back to the state
+   right before you did the remaster.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_frugal_install">Frugal Install</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p><strong>New for antiX-15!</strong>  Automatically do a frugal install from a LiveCD
+or LiveUSB to a hard drive or a usb drive.  Persistence files can also
+be created automatically so you can literally create and boot into an
+installed system in just a minute or two (depending on the speed of
+your hardware).</p></div>
+<div class="paragraph"><p>There are two modes of operation that are triggered by the same
+<span class="cheat">frugal</span> boot parameter: install mode and boot mode.  Normally
+the frugal device is a partition  with the label <strong>antiX-Frugal</strong>
+If such a device is not found then you will be given a list of
+partitions to choose from.  Once you have selected a device, you
+will be given an option to have it give the <strong>antiX-Frugal</strong>
+label.  If an antiX frugal install has not already been done on
+the device you selected then an frugal install will be performed.</p></div>
+<div class="paragraph"><p>The next time you boot with the frugal option, we will
+automatically boot from the <strong>antiX-Frugal</strong> device into the
+frugal system that was installed. Again, if a frugal install is
+not found on that device, we will automatically install one.</p></div>
+<div class="paragraph"><p>If persistence is requested and the persistence files are not
+found then we will offer to create them after we do the install.
+If you want to force a persistence file to be created in a later
+boot then <strong>require</strong> that form of persistence with an
+exclamation point.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>frugal=root     (requested)
+frugal=root!    (required)</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">frugal</span> Enable frugal mode.  Either boot into the existing
+   frugal system or create a new one if it does not already exist.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">frugal=&lt;list&gt;</span> A contraction of <span class="cheat">frugal</span> and
+   <span class="cheat">persist=&lt;list&gt;</span>.  It is common to add persist options when
+   enabling frugal mode so you can add the persist options directly to
+   the frugal boot parameter.  Example: <span class="cheat">frugal=root,home</span>.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_the_frugal_device">The Frugal Device</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Just like you can select the boot device and the persistence device
+with device name, label, or uuid, you can do the same with the frugal
+device.  If you specify the frugal device this way and it is not found
+then we will give you a list of devices to choose from, just like with
+the <span class="cheat">frugal</span> parameter, but we will I&lt;not&gt; offer to label the
+device you have selected.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">fdev</span> The name of the frugal device.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">flab</span> The partition label of the frugal device.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">fuuid</span> The UUID of the frugal partition.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_x_windows">X-Windows</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>These options affect X-windows.  They will all be carried over when you
+do an install.  The various keyboards options are carried over in the
+file <code>/etc/defaults/keyboard</code>.  The other options are carried over in
+the file <code>/etc/X11/xorg.conf</code>.</p></div>
+<div class="sect2">
+<h3 id="_keyboard_options">Keyboard Options</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>A rather complete list of keyboard options and variants is usually
+available at <code>/usr/share/X11/xkb/rules/xorg.lst</code></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">kbd=&lt;layout&gt;</span> Set the keyboard layout.  This is usually one or
+   more 2-letter country codes separated by commas.  For example:
+   <span class="cheat">kbd=gr,us</span>.  This will allow users to quick switch between
+   the US and the Greek keyboard layouts.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">kbopt=&lt;options&gt;</span> Keyboard options.  These give special meaning
+   to certain keys or key combinations.  For example
+   <span class="cheat">kbopt=ctrl</span>nocaps: turns the Caps Lock key into an extra
+   Control key.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">kbvar=&lt;variant&gt;</span> Keyboard variant.  These are variants to the
+   keyboard layout. For example <span class="cheat">kbvar=dvorak</span> will give you a
+   Dvorak keyboard layout when you use the <span class="cheat">us</span> layout.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_x_windows_video_options">X-Windows Video Options</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>These options affect the graphical X-Windows interface.  If the
+console frame-buffer is enabled, the X-Windows default graphics
+driver is <code>fbdev</code> which will force X-Windows to have the same
+resolution as the consoles.  Since the <strong>antiX</strong> sets the default
+console resolution to 800x600, using the default <code>fbdev</code> graphics
+driver results in very poor resolution in X-Windows.  Therefore
+we write a default <code>xorg.conf</code> file that uses the <code>vesa</code> graphics
+driver (which used to be the default) whenever we think the default
+<code>fbdev</code> driver is going to be used.  We also create an <code>xorg.conf</code>
+file with the <code>sisimedia</code> driver when we detect SiS hardware.</p></div>
+<div class="paragraph"><p>We use the <code>/sbin/make-xorg-conf</code> script to make xorg.conf files.
+The list from the <span class="cheat">xorg=&lt;list&gt;</span> boot parameter gets passed
+to this program.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">dpi=NNN</span>
+   DPI stands for "dots per inch".  It controls the size
+   of most fonts.  A larger DPI value will give you larger fonts and
+   as smaller value will give you smaller fonts.  The default is
+   <span class="cheat">96</span>.  This setting is stored in the Display Manager
+   configuration file.  On <strong>antiX</strong> this is <code>/etc/slim.conf</code>.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">xorg=&lt;parameter-list&gt;</span>
+    Force a particular driver to be used, set the screen
+   resolution or even set the horizontal and vertical frequency
+   ranges.  Accepts a comma separated list of parameters.  Any other
+   <span class="cheat">xorg=</span> parameter that is not specified below is treated as
+   the name of a video driver to use.  If that driver cannot be found
+   on the system then there will be a large error message in red
+   explaining the problem.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">WWWWxHHHH</span> any parameter that looks like a resolution,
+     a set of digits, an "x" and then another set of digits is treated
+     like a resolution and sets the resolution of the X display.  We
+     usually add fallback resolutions in case the one you specified
+     does not work out.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">h=XXXXX</span> set the range of horizontal frequencies
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">v=YYYYY</span> set the range of vertical frequencies
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">safe</span> use the "vesa" driver and use a conservative
+     set of resolutions
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">default</span> use the vesa driver and use a slightly less
+    conservative set of resolutions
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">vbox</span> set frequencies and resolutions that are optimized for
+    <strong>some</strong> uses inside of Virtual Box
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<span class="cheat">noxorg</span> Don&#8217;t make an xorg.conf file.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mounting">Mounting</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>These options control automatic and semi-automatic mounting of
+block devices in the Live system.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">automount|amnt</span> Enable automounting.  All the partitions on a
+   usb stick will get mounted automatically when the usb stick is
+   plugged in.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">automount=all|usb</span> In addition to enabling automounting as
+   above, also mount some or all partitions are boot-time.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">automount=all</span> Mount all partitions at boot-time.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">automount=usb</span> Mount partitions on usb devices at boot-time.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<span class="cheat">mount=</span> Mount partitions at boot-time without enabling
+   automounting.  The options are just like those for <span class="cheat">automount</span>
+   above.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">fstab=&lt;list&gt;</span> This option controls the fstab hotplug feature.
+   Normally, fstab entires and <code>/media</code> mountpoints will be created
+   for you automatically when you plug in a usb-stick.  These are the
+   values than can be used with <span class="cheat">fstab=</span> parameter:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">off</span> Turn off all fstab hotplug and automount features.
+   An <code>fstab</code> file will still be created for you at boot-time and
+   mountpoints for partitions will be added under the <code>/media</code>
+   directory at boot-time but after that, no automatic changes to
+   <code>fstab</code> or the <code>/media</code> mountpoints will be made.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">nolabel</span> Don&#8217;t use disk labels for <code>/media</code> mountpoints. Use
+   UUIDs or device names instead.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">uuid</span> Use UUID as the fallback for mountpoint name if a label
+   isn&#8217;t used.  A label won&#8217;t be used if it doesn&#8217;t exist or if labels
+   were turned off with the <span class="cheat">nolabel</span> directive.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">encode</span> Normally, if special characters are used in a
+   partition label, the are converted to underscore in the mountpoint
+   name.  Use this directive to use have the special characters
+   encoded in hex instead.  This should match the names of the
+   symlinks in <code>/dev/disk/by-label/</code>.
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_personalization">Personalization</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>These options let you customize or personalize your system.  They
+will all be carried over to the hard drive when you install.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">desktop=&lt;icon-wm&gt;</span> This option sets the default window
+   manager and desktop icon manager (if any).  For example:
+   <span class="cheat">desktop=rox-icewm</span> will set the window manager to be IceWM
+   and will use Rox to handle desktop icons.  The only other icon
+   manager available is SpaceFM.  So <span class="cheat">desktop=space-fluxbox</span> will
+   use Fluxbox as the window manager and use SpaceFM to handle desktop
+   icons.  <strong>New for antiX-15::</strong> a <span class="cheat">min-</span> prefix is allowed.
+   This turns off the icon manager and all extra goodies (such as
+   conky) so you get just the bare-bones window manager.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">hostname=&lt;name&gt;</span> Set the hostname of the system.  The default
+</p>
+</li>
+<li>
+<p>
+hostname is <strong>antiX1</strong>.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">lang=&lt;LL&gt;</span> In <strong>antiX</strong>, this option sets more than just
+   the language.  It also sets the keyboard layout, the Debian mirror,
+   and the timezone.  If you set any of these others explicitly then
+   that setting will over-ride the value set via <span class="cheat">lang</span>.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">mirror=MM</span> Set the country of the Debian mirror.  Usually this
+   option is set to a 2-letter country code such as <span class="cheat">mirror=gr</span>.
+   <strong>Note</strong> that we now use the <code>/sbin/localize-repo</code> program to
+   select the Debian repo and the antiX/MX repo based on the
+   time-zone.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">tz=&lt;zone&gt;</span> Set the timezone.  Example: <span class="cheat">tz=America/Denver</span>.
+   Some languages, such as en_US (United States English) cover more than
+   one timezone so setting the <span class="cheat">lang</span> may not set the correct timezone
+   for you. More languages choices have been added to the F2-Language
+   menu in the bootloader in order make it easier to set both the
+   language and the time-zone with that menu.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_live_system_features">Other Live System Features</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>These options control features that are specific to the Live system
+but don&#8217;t fit into any of the previous categories.  Some of these
+are available in the bootloader menus.</p></div>
+<div class="sect2">
+<h3 id="_disable_some_systemv_services">Disable Some SystemV Services</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>This option will disable some startup services for faster booting and
+less memory consumption.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">disable_srv=|antiX=|aX=</span>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Valid values are a combination of the following letters:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>L = lean        Turn off some services
+X = Xtralean    Turn off even more services
+M = mean        Turn off some networking services
+D = nodbus      Dont' launch dbus</code></pre>
+</div></div>
+<div class="paragraph"><p>Lean services:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>acpid           acpi-fakekey    acpi-support    bootlogs        bluetooth
+cpufrequtils    cron            cups            gpm             ifplugd
+irqbalance      loadcpufreq     nfs-common      rpcbind         rsync
+rsyslog         saned           smartmontools   ssh             stop-bootlogd
+sudo            wicd</code></pre>
+</div></div>
+<div class="paragraph"><p>Note that acpid and wicd will not be disabled if we detect laptop
+hardware.</p></div>
+<div class="paragraph"><p>Xtralean services:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>bootlogd                    cryptdisks                  cryptdisks-early
+dns-clean                   hdparm                      hwclock.sh
+hwclockfirst.sh             ifupdown-clean              lm-sensors
+mountnfs-bootclean.sh       mountoverflowtmp            nfs-common
+pcmciautils                 policykit                   pppd-dns
+ufw                         urandom</code></pre>
+</div></div>
+<div class="paragraph"><p>Mean services:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>networking resolvconf</code></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_other_live_options">Other Live Options</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="cheat">checkfs</span> (<strong>LiveUSB Only</strong>)
+   Perform file system check on the <span class="cheat">LiveUSB</span>.
+   This won&#8217;t check the file system of a LiveCD.  Will also check the
+   filesystem of the persistence device (if different from the boot device)
+   and the file systems on the persistence files <code>rootfs</code> and <code>homefs</code> if
+   they exist and are enabled.  It will only check the following types of file
+   systems: ext2, ext3, and ext4.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">gfxsave=*</span> (<strong>LiveUSB Only</strong>)
+   Set the bootloader current bootloader settings as the defaults.  Valid
+   values: <span class="cheat">custom</span>, <span class="cheat">menus</span>, <span class="cheat">both</span>, and <span class="cheat">reset</span>.
+   <strong>Note:</strong> the <span class="cheat">gfsave</span> options will usually not work on a frugal
+   install.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">md5|checkmd5</span>
+   Check the md5sum of the three primary files needed to boot a live system:
+   <code>linuxfs</code>, <code>vmlinuz</code>, and <code>initrd.gz</code>.  If this test passes then your
+   boot media should be good although this won&#8217;t necessarily catch
+   intermittent problems.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">nocheckfs</span>
+   The LiveUSB acts like an installed system and will automatically check its
+   own filesystem based the time since the last check and/or the number of
+   mounts since the last check.  Use this option to turn this feature off.
+</p>
+</li>
+<li>
+<p>
+<span class="cheat">toram</span>
+   Copy the entire <code>linuxfs</code> file into RAM.  This takes up RAM.  The amount
+   of RAM used will be about the same as the size of the .iso file used to
+   create the LiveCD or LiveUSB.  It will also take some time when you first
+   boot to copy the file into RAM.  But after this, the system will run very
+   fast.  You can also eject the LiveCD (or remove the LiveUSB while the
+   system is running.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_all_boot_parameters_described">List of All Boot Parameters Described</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><code>amnt         buuid=       flab         kbd=         nocheckfs    puuid=
+amnt=        checkfs      from=        kbopt=       noremaster   rollback
+automount    checkmd5     fromiso=     kbvar=       nosavestate  savestate
+automount=   desktheme=   frugal       lang=        noxorg       sq=
+bdev=        desktop=     frugal=      load=        pdev=        toram
+bdir=        disable_srv= fstab=       load=        persist=     try=
+blab=        dpi=         fuuid        md5          plab=        tz=
+blacklist=   earlyvid     gfxsave=     menus        plink        verb=
+bootchart    failsafe     hostname=    mirror=      private      xorg=
+bp=          fdev         hwclock=     mount=       ptry=</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2015-10-23 19:42:50 EEST
+</div>
+</div>
+</div>
+</body>
+</html>

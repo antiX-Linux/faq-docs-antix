@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ Live Remastering</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="remaster.html">Remaster</a></td><td>&#187;</td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Live Remastering</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">Live Remastering</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#_system_requirements">System Requirements</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#_how_it_works">How it Works</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#_remastering_plus_persistence">Remastering Plus Persistence</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#boot-options">Live Remaster Boot Options</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">Live Remastering</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>The primary purpose of live remastering is to make it as safe, easy, and
+convenient as possible for users to make their own customized version of
+antiX. The idea is that you use a LiveUSB or a LiveHD (a frugal install to a
+hard drive partition) as the development and testing environment.  Add or
+subtract packages and then when you are ready to remaster, use use a simple
+remaster script or GUI to do the remaster and then reboot.  If something goes
+horribly wrong, simply reboot again with the <span class="cheat">rollback</span> option and you
+will boot into the previous environment.</p></div>
+<div class="paragraph"><p>If you are using a LiveUSB then the LiveUSB is your target system.  You
+can use it to install your customized version of <span class="antix-text">anti<span class="antix-x">X</span></span> on other systems.
+If you are using a LiveHD then you will need to create a LiveUSB or
+a LiveCD from the LiveHD in order to install elsewhere.</p></div>
+<div class="sect2">
+<h3 id="_system_requirements">System Requirements</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>There are three simple and straightforward system requirements that
+are needed to perform live remastering:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The boot device must be writable
+</p>
+</li>
+<li>
+<p>
+The boot device must have enough free space to create a new linuxfs file
+</p>
+</li>
+<li>
+<p>
+The development system must have been created using a "frugal install",
+not a fromiso install
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>In other words, the development system must be booted using a linuxfs file
+that is on a writable device that has enough free space to create a new
+linuxfs file.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_it_works">How it Works</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>In order to perform a live remaster, a new linuxfs file is created in the same directory
+as the existing linuxfs file with the ".new" extension added.  On the next boot, before
+the linuxfs file is mounted, the following commands are (in essence) performed in the
+directory containing the linuxfs file:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># mv linuxfs linuxfs.old
+# mv linuxfs.new linuxfs</code></pre>
+</div></div>
+<div class="paragraph"><p>If the new linuxfs file makes the system unbootable then the <span class="cheat">rollback</span>
+boot code should be used.  It can either be added manually by the user or
+their can be another Grub menu entry that contains the <span class="cheat">rollback</span> option.
+In this case the following two commands are (in essence) performed in the
+directory containing the linuxfs file:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># mv linuxfs linuxfs.bad
+# mv linuxfs.old linuxfs</code></pre>
+</div></div>
+<div class="paragraph"><p>This reverse the previous actions except the file that was originally called
+<code>linuxfs.new</code> is now called <code>linuxfs.bad</code>.  If you use the <span class="cheat">sqname</span> or
+<span class="cheat">sqext</span> options to change the name of the linuxfs file then these names
+are used instead of <code>linuxfs</code>.  For example if you boot with <span class="cheat">sqext=e16</span>
+then we look for a file called <code>linuxfs.e16.new</code> etc.</p></div>
+<div class="sect2">
+<h3 id="_wtf">WTF?</h3>
+<div class="paragraph"><p>Don&#8217;t worry, antiX has automated this process for you! All you have to do is
+click a few buttons.</p></div>
+<div class="paragraph"><p>antiX Control Centre-&#8594;Live-&#8594;Remaster</p></div>
+<div class="paragraph"><p>You will be asked a few simple questions about how you want to save the remaster
+and then the application will do its work. Note that the process is quite slow
+and CPU intensive.
+Once the new linuxfs file has been created, you will be prompted to set up a new
+rootfs file. This is recommended.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_remastering_plus_persistence">Remastering Plus Persistence</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>A persistent home or a persistent can useful if you are doing remastering.
+A persistent home is a handy place to hold your development environment if
+you don&#8217;t want that environment to end up in your remaster.  A persistent
+root is a handy way to save changes between reboots without having to go
+to the bother of doing a full remaster.  In a mountain climbing analogy, you
+can think of the persistent root as a piton (or a
+<a href="http://en.wikipedia.org/wiki/Special:Search?search=Spring-loaded_camming_device&amp;go=Go">
+spring loaded camming device</a>) while
+remastering is setting up a new campsite or bivouac.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="boot-options">Live Remaster Boot Options</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>There are only two live remaster boot option because live remastering is
+almost entirely handled by a script or GUI.  The only two option are to
+prevent live remastering and to rollback live remastering in case something
+goes horribly wrong.</p></div>
+<div class="sect3">
+<h4 id="noremaster"><span class="cheat">noremaster</span></h4>
+<div class="paragraph"><p>don&#8217;t remaster even when a linuxfs.new file is found</p></div>
+</div>
+<div class="sect3">
+<h4 id="rollback"><span class="cheat">rollback</span></h4>
+<div class="paragraph"><p>return to previous version after a failed remaster</p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2015-10-23 19:42:49 EEST
+</div>
+</div>
+</div>
+</body>
+</html>

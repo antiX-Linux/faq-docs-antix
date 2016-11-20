@@ -1,0 +1,70 @@
+= Guide to smxi
+:smxi-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[What is smxi?]
+*  link:#_what_can_smxi_do[What can smxi do?]
+*  link:#_how_do_you_use_smxi[How do you use smxi?]
+*  link:#_what_about_sgfxi_what_does_that_do[What about sgfxi? What does that do?]
+*  link:#_what_is_inxi[What is inxi?]
+*  link:#_links[Links]
+
+
+[[under-toc]]
+== What is smxi?
+
+smxi is a script written by a programmer named “h2” that enables users to 
+keep their antiX OS installation up-to-date and running as a rolling release.
+
+== What can smxi do?
+
+When run, smxi allows users to install a new kernel, install ATI and nVidia 
+graphics drivers, run apt-get upgrade or apt-get dist-upgrade safely, change 
+antiX to a Sid-based system, and lots more!
+
+The script is self explanatory. For usage options, execute smxi -h.
+
+== How do you use smxi?
+
+smxi is already installed in antiX and ready to run. smxi must be run 
+outside of the X window system. To get out of X when on your desktop, press 
+Ctrl-Alt-F1 to get to a terminal prompt, log in as root, and then type: smxi
+
+smxi will stop X and ask a series of questions the first time it is run, 
+including which system options you want to run (ie default, aptosid, sid). 
+antiX developer anticapitalista suggests selecting the continue-no-changes option, 
+using apt-get (rather than aptitude) and apt-get dist-upgrade.
+
+If you want to run smxi before booting to the desktop, add 3 to the end of 
+the kernel line in GRUB's menu entry for antiX (type e when on the menu to 
+be able to edit it) and it will boot directly to the console.
+After smxi has completed its operations it will ask if you want to start 
+the desktop.
+
+Running smxi -G in a root terminal while inside a running X session allows certain
+features of smxi to run, such as removing unwanted kernels etc.
+
+== What about sgfxi? What does that do?
+
+sgfxi is the script in smxi that deals with installing graphical drivers. 
+As with smxi, it must be run out of X desktop. Logged as root, type: sgfxi
+
+== What is inxi?
+
+Also included in antiX is inxi, a script from h2 (the author of smxi and 
+sgfxi). inxi is a convenient command line system information script. Run 
+inxi -h for all the options available. To update, run inxi -U as root user
+to get the updated man page.
+
+antiX also comes with a gui front end to inxi called inxi-gui. Find it in 
+Control Centre-->Hardware-->PC Information or type inxi-gui in a terminal.
+
+== Links
+
+* {ob}link:http://smxi.org/[smxi home page]{cb}.
+* {ob}link:http://techpatterns.com/forums/forum-33.html[smxi forum]{cb}.
+  
+ 

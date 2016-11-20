@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ Droopy User Guide</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="droopy.html">Droopy</a></td><td>&#187;</td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Droopy User Guide</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">Conventions</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_what_is_droopy">What is Droopy?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_features">Features</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_getting_started">Getting Started</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_starting_droopy">Starting Droopy</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_transferring_files">Transferring Files</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_fine_tuning">Fine Tuning</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_summary_of_files">Summary of Files</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_video">Video</a>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">Conventions</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">This is additional information</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Note" />
+</td>
+<td class="content">This is a tip</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">This is an example configuration or setting</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_droopy">What is Droopy?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>It is a simple way of using a network connection to make a folder
+in your local antiX system available to other systems.  The remote
+system can upload and/or download files to and from the folder.</p></div>
+<div class="paragraph"><p>Additional apps are not required on the remote system.  If it has
+a web (internet) browser it can access your folder.  Files can be
+transferred to and from a PC, laptop, smart phone etc.</p></div>
+<div class="paragraph"><p>The remote system can be Linux, Mac, Windows etc.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_features">Features</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Transfer files over a local network or the internet
+</p>
+</li>
+<li>
+<p>
+An option to choose whether access requires a name and password
+</p>
+</li>
+<li>
+<p>
+Choice of connecting via HTTP or HTTPS for additional security
+</p>
+</li>
+<li>
+<p>
+An option to control the permissions of a file uploaded to the folder
+</p>
+</li>
+<li>
+<p>
+Monitor who is connected and what they are doing
+</p>
+</li>
+<li>
+<p>
+Switch the server on and off as desired
+</p>
+</li>
+<li>
+<p>
+Nominate an alternative folder to serve
+</p>
+</li>
+<li>
+<p>
+Specify an alternative port number
+</p>
+</li>
+<li>
+<p>
+Create your own message to be displayed on the web page
+</p>
+</li>
+<li>
+<p>
+An option to display your own choice of logo on the web page
+</p>
+</li>
+<li>
+<p>
+Works in both GUI and console modes
+</p>
+</li>
+<li>
+<p>
+Tiny amount of storage space is used by Droopy and related files
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started">Getting Started</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>As long as you have a folder named Public in your home folder, and have
+x-terminal-emulator installed, Droopy will work without changing any
+settings.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">To check whether x-terminal-emulator is installed:<br />
+1. Open a terminal<br />
+2. Type which x-terminal-emulator<br />
+3. If it is installed it will report the name of the terminal app</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>If it is not installed, or you want to use an alternative, refer to the
+section named Fine Tuning,</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_starting_droopy">Starting Droopy</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>From the antiX menu select<br />
+<span class="image">
+<img src="images/droopy/droopy.png" alt="droopy/droopy.png" />
+</span><sup>Droopy</sup></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>A window opens to indicate the Public folder is being served.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/droopy/droopy-server-window.png" alt="droopy/droopy-server-window.png" />
+</span></p></div>
+<div class="paragraph"><p>The main body of the window is used to monitor which system is accessing
+the served folder and what that system is doing.</p></div>
+<div class="paragraph"><p>The titlebar shows the location of the served folder, the local system
+name, and the IP address plus port number Droopy is using. The latter
+parts are used to contact Droopy from a remote system.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>While the window is open Droopy continues to serve the Public folder.
+To stop serving it, simply close the window.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transferring_files">Transferring Files</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Put some files in the Public folder to make them available to download.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="sect2">
+<h3 id="_transfer_across_local_network">Transfer Across Local Network</h3>
+<div class="paragraph"><p>On a different system open a web (internet) browser e.g. Iceweasel.<br />
+In the address area type the IP address and port as shown in the
+titlebar of the Droopy server<br />
+For example<br />
+<a href="http://192.168.2.129:8800">http://192.168.2.129:8800</a></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">If a domain name server (DNS) is running on your network a name can
+be used instead.<br />
+For example<br />
+<a href="http://antix1:8800">http://antix1:8800</a></td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>Iceweasel shows the page served by Droopy</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/droopy/droopy-in-iceweasel.png" alt="droopy/droopy-in-iceweasel.png" />
+</span></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><strong>To Upload to the Public Folder</strong><br />
+1. Press the Browse button<br />
+2. Select one or more files<br />
+3. Press the Send button<br /></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><strong>To Download from the Public Folder</strong><br />
+1. Right-click on a file in the list<br />
+2. Select Save Link As<br />
+3. Choose where to save the file</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+<div class="sect2">
+<h3 id="_transfer_across_internet">Transfer Across Internet</h3>
+<div class="paragraph"><p>On the system that is running Droopy, open a web (internet) browser e.g. Iceweasel.<br />
+In the address area type<br />
+<a href="http://localhost:8800">http://localhost:8800</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>Iceweasel shows the page served by Droopy plus a black banner</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/droopy/droopy-wan-ip.png" alt="droopy/droopy-wan-ip.png" />
+</span></p></div>
+<div class="paragraph"><p>In the banner, click <em>Discover the address of this page</em>.
+This shows the IP address plus port to be entered into the web (internet)
+browser in the remote system which may be anywhere in the world.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>Droopy is likely to be running behind a firewall or a NAT router.
+To enable transfer of files across the internet they must be configured
+to allow connections on port 8800 to your Droopy system.</p></div>
+<div class="paragraph"><p>Because each firewall/NAT router does this in its own way, you should
+refer to its user manual to do the setting up.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>Once the connection has been established, files may be transferred in
+the same way as described above.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fine_tuning">Fine Tuning</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>You can control the Droopy server by changing its settings.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">Settings are held in a single hidden file in your home folder<br />
+.config/droopy/droopy.conf</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Usually the default settings do not have to be changed for Droopy to work.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>If your system does not have x-terminal-emulator installed you have to tell
+Droopy the name of the terminal emulator to use.  To do this open droopy.conf
+in a text editor.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">A simple way to open droopy.conf for editing is<br />
+1. Switch your file manager to show hidden files<br />
+2. Browse to .config/droopy/droopy.conf<br />
+3. Select the file and open it in your text editor</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>In the file, find the section that sets the terminal emulator.  The default
+setting is for it to be left empty (blank).  Simply enter the name of your
+preferred terminal emulator and save the file.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Example setting urxvt as the preferred terminal</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># The name of a preferred terminal emulator in which droopy runs
+# Leave empty to use the system default of x-terminal-emulator
+# Examples
+#  roxterm
+#  urxvt
+#  xfce4-terminal
+# Default, PREFTERM=
+PREFTERM=urxvt</code></pre>
+</div></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>Each of the other settings has its own section laid out in a similar way.
+Guidance is provided to indicate the purpose of the setting and its
+default value.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>After changing a setting Droopy should be restarted for it to take effect.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary_of_files">Summary of Files</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Configuration file is located in /home/USERNAME/.config/droopy/</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+droopy.conf is the default configuration file
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Executable files are located in /usr/local/bin/</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+droopy.sh is the launcher for the server
+</p>
+</li>
+<li>
+<p>
+droopy is the Python app that does the work
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Menu files are located in /usr/share/applications/antix/</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+droopy.desktop
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Icon file is located in /usr/share/pixmaps/</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+droopy.png
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_video">Video</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>antiX 13 - Droopy - A Simple Way to Transfer Files  by runwiththedolphin
+<a href="https://www.youtube.com/watch?v=J2I0okt7mIU">https://www.youtube.com/watch?v=J2I0okt7mIU</a></p></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2016-06-21 17:01:48 EEST
+</div>
+</div>
+</div>
+</body>
+</html>

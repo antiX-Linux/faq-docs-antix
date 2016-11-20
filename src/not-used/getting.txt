@@ -1,0 +1,321 @@
+= antiX-FAQ
+:getting-page:
+
+[[top]]
+== Getting antiX
+
+.Introduction
+
+   The antiX Linux LiveCD or LiveUSB boots your computer without
+   accessing the hard disk. It copies a virtual filesystem into RAM that
+   acts as the centre of a temporary operating system for the computer.
+   When you end your Live session, everything about your computer is
+   back to the way it was, unchanged.
+
+   This provides a number of benefits:
+     * It enables you to run antiX Linux on your computer without
+       installing it.
+     * It allows you to determine whether antiX Linux is compatible with
+       your hardware.
+     * It helps you to get a feel for how antiX Linux works and to explore
+       some of its features.
+     * You can decide whether antiX Linux is what you want without
+       permanently affecting your current system.
+     * Installing and removing software is possible in antiX
+       Linux.
+
+   Running LiveCD also has some disadvantages:
+     * Because the entire system is operating from a combination of RAM
+       and the CD, antiX Linux will require more RAM and run more slowly
+       in a LiveCD session than if it were installed on the hard drive.
+     * Some unusual hardware that requires specialized drivers or custom
+       configuration may not work in a LiveCD session where permanent
+       files can't be installed.
+     
+
+.How to get a antiX LiveCD
+
+   If you don't have a copy of antiX Linux on a CD already, here are
+   the ways to obtain a copy.
+
+
+Free Download
+
+   You can download any testing or final release versions of antiX Linux
+   for free from one of the public mirror sites listed on the page linked
+   below. Sometimes the mirrors are a bit behind the antiX
+   download site, and some mirrors get out-of-date from time to time. If
+   you can't find a particular version at one site, it may be available at
+   one of the other sites. Downloading the current antiX ISO via
+   BitTorrent is also an option.
+
+   The LiveCD you download is actually an ISO: a disk image file in the
+   ISO 9660 file system format. Before trying to turn it into an antiX
+   LiveCD, please consult Section 2.2.
+
+   Download antiX: [12]http://www.mepis.org/mirrors
+   antiX torrents: [13]http://www.mepiscommunity.org/en/node/54
+
+
+== Obtaining & verifying the ISO
+{top}
+
+.Introduction
+
+   This page provides guidance if you intend to download an ISO and
+   burn your own CD.
+
+.Downloading antiX Linux
+
+   Here are a few considerations to keep in mind:
+     * The first day or two after a new ISO is released, a particular
+       mirror (a web site that is an exact copy of another site) may not
+       have it. Check other mirrors until you find the version you are
+       looking for, then click the filename to download it. These files
+       are usually very large, so plan to wait for some time (depending on
+       your machine, connection and web traffic).
+     * Sometimes an ISO may be incomplete. This is caused by the mirror
+       attempting to grab the ISO before it has completely uploaded to
+       their source site. If this happens, the ISO may be unusually small
+       or it may give [16]cloop errors when a CD is booted.
+     * If different mirrors offer ISOs of different sizes, the larger ISO
+       is probably correct. If a mirror site has a bad ISO file, it will
+       probably be replaced during the next automatic update at that site,
+       usually done once per day.
+     * Make sure to download the md5sum file (see below) from the same
+       directory as the ISO file. It will have the same filename but the
+       extension will be .md5sum. Make certain that you put the [17]md5sum
+       file in the same directory as the ISO file.
+     * If the md5sum does not match, you could try one of the following
+       options:
+          + Copy the ISO with a bad checksum to a download folder used by
+            a BitTorrent program (see Section 8.1), then restart the
+            download using a BitTorrent client program. Most BitTorrent
+            clients will find the file already on your hard disk and patch
+            it by downloading only the missing or damaged portions.
+          + Try a different mirror site.
+          + Download the ISO again.
+
+.Downloading antiX Linux via BitTorrent
+
+   BitTorrent file sharing provides an
+   internet protocol for efficient mass transfer of data. It decentralizes
+   the transfer in such a way as to utilize good bandwidth connections and
+   to minimize strain on low-bandwith connections. An added benefit is
+   that most, if not all, BitTorrent clients perform error checking during
+   the download process, so there is no need to do a separate md5sum check
+   after your download is complete. It has already been done!
+
+   The antiX Torrent Team also maintains a seeded BitTorrent swarm of the
+   latest antiX Linux ISO, registered at LinuxTracker.org within 24 hours
+   of its official release. Bit-torrent downloads may be somewhat slow
+   following a major release. See link below.
+
+.Verifying the md5sum
+
+   After you have downloaded an ISO, the next step is to check its
+   md5sum against the official one. The md5sum is the result of a
+   complex calculation on the contents of a file: the outcome is a unique
+   string. It will be identical to the official md5sum if your copy is
+   authentic. The following steps will let you verify the integrity of the
+   downloaded ISO on any OS platform:
+
+md5sum: Windows
+
+   Windows users should download a tool called md5summer (link below):
+    1. Download the self-extracting .exe file. Double-click it to put 2
+       files in the current directory: md5summer.exe and md5summer.md5
+    2. Run md5summer.exe, respond “yes” to associate extension .md5 with
+       md5summer program.
+    3. Now you can either double-click on the .md5 file and the program
+       will check the md5 sum automatically, or from inside the md5summer
+       program you can select the location of the .ISO and .md5 files, and
+       then click “verify sums” and select the .md5 file you want to
+       check.
+
+md5sum: Linux
+
+   Method 1. Check when running the burned iso.
+
+   Method 2. Open up a console/terminal and type:
+cd /directoryname
+
+   where directoryname indicates the location of the ISO and md5sum files.
+   Then type:
+md5sum filename.iso
+
+   Be sure to replace filename with the actual filename (type in the first
+   couple of letters then hit Tab and it will be filled in automatically).
+
+   Compare the number obtained by this calculation with the md5sum file
+   downloaded from official site. If they are identical, your copy is
+   identical to the official release.
+
+md5sum: Mac
+
+   Mac users need to open up a console/terminal and change into the
+   directory with the ISO and md5sum files. Then issue this command:
+md5 -c filename.md5sum
+
+   Be sure to replace filename with the actual filename (type in the first
+   couple of letters then hit Tab and it will be filled in automatically).
+
+
+== Creating a bootable medium
+{top}
+
+.Introduction
+
+   Once you have successfully downloaded an ISO and verified its
+   integrity, you are ready to create a bootable medium. For many users,
+   this will be a LiveCD, but others may need or want a Live USB.
+     * [27]Burning a LiveCD
+     * [28]Creating a Live USB
+
+.Burning a LiveCD
+
+General tips
+
+    1. Most important: do not burn the ISO onto a blank CD as if it were
+       a data file! An ISO is a formatted image of an entire CD. You
+       need to choose Burn disk image or Burn ISO in the menu of your
+       CD/CD burning program. If you just drag and drop it into a file
+       list and burn it as a regular file, you will not get a bootable
+       LiveCD.
+    2. Use a good quality writable CD with a .7 GB capacity.
+
+.Burning the ISO
+
+Linux
+
+   The following method describes burning with K3b, the default
+   application in antiX Linux, but you can use any burner or the command
+   line just as well.
+    1. Right-click the ISO and select Open with >K3b
+    2. Wait until the md5sum is calculated, then compare it with the one
+       that you downloaded with the ISO. If the md5sum does match, it
+       means you have a corrupted file.
+    3. Check verify written data. After the CD is written, K3b will read
+       it and compare the result with the MD5 sum of the ISO.
+
+Windows
+
+   If you already have a CD burning program installed on your computer
+   such as Nero or EasyCD Creator (Roxio), go directly to Step 2.
+    1. Download and install a CD Burner such as Cheetah (follow link
+       below).
+    2. Put a blank medium in your drive. Start the burner, and click Start
+       and choose Burn ISO File (other wording may be used). In Nero and
+       Roxio there is a similar command to Burn a Disk Image or ISO.
+
+   NOTE: the program names here are used as examples only, and no
+   endorsement or guarantee is intended.
+
+Mac
+
+   You probably already have Toast (Roxio) or a similar CD/CD burning
+   program installed. Just follow Step 2 above.
+
+.Verify the integrity
+
+   It is a good idea to verify the integrity of the burn, just as you did
+   of the ISO. If you didn't burn your new antiX
+   Linux LiveCD/CD with a program that can verify the data after the
+   burn, you can check its integrity another way.
+
+Linux
+
+   In terminal type:
+md5sum devicelocation
+
+   If you burned a CD, the typical device location ("mount point") is
+   /dev/cdrom. Other devices can be hdc or scd0. Navigate with the file
+   manager Dolphin to /etc/fstab to check the device names on your system.
+
+   Wait for the MD5 sum to be calculated, and compare it with the sum
+   obtained from the download site: they should be the same.
+
+Windows
+
+    1. Get the free version of the Windows application IsoBuster from the
+       link below.
+    2. Insert CD in drive.
+    3. Run IsoBuster as Administrator.
+    4. In registration dialog, select “Free funct. only”.
+    5. In left pane, right-click on CD (top line) to get context menu,
+       and select: MD5 Checksum file > Create MD5 Checksum > For image
+       file with 2048 bytes/block.
+    6. Compare the MD5 in the .tao line of the output with that of the
+       downloaded ISO.
+
+   NOTE: the Windows program cited here is used as an example only, no
+   endorsement or guarantee is intended.
+
+Mac
+
+   When you select to verify the data in Toast or another burner, a
+   byte-for-byte comparison with the ISO file will be carried out to check
+   the CD's integrity.
+
+.Troubleshooting
+
+   If you verified the md5sum of the ISO before you burned, but the CD
+   you burned is no good:
+     * Try burning again at a slower speed.
+     * Try another blank disk.
+
+.Creating a Live USB
+
+   Netbooks typically lack a CD/CD drive, so a Live USB is required for
+   temporary use and installation. Other users may also want a Live USB
+   for improved portability or speed. Once you have obtained the ISO,
+   whether by purchase or download, you can easily create a bootable USB
+   that works on most systems.
+     * If you have an existing installtion of antiX, or can boot the
+       LiveCD on a different computer, then a antiX application is
+       available to you that makes the process easy.
+
+     * Plug in your USB device. It needs to remain unmounted, so ignore
+       the Device Notifier screen that pops up.
+     * Click Start Menu > Settings > antiX System Assistant, then click on
+       the antiX USB Key tab.
+     * Make the appropriate selections for the USB key, key type and ISO
+       source.
+     * Click Apply, wait until the process is finished, then reboot or
+       exit for later use.
+     * See Section 5.4 for details
+
+     If you need or want to create the Live USB from the netbook itself,
+   you should use an alternative method:
+     * Download and install the Unetbootin Windows package from the
+       Unetbootin home page listed below.
+     * Plug in the USB stick you are going to use and reformat it to
+       FAT32. On Windows, use the My Computer screen, right-click your USB
+       device in the menu and select Format, then FAT 32.
+     * Start Unetbootin, and use the GUI to locate your antiX ISO file (or
+       to download it) and the USB device (usually already identified for
+       you)
+     * Create the files necessary (it will take some time) on the USB
+       device
+
+   Whichever method you used to create the Live USB, you will probably
+   need to take a few steps to get your computer to boot correctly using
+   the USB.
+     * To boot with the USB Drive, many computers have special keys you
+       can press during booting which allow you to choose that device.
+       Typical Boot Device Menu keys are Esc, F8, F9, F10 or F12.
+     * Alternatively, You may have to go into the BIOS to change the boot
+       device order:
+          + Boot the computer, and hit the required key (e.g., F2, F10 or
+            Esc) at the beginning to get into the BIOS
+          + Click on (or arrow over to) the Boot tab
+          + Identify and highlight your USB device (usually, "USB HDD"),
+            then move it to the top of the list. Save and exit
+          + If unsure or uncomfortable about changing the BIOS, ask for
+            assistance in the Forums.
+     * On older computers without USB support in the BIOS, you can use the
+       Plop Linux LiveCD that will load USB drivers and present you with a
+       menu. See the website linked below for details.
+
+   Once your system is set to recognize the USB Drive during the boot
+   process, just plug in the Drive and reboot the machine.

@@ -1,0 +1,693 @@
+= Live Boot Parameters
+:params-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[Synopsis]
+*  link:#_new_for_antix_15[New for antiX-15!]
+*  link:#_boot_livecd_usb[Boot LiveCD/USB]
+** link:#_the_boot_device[The Boot Device]
+** link:#_the_boot_directory[The Boot Directory]
+** link:#_debugging[Debugging]
+** link:#_loading_modules[Loading Modules]
+** link:#_other_booting_options[Other Booting options]
+*  link:#_persistence[Persistence]
+** link:#_the_persistence_device[The Persistence Device]
+** link:#boot-options[Other Persistence Options]
+*  link:#_remastering[Remastering]
+*  link:#_frugal_install[Frugal Install]
+** link:#_the_frugal_device[The Frugal Device]
+*  link:#_x_windows[X-Windows]
+** link:#_keyboard_options[Keyboard Options]
+** link:#_x_windows_video_options[X-Windows Video Options]
+*  link:#_mounting[Mounting]
+*  link:#_personalization[Personalization]
+*  link:#_other_live_system_features[Other Live System Features]
+** link:#_disable_some_systemv_services[Disable Some SystemV Services]
+** link:#_other_live_options[Other Live Options]
+*  link:#_list_of_all_boot_parameters_described[List of All Boot Parameters Described]
+
+[[under-toc]]
+== Synopsis
+{top}
+
+This page explains many of the boot parameters that are used by antiX
+Live systems.  Most users will get by just fine by making selections
+in the bootloader menus.  The boot menus provide a convenient GUI for
+setting some of the options documented here.  Use the cheat:F12: key
+in the bootloader to see what boot options are selected by your
+current menu choices.
+
+== New for antiX-15!
+
+These boot parameters have been recently added.
+
+ * cheat:blacklist=<list>:
+   A list of kernel modules to blacklist.  These modules won't get
+   automatically loaded.
+
+ * cheat:blacklist=VIDEO:
+   If you add cheat:VIDEO: to the list then all KMS video modules will
+   get blacklisted.
+
+ * cheat:bootchart:  Create /var/log/bootchart.tgz.  Use the program
+   +pybootchartgui to convert this to a .png image to view what happens
+   when the Live system boots.  It is designed to stop recording a few
+   seconds after conky starts.
+
+ * cheat:desktheme=dark|light:
+   Choose either a dark theme or a light theme for the desktop.  Use
+   the command +set-desktop-theme+ to change the theme from the
+   command line.
+
+ * cheat:earlyvid:
+   Try to load KMS video modules earlier in the boot process.  This
+   is mainly for debugging but if it works, it may give a a higher
+   resolution console slighter earlier in the boot process.
+
+ * cheat:failsafe:
+   This has the effect of combining several different boot parameters
+   that should allow antiX to boot on most systems and get to
+   X-Windows.  Some older system may need to use cheat:acpi=off: and
+   so forth.  These options are not enabled by default because they
+   may be rarely needed and each one has a cost associated with it
+   such as poorer graphics resolution and performance in X-Windows.
+   We hope on one will ever need to use the cheat:failsafe: option.
+   These are the boot options it enables:
+
+   load=all
+   blacklist=VIDEO
+   from=all
+   xorg=safe
+
+ * cheat:hwclock=local|utc:
+   Assume that the hardware clock is set to either UTC or to localtime.
+   If you are dual booting with Windows then you should set the hardware
+   clock to localtime.  Otherwise, UTC is preferred.
+
+ * cheat:menus:
+   Enable a series of text-based menus to make the selections that are
+   normally made by the function key popup menus in the Live bootloader.
+   This is primarily for booting via UEFI since the UEFI bootloaders
+   don't provide support for separate menus.
+
+ * cheat:plink:
+   Enable pseudo-links in the AUFS file system.  If you don't know
+   what this means then you probably don't want to use it although
+   it shouldn't do any harm.
+
+ * cheat:private:
+   Get prompted for new root and demo passwords during the boot process.
+   The well known and well advertised default passwords for the root and
+   demo accounts on the Live system are a security risk.  Using your
+   own passwords instead of the defaults should make your system a little
+   safer.
+
+ * cheat:savestate: (**LiveUSB Only**)
+   Save certain "state" files across reboots even without persistence
+   enabled.  Also save certain machine-specific state files across
+   reboots.  You can control which files get saved by editing the
+   files +/live/boot-dev/antiX/state/general-state-files+ and
+   +/live/boot-dev/antiX/state/machine-state-files+.  Those files and
+   the directory they are in will be created automatically the first
+   time you boot the LiveUSB.  This is enabled by default and it is
+   "sticky" so once you enable it it will stay enabled until you turn
+   it off.  See below.
+
+ * cheat:nosavestate: (**LiveUSB Only**)
+   disable saving state files.  See description above.  This too
+   is sticky so when you use it saving state will stay disabled
+   until you re-enable it.
+
+== Boot LiveCD/USB
+{top}
+
+These options control how the Live media boots.  In particular the
+control where we look for the +linuxfs+ file.  The location of this
+file will be used for other Live features such as persistence and
+remastering.
+
+=== The Boot Device
+{top}
+
+The primary job of Live initrd is to find the compressed file system
+called a *squashfs* file.  For antiX and MX this file is normally
+named +linuxfs+.   We need to find the device this file is on and find
+the file on that device.
+
+Normally we scan all cdrom (and dvd) and usb devices for that file.
+This default behavior can be modified with the following options.  The
+easiest way to specify the boot device is the cheat:from: option which
+specifies what type of device to boot from.
+
+
+ * cheat:from=<list>: The type of boot device.  Valid values:
+   cheat:cd hd usb:, and cheat:all:.  More than one is allowed.  The
+   default is cheat:usb,cd: so by default we will only look at
+   cdrom/dvd devices and usb devices to for the boot directory.  You
+   can also specify a device more specifically by giving a device
+   name (like +sda1+), a partition label, or a partition UUID.
+
+The cheat:bdev:, cheat:blab:, and cheat:buuid: options allow you
+to specify which device we look on to find the +linuxfs+ file.
+
+ * cheat:bdev=<name>: The name of the boot device.  For example
+   cheat:bdev=sda:..
+
+ * cheat:blab=<label>: The partition label of the boot device.
+
+ * cheat:buuid=<uuid>: The UUID of the boot device.
+
+**New for antiX-15:** the cheat:buuid: option accepts simple wildcards
+such as cheat:*: and cheat:?:.  For example: cheat:buuid:1234*" will
+instruct us to look on all partitions that have a UUID that starts
+with "1234".
+
+You can combine cheat:from: with cheat:bdev:, cheat:blab:, or
+cheat:buuid:.  For example: cheat:from=usb blab=antiX-LiveUSB: will
+instruct us to only look for partitions on usb/removable devices that
+have the label +antiX-LiveUSB+.  
+
+=== The Boot Directory
+{top}
+
+By default, we look for the +linuxfs+ file and and persistence
+files in the +antiX+ directory on the boot device.   If you want
+to boot more than one Live system on the same device or if you
+want to do a frugal install, you should change that directory
+and use the cheat:bdir: parameter to point to the new directory.
+
+
+ * cheat:bdir=<dir>: The boot directory.  This is the directory where
+   we look for the +linuxfs+ (squashfs) file, persistence files and
+   live-remaster files.  The default is +/antiX+.   The leading slash
+   is optional.
+
+ * cheat:sq=<dir/file>: Specify the linuxfs file plus the boot directory
+   all at once.  The default is +/antiX/linuxfs+ but the leading slash
+   is optional.
+
+=== Debugging
+{top}
+
+Sometimes booting problems can be tracked down to a missing driver or
+a driver that is not getting loaded.  These two boot parameters can be
+helpful in tracking down such problems.
+
+ * cheat:bp=N: Set one or more breakpoints in the live-init script
+   separated by commas.  Use cheat:bp=?: to get a list of breakpoints
+   to choose from.  The meanings may change with different versions so
+   use cheat:bp=?: be sure.
+
+    breakpoint 1  before welcome
+    breakpoint 2  before coldplug
+    breakpoint 3  before looking for linuxfs file
+    breakpoint 4  after mounting boot device
+    breakpoint 5  after mounting persistence device
+    breakpoint 6  after mounting aufs
+    breakpoint 7  before prepare switch_root
+    breakpoint 8  before running init.d scripts
+    breakpoint 9  right before starting init
+
+    breakpoint F  After fsck
+    breakpoint F  Before fsck
+    breakpoint e  On possibly fatal error
+    breakpoint f  in frugal install
+    breakpoint i  after init= chroot
+    breakpoint m  before makefs
+    breakpoint r  After resize homefs rsync
+    breakpoint r  Before resize homefs rsync
+    breakpoint tr After copy to ram
+    breakpoint u  final umount
+    breakpoint v  before check VID
+    breakpoint x  before select device
+
+ * cheat:verb=M: Control how much gets printed out during the early
+   boot process.  The default level is cheat:verb=5:.  Lower numbers
+   print less, higher numbers print more.  Usually cheat:6: or
+   cheat:7: will show you more info without being too obnoxious.  The
+   full output is available in the +/var/log/live/bootloader.log+
+   file.  A partial version of the log file is available at
+   +/init.log+ from within most breakpoints.
+
+=== Loading Modules
+{top}
+
+One of the primary tasks of the live-initrd is to mount the device
+that holds the +linuxfs+ file which contains the final file system.
+Modules (also called drivers) sometimes need to be loaded to allow
+the kernel to talk to certain types of hardware.  Most of the time
+this is taken care of automatically but if you have very old or
+unusual hardware, there might be a glitch.
+
+
+ * cheat:load=<list>: Load one or more specific modules, separated by
+   commas. You need to know the name of the module or modules that you
+   want loaded for this to be useful.
+
+ * cheat:load=all: Load all modules in the initrd.  This is a shotgun
+   approach just in case there is module that is available in the
+   initrd that needs to be manually loaded for your system to boot
+   that is not getting loaded automatically.  In addition, extra
+   debugging information is added to the +initrd.log+ file.
+
+=== Other Booting options
+{top}
+
+These options affect the boot process but the don't fit into any of
+the categories above.
+
+
+ * cheat:fromiso=<file>: Use this to boot from a iso file.  This
+   feature is deprecated because it defaults some of the more advanced
+   features of the Live system but is supported due to popular (or
+   otherwise) demand.  This can be abbreviated as cheat:iso=<file>:.
+
+ * cheat:try=NN: The maximum number of seconds to try finding the
+   +linuxfs+ file.  The default is 15 seconds.  This replaces
+   cheat:rootdelay: which is no longer used.
+
+== Persistence
+{top}
+
+These options enable and control Live persistence which allows you to
+make changes that will persist across reboots.  These options are
+normally used on LiveUSBs but if you specify a persistence device (or
+use the default LiveCD persistence device) then you can make use
+persistence on a LiveCD.  In this case, the changes will have to be
+saved on some other device that allows for read-write access.
+
+**New for antiX-15:** If you enable persistence on a LiveCD and and
+device with the label *antiX-Persist* is not found then we will give
+you a list of partitions to choose from and offer to give that device
+the label *antiX-Persist*.  If a form of persistence is *required* but
+the persistence file is not found then we will offer to create it for
+you.  We do not offer to create a persistence file if it is merely
+*requested* with one exception.  If root persistence is required and
+home persistence is requested and neither +rootfs+ nor +homefs+
+persistence files exist then we will offer to create both a +rootfs+
+file and a +homefs+ file.
+
+ * cheat:persist=<list>: This is the main option for controlling Live
+   persistence. It can be given one or more of the following
+   parameters, separated by commas:
+
+ - cheat:auto,a: Automatically create +rootfs+ and/or +homefs+ files
+   if they don't already exist and they are required.  Normally, we
+   will prompt the user for size and file system type.
+
+ - cheat:hd: Only look on internal hard drives for the persistence
+   device. This is analogous to cheat:from=hd: for finding the boot
+   device.
+
+ - cheat:home!,h!:  Enable and require home persistence.  The exclamation
+   point means this form of persistence is required.  A non-fatal
+   error will be thrown if it cannot be enabled.
+
+ - cheat:home,h: Request home persistence but don't require it.  We
+   will try to enable home persistence but if we can't then this fact
+   is briefly noted and the boot continues normally.
+
+ - cheat:root!,r!:  Enable and require root persistence.  The exclamation
+   point means this form of persistence is required.  A non-fatal
+   error will be thrown if it cannot be enabled.
+
+ - cheat:root,r: Request root persistence but don't require it.  We
+   will try to enable root persistence but if we can't then this fact
+   is briefly noted and the boot continues normally.
+
+ - cheat:static,s: If root persistence is enabled then use the static
+   version of root persistence.  Normally, dynamic root persistence is
+   used.
+
+ - cheat:usb: Only look on usb partitions for the persistence device.
+   This is analogous to cheat:from=usb: for finding the boot device.
+
+=== The Persistence Device
+{top}
+
+Just like the boot device can be specified generally with the
+cheat:from=: option and more specifically with options like
+cheat:bdev=: the same choices are available for specifying the
+persistence device.
+
+On a LiveUSB or a frugal install, the default persistence device is
+the boot device which is what you would expect.  Normally the
+persistence files will sit alongside the +linuxfs+ file that we are
+booting from.
+
+On a LiveCD the default persistence device is whatever device has the
+disk label *antiX-Persist*.  If you specify a persistence device with
+one of the three options below then the defaults are ignored.
+
+ * cheat:pdev=<dev>: The name of the persistence device.  For example:
+   cheat:pdev=sdb2:.
+
+ * cheat:plab=<label>: The partition label of the persistence device.
+
+ * cheat:puuid=<uuid>: The UUID of the persistence device.
+
+=== Other Persistence Options
+{top}
+
+ * cheat:ptry=NN: How many seconds to wait for the persistence device
+   to appear.  This is only relevant if the peristence device is
+   different from the boot device.  The default is 10 seconds.
+
+== Remastering
+{top}
+
+These two options affect remastering.  Normally, remastering is done
+automatically whenever there is a +linuxfs.new+ file in the same
+directory as the +linuxfs+ file.
+
+ * cheat:noremaster: (**LiveUSB Only**) Disable remastering even when
+   a +linuxfs.new+ file is found.
+
+ * cheat:rollback: (**LiveUSB Only**) Roll back to the previous version
+   of +linuxfs+.   If you remaster and for some reason things go
+   horribly wrong, then use this feature to get back to the state
+   right before you did the remaster.
+
+== Frugal Install
+{top}
+
+**New for antiX-15!**  Automatically do a frugal install from a LiveCD
+or LiveUSB to a hard drive or a usb drive.  Persistence files can also
+be created automatically so you can literally create and boot into an
+installed system in just a minute or two (depending on the speed of
+your hardware).
+
+There are two modes of operation that are triggered by the same
+cheat:frugal: boot parameter: install mode and boot mode.  Normally
+the frugal device is a partition  with the label *antiX-Frugal*
+If such a device is not found then you will be given a list of
+partitions to choose from.  Once you have selected a device, you
+will be given an option to have it give the *antiX-Frugal*
+label.  If an antiX frugal install has not already been done on
+the device you selected then an frugal install will be performed.
+
+The next time you boot with the frugal option, we will
+automatically boot from the *antiX-Frugal* device into the
+frugal system that was installed. Again, if a frugal install is
+not found on that device, we will automatically install one.
+
+If persistence is requested and the persistence files are not
+found then we will offer to create them after we do the install.
+If you want to force a persistence file to be created in a later
+boot then *require* that form of persistence with an
+exclamation point.
+
+ frugal=root     (requested)
+ frugal=root!    (required)
+
+ * cheat:frugal: Enable frugal mode.  Either boot into the existing
+   frugal system or create a new one if it does not already exist.
+
+ * cheat:frugal=<list>: A contraction of cheat:frugal: and
+   cheat:persist=<list>:.  It is common to add persist options when
+   enabling frugal mode so you can add the persist options directly to
+   the frugal boot parameter.  Example: cheat:frugal=root,home:.
+
+=== The Frugal Device
+{top}
+
+Just like you can select the boot device and the persistence device
+with device name, label, or uuid, you can do the same with the frugal
+device.  If you specify the frugal device this way and it is not found
+then we will give you a list of devices to choose from, just like with
+the cheat:frugal: parameter, but we will I<not> offer to label the
+device you have selected.
+
+ * cheat:fdev: The name of the frugal device.
+
+ * cheat:flab: The partition label of the frugal device.
+
+ * cheat:fuuid: The UUID of the frugal partition.
+
+== X-Windows
+{top}
+
+These options affect X-windows.  They will all be carried over when you
+do an install.  The various keyboards options are carried over in the
+file +/etc/defaults/keyboard+.  The other options are carried over in
+the file +/etc/X11/xorg.conf+.
+
+=== Keyboard Options
+{top}
+
+A rather complete list of keyboard options and variants is usually
+available at +/usr/share/X11/xkb/rules/xorg.lst+
+
+ * cheat:kbd=<layout>: Set the keyboard layout.  This is usually one or
+   more 2-letter country codes separated by commas.  For example:
+   cheat:kbd=gr,us:.  This will allow users to quick switch between
+   the US and the Greek keyboard layouts.
+
+ * cheat:kbopt=<options>: Keyboard options.  These give special meaning
+   to certain keys or key combinations.  For example
+   cheat:kbopt=ctrl:nocaps: turns the Caps Lock key into an extra
+   Control key.
+
+ * cheat:kbvar=<variant>: Keyboard variant.  These are variants to the
+   keyboard layout. For example cheat:kbvar=dvorak: will give you a
+   Dvorak keyboard layout when you use the cheat:us: layout.
+
+=== X-Windows Video Options
+{top}
+
+These options affect the graphical X-Windows interface.  If the
+console frame-buffer is enabled, the X-Windows default graphics
+driver is +fbdev+ which will force X-Windows to have the same
+resolution as the consoles.  Since the *antiX* sets the default
+console resolution to 800x600, using the default +fbdev+ graphics
+driver results in very poor resolution in X-Windows.  Therefore
+we write a default +xorg.conf+ file that uses the +vesa+ graphics
+driver (which used to be the default) whenever we think the default
++fbdev+ driver is going to be used.  We also create an +xorg.conf+
+file with the +sisimedia+ driver when we detect SiS hardware.
+
+We use the +/sbin/make-xorg-conf+ script to make xorg.conf files.
+The list from the cheat:xorg=<list>: boot parameter gets passed
+to this program.
+
+ * cheat:dpi=NNN:
+   DPI stands for "dots per inch".  It controls the size
+   of most fonts.  A larger DPI value will give you larger fonts and
+   as smaller value will give you smaller fonts.  The default is
+   cheat:96:.  This setting is stored in the Display Manager
+   configuration file.  On **antiX** this is +/etc/slim.conf+.
+
+ * cheat:xorg=<parameter-list>:
+    Force a particular driver to be used, set the screen
+   resolution or even set the horizontal and vertical frequency
+   ranges.  Accepts a comma separated list of parameters.  Any other
+   cheat:xorg=: parameter that is not specified below is treated as
+   the name of a video driver to use.  If that driver cannot be found
+   on the system then there will be a large error message in red
+   explaining the problem.
+
+   - cheat:WWWWxHHHH: any parameter that looks like a resolution,
+     a set of digits, an "x" and then another set of digits is treated
+     like a resolution and sets the resolution of the X display.  We
+     usually add fallback resolutions in case the one you specified
+     does not work out.
+
+   - cheat:h=XXXXX: set the range of horizontal frequencies
+
+   - cheat:v=YYYYY: set the range of vertical frequencies
+
+   - cheat:safe: use the "vesa" driver and use a conservative
+     set of resolutions
+
+  - cheat:default: use the vesa driver and use a slightly less
+    conservative set of resolutions
+
+  - cheat:vbox: set frequencies and resolutions that are optimized for
+    *some* uses inside of Virtual Box
+
+ * cheat:noxorg: Don't make an xorg.conf file.
+
+
+== Mounting
+{top}
+
+These options control automatic and semi-automatic mounting of
+block devices in the Live system.
+
+
+ * cheat:automount|amnt: Enable automounting.  All the partitions on a
+   usb stick will get mounted automatically when the usb stick is
+   plugged in.
+
+ * cheat:automount=all|usb: In addition to enabling automounting as
+   above, also mount some or all partitions are boot-time.
+
+   - cheat:automount=all: Mount all partitions at boot-time.
+
+   - cheat:automount=usb: Mount partitions on usb devices at boot-time.
+
+ * cheat:mount=: Mount partitions at boot-time without enabling
+   automounting.  The options are just like those for cheat:automount:
+   above.
+
+ * cheat:fstab=<list>: This option controls the fstab hotplug feature.
+   Normally, fstab entires and +/media+ mountpoints will be created
+   for you automatically when you plug in a usb-stick.  These are the
+   values than can be used with cheat:fstab=: parameter:
+
+ - cheat:off: Turn off all fstab hotplug and automount features. 
+   An +fstab+ file will still be created for you at boot-time and
+   mountpoints for partitions will be added under the +/media+
+   directory at boot-time but after that, no automatic changes to
+   +fstab+ or the +/media+ mountpoints will be made.
+
+ - cheat:nolabel: Don't use disk labels for +/media+ mountpoints. Use
+   UUIDs or device names instead.
+
+ - cheat:uuid: Use UUID as the fallback for mountpoint name if a label
+   isn't used.  A label won't be used if it doesn't exist or if labels
+   were turned off with the cheat:nolabel: directive.
+
+ - cheat:encode: Normally, if special characters are used in a
+   partition label, the are converted to underscore in the mountpoint
+   name.  Use this directive to use have the special characters
+   encoded in hex instead.  This should match the names of the
+   symlinks in +/dev/disk/by-label/+.
+
+== Personalization
+{top}
+
+These options let you customize or personalize your system.  They
+will all be carried over to the hard drive when you install.
+
+ * cheat:desktop=<icon-wm>: This option sets the default window
+   manager and desktop icon manager (if any).  For example:
+   cheat:desktop=rox-icewm: will set the window manager to be IceWM
+   and will use Rox to handle desktop icons.  The only other icon
+   manager available is SpaceFM.  So cheat:desktop=space-fluxbox: will
+   use Fluxbox as the window manager and use SpaceFM to handle desktop
+   icons.  **New for antiX-15::** a cheat:min-: prefix is allowed.
+   This turns off the icon manager and all extra goodies (such as
+   conky) so you get just the bare-bones window manager.  
+
+ * cheat:hostname=<name>: Set the hostname of the system.  The default
+ * hostname is *antiX1*.
+
+ * cheat:lang=<LL>: In **antiX**, this option sets more than just
+   the language.  It also sets the keyboard layout, the Debian mirror,
+   and the timezone.  If you set any of these others explicitly then
+   that setting will over-ride the value set via cheat:lang:.
+
+ * cheat:mirror=MM: Set the country of the Debian mirror.  Usually this
+   option is set to a 2-letter country code such as cheat:mirror=gr:.
+   **Note** that we now use the +/sbin/localize-repo+ program to
+   select the Debian repo and the antiX/MX repo based on the
+   time-zone.
+
+ * cheat:tz=<zone>: Set the timezone.  Example: cheat:tz=America/Denver:.
+   Some languages, such as en_US (United States English) cover more than
+   one timezone so setting the cheat:lang: may not set the correct timezone
+   for you. More languages choices have been added to the F2-Language
+   menu in the bootloader in order make it easier to set both the
+   language and the time-zone with that menu.
+
+== Other Live System Features
+{top}
+
+These options control features that are specific to the Live system
+but don't fit into any of the previous categories.  Some of these
+are available in the bootloader menus.
+
+
+=== Disable Some SystemV Services
+{top}
+
+This option will disable some startup services for faster booting and
+less memory consumption.
+
+ * cheat:disable_srv=|antiX=|aX=:
+
+Valid values are a combination of the following letters:
+
+ L = lean        Turn off some services
+ X = Xtralean    Turn off even more services
+ M = mean        Turn off some networking services
+ D = nodbus      Dont' launch dbus
+
+Lean services:
+
+  acpid           acpi-fakekey    acpi-support    bootlogs        bluetooth
+  cpufrequtils    cron            cups            gpm             ifplugd
+  irqbalance      loadcpufreq     nfs-common      rpcbind         rsync
+  rsyslog         saned           smartmontools   ssh             stop-bootlogd
+  sudo            wicd
+
+Note that acpid and wicd will not be disabled if we detect laptop
+hardware.
+
+Xtralean services:
+
+  bootlogd                    cryptdisks                  cryptdisks-early
+  dns-clean                   hdparm                      hwclock.sh
+  hwclockfirst.sh             ifupdown-clean              lm-sensors
+  mountnfs-bootclean.sh       mountoverflowtmp            nfs-common
+  pcmciautils                 policykit                   pppd-dns
+  ufw                         urandom
+
+Mean services:
+
+    networking resolvconf
+
+=== Other Live Options
+{top}
+
+ * cheat:checkfs: (**LiveUSB Only**)
+   Perform file system check on the cheat:LiveUSB:.
+   This won't check the file system of a LiveCD.  Will also check the
+   filesystem of the persistence device (if different from the boot device)
+   and the file systems on the persistence files +rootfs+ and +homefs+ if
+   they exist and are enabled.  It will only check the following types of file
+   systems: ext2, ext3, and ext4.
+
+ * cheat:gfxsave=*: (**LiveUSB Only**)
+   Set the bootloader current bootloader settings as the defaults.  Valid
+   values: cheat:custom:, cheat:menus:, cheat:both:, and cheat:reset:.
+   **Note:** the cheat:gfsave: options will usually not work on a frugal
+   install.
+
+ * cheat:md5|checkmd5:
+   Check the md5sum of the three primary files needed to boot a live system:
+   +linuxfs+, +vmlinuz+, and +initrd.gz+.  If this test passes then your
+   boot media should be good although this won't necessarily catch
+   intermittent problems.
+
+ * cheat:nocheckfs:
+   The LiveUSB acts like an installed system and will automatically check its
+   own filesystem based the time since the last check and/or the number of
+   mounts since the last check.  Use this option to turn this feature off.
+
+ * cheat:toram:
+   Copy the entire +linuxfs+ file into RAM.  This takes up RAM.  The amount
+   of RAM used will be about the same as the size of the .iso file used to
+   create the LiveCD or LiveUSB.  It will also take some time when you first
+   boot to copy the file into RAM.  But after this, the system will run very
+   fast.  You can also eject the LiveCD (or remove the LiveUSB while the
+   system is running.
+
+== List of All Boot Parameters Described
+
+  amnt         buuid=       flab         kbd=         nocheckfs    puuid=
+  amnt=        checkfs      from=        kbopt=       noremaster   rollback
+  automount    checkmd5     fromiso=     kbvar=       nosavestate  savestate
+  automount=   desktheme=   frugal       lang=        noxorg       sq=
+  bdev=        desktop=     frugal=      load=        pdev=        toram
+  bdir=        disable_srv= fstab=       load=        persist=     try=
+  blab=        dpi=         fuuid        md5          plab=        tz=
+  blacklist=   earlyvid     gfxsave=     menus        plink        verb=
+  bootchart    failsafe     hostname=    mirror=      private      xorg=
+  bp=          fdev         hwclock=     mount=       ptry=
+
+

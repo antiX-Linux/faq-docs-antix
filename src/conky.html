@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ Guide to Conky</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="conky.html">Conky</a></td><td>&#187;</td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Guide to Conky</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">First look</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_basic_configuration">Basic Configuration</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_basic_operation">Basic Operation</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_basic_customization">Basic Customization</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_advanced">Advanced</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_links">Links</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">First look</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div>
+<span class="image">
+<img src="images/conky.jpg"" alt="conky.jpg"" />
+</span></p></div>
+<div class="paragraph"><div class="title">What is this stuff I see in the upper right corner?</div><p>That is the output of Conky, a powerful system monitor loaded by default
+in antiX.</p></div>
+<div class="paragraph"><div class="title">What&#8217;s it good for?</div><p>Conky can display just about anything you want to keep track of, either on
+your desktop or in its own window.</p></div>
+<div class="paragraph"><div class="title">Can you give me some examples?</div><p>Sure: disk space, system load, wireless status, battery status, network
+download and upload speed, Internet connections by protocol, RAM usage,
+swap usage, running processes, weather report, etc.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_configuration">Basic Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><div class="title">How do I set it up?</div><p>Conky comes already installed and configured by default in antiX to display
+basic system information. Open ~/.conkyrc in a text editor or
+antiX CC -&#8594; Desktop -&#8594; Edit System Monitor (which does that for you) and
+study the file. You will see that there are already some options set up
+for laptop users (like battery monitoring) which are commented out and if
+you want them displayed, just uncomment them and save.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_operation">Basic Operation</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="ulist"><div class="title">How do I turn it off?</div><ul>
+<li>
+<p>
+IceWM: right click  on Menu -&#8594; Desktop-&#8594; Settings-&#8594; Conky on/off
+Repeat to turn it back on.
+</p>
+</li>
+<li>
+<p>
+Fluxbox:right click on Menu -&#8594; Desktop -&#8594; Conky on/off
+</p>
+</li>
+<li>
+<p>
+JWM:right click on Menu -&#8594; Desktop -&#8594; Conky on/off
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_customization">Basic Customization</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><div class="title">How do I change Conky&#8217;s look or information?</div><p>Follow these steps:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Open antiX CC -&#8594; Desktop -&#8594; Edit System Monitor. This will bring up
+a text editor with your default .conkyrc script.
+</p>
+</li>
+<li>
+<p>
+Before you start editing, save a copy of your default conky script under
+a different name such as “conkyrc_default”. That way if you make a mistake
+or don&#8217;t like your changes you can just reload your default script.
+</p>
+</li>
+<li>
+<p>
+Make any changes you would like to the conky setup, save and exit, then
+click Menu -&#8594; Desktop -&#8594; Settings-&#8594; Conky on/off twice to toggle it off
+and back on to see your changes. The options section in the .conkyrc file
+in your home folder supplies some useful tips.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><div class="title">Can I use the terminal to do this?</div><p>You can edit the Conky config file in a terminal by typing (substitute your
+actual username): nano /home/yourusername/.conkyrc</p></div>
+<div class="paragraph"><p>This will bring up the config file in Nano.</p></div>
+<div class="paragraph"><div class="title">That&#8217;s a long file: where do I put my changes?</div><p>All style changes go above the word “TEXT” (toward the bottom), content
+changes go below.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced">Advanced</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><div class="title">What extra features does Conky have?</div><p>See this long list of the possible variables here or open a terminal and
+enter: man conky.</p></div>
+<div class="paragraph"><div class="title">How can I make style changes such as color, boxes, etc?</div><p>Available style variables are listed here. or open a terminal and
+enter: man conky.</p></div>
+<div class="paragraph"><div class="title">Can you give me a couple of examples of advanced use?</div><p>Sure, you might want to try these to begin with, changing colors as you wish</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>     * Monitor top processes:
+${color white} Top processes (PID CPU% MEM%)
+${color green}${top name 1}${color white} ${top pid 1} ${top cpu 1} ${top mem 1}
+
+${color red}${top name 2}${color white} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color red}${top name 3}${color white} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color red}${top name 4}${color white} ${top pid 4} ${top cpu 4} ${top mem 4}
+     * Monitor a laptop battery:
+${color red}battery state:${color white} ${battery}
+${color red}battery strength:${color green} ${battery_bar 7,50}
+     * Add a wireless section (adjust interface as necessary):
+${color white}Wireless:
+${color green}essid: ${wireless_essid wlan0}
+${color red}IP:${color white} ${addr wlan0}
+${color red}link strength: ${color white} ${wireless_link_bar 7,50 wlan0}</code></pre>
+</div></div>
+<div class="paragraph"><p>For more examples, follow the links below and search the internet.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links">Links</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+&#91;<a href="http://conky.sourceforge.net/">Conky home page</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="http://conky.sourceforge.net/screenshots.html">Conky examples with some scripts</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="http://ubuntuforums.org/showthread.php?t=281865">Variety of individual Conky config files</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="http://linuxowns.wordpress.com/2008/04/04/create-a-custum-conky-setup/">Conky setup for weather, gmail and audio</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="http://crunchbanglinux.org/wiki/conky">Conky wiki at #! Linux</a>&#93;.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2016-06-21 17:22:49 EEST
+</div>
+</div>
+</div>
+</body>
+</html>

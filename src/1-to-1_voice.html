@@ -1,0 +1,800 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ 1-to-1 Voice User Guide</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">1-to-1 Voice User Guide</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><a id="table_of_contents"></a></p></div>
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">Conventions</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_what_is_1_to_1_voice">What is 1 to 1 Voice</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_typical_use_case">Typical Use Case</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_scenario_private_call_via_the_internet">Scenario Private Call via the Internet</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_call_a_voice_service_provider">Call a Voice Service Provider</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_provide_a_voice_service_for_a_caller">Provide a Voice Service for a Caller</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_provide_multiple_concurrent_voice_services_from_a_single_location">Provide Multiple Concurrent Voice Services from a Single Location</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_fine_tuning">Fine Tuning</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_superuser_account">SuperUser Account</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_summary_of_files">Summary of Files</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_references">References</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_video">Video</a>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">Conventions</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">This is additional information</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Note" />
+</td>
+<td class="content">This is a tip</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">This is an example configuration or setting</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_1_to_1_voice">What is 1 to 1 Voice</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>It is a simple way to talk privately with the user of another system.</p></div>
+<div class="paragraph"><p>A system may perform either of two roles:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Call a 1-to-1 Voice Service Provider
+</p>
+</li>
+<li>
+<p>
+Provide a 1-to-1 Voice Service for a Caller
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>The caller and provider make contact across either the internet or local network.  The connection is automatically encrypted to provide privacy during the call. The conversation happens in real time in a similar manner to a telephone call.</p></div>
+<div class="paragraph"><p>It is self contained.  Except for an ISP, connections across the internet do not depend upon the availability of third party services. Creation of external facilities or registration with their providers are not required.  Additional financial commitment is not needed.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_typical_use_case">Typical Use Case</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>The user prefers to work by clicking buttons rather than by typing commands.  Their interest is in using their system rather than understanding its technicalities. Beyond the applications they normally use day-to-day, they have low levels of confidence in their technical abilities.  When something unforeseen occurs, they rely upon the expertise of someone else to resolve it.</p></div>
+<div class="paragraph"><p>Something happens that the user wants to discuss with someone else.  Just like making a regular 'phone call, the user calls the service that the other person provides and the conversation takes place.</p></div>
+<div class="paragraph"><p>The user&#8217;s preference is for a basic service that is simple, familiar, and obvious to use, rather than a complex one that offers many features and is unclear how to use because of the large number of optional settings they might have to handle.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><a id="scenario_private_call_via_the_internet"></a></p></div>
+<div class="sect2">
+<h3 id="_scenario_private_call_via_the_internet">Scenario Private Call via the Internet</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+The caller system is behind a local network firewall/router that the user cannot or does not want to configure<br />
+</p>
+</li>
+<li>
+<p>
+The caller system might or might not be running a firewall that the user does not want to configure<br />
+</p>
+</li>
+<li>
+<p>
+The provider system is behind a local network firewall/router that forwards the required port to their system<br />
+</p>
+</li>
+<li>
+<p>
+If a firewall is running on the provider system, it allows a connection to the forwarded port<br />
+</p>
+</li>
+<li>
+<p>
+The caller and the provider systems are many miles apart and will connect across the internet<br />
+</p>
+</li>
+<li>
+<p>
+The connection is automatically encrypted before the 1-to-1 call is allowed to start<br />
+</p>
+</li>
+<li>
+<p>
+The call is automatically started and all traffic passes within the encrypted tunnel<br />
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">If you are connecting via a local network rather than the internet, there is no need to forward any ports to the provider system.  In that case, both provider and caller systems must be in the same local network i.e. behind the same local network firewall/router.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><div class="title">Links</div><p><a href="#table_of_contents">Table of Contents</a><br />
+<a href="#call_a_voice_service_provider">Call a Voice Service Provider</a><br />
+<a href="#provide_a_voice_service_for_a_caller">Provide a Voice Service for a Caller</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><a id="call_a_voice_service_provider"></a></p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_call_a_voice_service_provider">Call a Voice Service Provider</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_security_measures">Security Measures</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Automatically uses SSL to create an encrypted connection<br />
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+<div class="sect2">
+<h3 id="_pre_connection_requirements">Pre-Connection Requirements</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+The provider system is listening for a connection<br />
+</p>
+</li>
+<li>
+<p>
+The provider system operator has supplied you the IP address to contact
+</p>
+</li>
+<li>
+<p>
+Your system has working audio, able to output sounds via headset/speakers and input sounds via a microphone
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+<div class="sect2">
+<h3 id="_making_a_call">Making a Call</h3>
+<div class="paragraph"><p>From the antiX menu select<br />
+<span class="image">
+<img src="images/1-to-1_voice/1-to-1_voice.png" alt="1-to-1_voice/1-to-1_voice.png" />
+</span><sup>1-to-1 Voice </sup></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>A window opens asking which mode is wanted.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/1-to-1_voice/c_select_mode_call.jpg" alt="1-to-1_voice/c_select_mode_call.jpg" />
+</span></p></div>
+<div class="paragraph"><p>If a buton is not pressed, <em>Call</em> is automatically started after a timeout</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>A window opens asking what IP address to contact</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/1-to-1_voice/c_ip_address_to_contact.jpg" alt="1-to-1_voice/c_ip_address_to_contact.jpg" />
+</span></p></div>
+<div class="paragraph"><p>Enter the IP Address supplied by the provider system operator</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>The first time you run call mode, a wizard will open advising you how to set up Mumble for your particular hardware. This is the application that 1-to-1 Voice uses to talk with the service provider.  Follow the on-screen prompts to conduct the set up procedure.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">Refer to section <em>Fine Tuning</em> to change the configuration after initial set up.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">If you have previously run provide mode, or Mumble as a separate applicaction, 1-to-1 Voice will automatically use the set up you created at that time.  In such a case, setting up again is not required.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>The first time you run call mode, a window will open asking whether you want to accept an SSL certificate from the service provider.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/1-to-1_voice/c_certificate_accept.jpg" alt="1-to-1_voice/c_certificate_accept.jpg" />
+</span></p></div>
+<div class="paragraph"><p>Click <em>Yes</em> to accept and store the certificate.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>A window opens to indicate the connection has been made to the provider service.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/1-to-1_voice/c_connected.jpg" alt="1-to-1_voice/c_connected.jpg" />
+</span></p></div>
+<div class="paragraph"><p>When both caller and provider are listed, you are ready to hold your private conversation.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><div class="title">Links</div><p><a href="#table_of_contents">Table of Contents</a><br />
+<a href="#scenario_private_call_via_the_internet">Scenario Private Call via the Internet</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><a id="provide_a_voice_service_for_a_caller"></a></p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_provide_a_voice_service_for_a_caller">Provide a Voice Service for a Caller</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_security_measures_2">Security Measures</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Automatically uses SSL to create an encrypted connection
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+<div class="sect2">
+<h3 id="_pre_connection_requirements_2">Pre-Connection Requirements</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Your local network firewall/router forwards port 64730 to the provider system
+</p>
+</li>
+<li>
+<p>
+You have started provider mode before the caller system requests a connection
+</p>
+</li>
+<li>
+<p>
+You have supplied the caller system operator your external IP address
+</p>
+</li>
+<li>
+<p>
+Your system has working audio, able to output sounds via headset/speakers and input sounds via a microphone
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">Each firewall/router handles port forwarding in its own way, this means there is no single description that can cover all variations.  You should refer to the user manual to do the setting up.<br /></td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">If you are connecting via a local network rather than the internet, there is no need to forward any ports to the provider system.</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ip_address">IP Address</h3>
+<div class="paragraph"><p>To provide access across the internet for a caller system, a connection must be made to the external IP address of your local network firewall/router. This is different from the internal address it uses on your local network.</p></div>
+<div class="paragraph"><p>A home firewall/router will usually have its external IP address assigned by your ISP.  Often the ISP can change this external address without your knowlege and without affecting your access to the internet. This means your external address must be confirmed before each call can be started.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+<div class="sect2">
+<h3 id="_to_discover_your_external_ip_address">To Discover Your External IP Address</h3>
+<div class="paragraph"><p>Open a web (internet) browser<br />
+Enter the address <a href="http://whatismyip.com">http://whatismyip.com</a></p></div>
+<div class="paragraph"><p>Supply the IP address to the person operating the caller system, via email or some other means.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">If you are connecting via a local network rather than the internet, supply to the caller system operator the IP address of the provider system.</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_begin_providing_the_service">Begin Providing the Service</h3>
+<div class="paragraph"><p>From the antiX menu select<br />
+<span class="image">
+<img src="images/1-to-1_voice/1-to-1_voice.png" alt="1-to-1_voice/1-to-1_voice.png" />
+</span><sup>1-to-1 Voice </sup></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>A window opens asking which mode is wanted.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/1-to-1_voice/p_select_mode_provide.jpg" alt="1-to-1_voice/p_select_mode_provide.jpg" />
+</span></p></div>
+<div class="paragraph"><p>Press the <em>Provide</em> button</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>The service starts and you will be automatically logged in as an unprivileged user named provider. The first time you run provide mode, a wizard will open advising you how to set up Mumble for your particular hardware. This is the application that 1-to-1 Voice uses to talk with the caller via the service you are now providing.  Follow the on-screen prompts to conduct the set up procedure.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">Refer to section <em>Fine Tuning</em> to change the configuration after initial set up.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">If you have previously run call mode, or Mumble as a separate applicaction, 1-to-1 Voice will automatically use the set up you created at that time.  In such a case, setting up again is not required.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>A window opens to indicate you have joined the service.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/1-to-1_voice/p_connected.jpg" alt="1-to-1_voice/p_connected.jpg" />
+</span></p></div>
+<div class="paragraph"><p>When a caller joins the service, you are ready to hold your private conversation.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+<div class="sect2">
+<h3 id="_stop_providing_the_service">Stop Providing the Service</h3>
+<div class="paragraph"><p>Close Mumble in the usual way via its window or icon in the taskbar.  This automatically closes the Murmur service.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><div class="title">Links</div><p><a href="#table_of_contents">Table of Contents</a><br />
+<a href="#scenario_private_call_via_the_internet">Scenario Private Call via the Internet</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_provide_multiple_concurrent_voice_services_from_a_single_location">Provide Multiple Concurrent Voice Services from a Single Location</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>In cases where two or more systems are present at your site, each of them may provide an independent 1-to-1 Voice service.</p></div>
+<div class="paragraph"><p>To provide a service exclusively to any system in the same local network, the default configuration may be used.  All systems providing a service may operate concurrently with an identical configuration. Use 1-to-1 Voice as described in the section <em>Provide a Voice Service for a Caller</em></p></div>
+<div class="paragraph"><p>To provide a service to any system across the internet and local network, each system providing service must have an individual configuration as described in the following steps.</p></div>
+<div class="sect2">
+<h3 id="_port_number">Port Number</h3>
+<div class="paragraph"><p>Your local network firewall/router must forward a unique port number to each system e.g. 64730 (default), 64731, 64732, etc.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">Each firewall/router handles port forwarding in its own way, this means there is no single description that can cover all variations.  You should refer to the user manual to do the setting up.<br /></td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_to_1_voice_settings">1-to-1 Voice Settings</h3>
+<div class="paragraph"><p>You must change the port number in both the Murmur and Mumble configuration files to ensure they match the value in the firewall/router</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">Settings are held in hidden files in your home folder<br />
+.config/1-to-1_voice/murmur.ini<br />
+.config/1-to-1_voice/mumble.conf</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">A simple way to open a file for editing is<br />
+1. Switch your file manager to show hidden files<br />
+2. Browse to .config/1-to-1_voice/filename<br />
+3. Select the file and open it in your text editor</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>In the files, find the section that specifies the port number, enter the required value, and save the file.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Example setting an alternative port number in murmur.ini</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># Port to bind TCP and UDP sockets to
+port=64731</code></pre>
+</div></div>
+</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Example setting an alternative port number in mumble.conf</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># Specify an alternative port number
+# This is only needed if you are providing a 1-to-1_voice service from this
+# local system that does not use the default port number.  It used by the local
+# Mumble to join the local Murmur server as the user named provider.
+# When an alternative port number is specified the following are required
+#   The port number specified in murmur.ini must be changed to match
+#   The LAN firewall/router must forward the port number to this system
+# Leave empty to use the default port number
+# Examples
+#   ALTERNATIVE_PORT=
+#   ALTERNATIVE_PORT=64733
+# Default: ALTERNATIVE_PORT=
+ALTERNATIVE_PORT=64731</code></pre>
+</div></div>
+</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_details_to_supply_to_a_caller">Details to Supply to a Caller</h3>
+<div class="paragraph"><p>When providing a service from a system using an alternative port number it is neccessary to supply the caller your contact details in the following format<br />
+<em>IPAddress:PortNumber</em><br />
+You should advise the caller to enter the entire details in order to successfully contact your service.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">The format is important.<br />
+It must not contain any spaces.<br />
+The colon is required between the IP address and port number.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><a id="fine_tuning"></a></p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fine_tuning">Fine Tuning</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Usually the initial settings created by the Mumble Audio Wizard do not have to be changed for 1-to-1 Voice to work.</p></div>
+<div class="paragraph"><p>The wizard may be run again or other settings modified from the main window.  Because of the large number of items that can be changed it is impractical to cover more than a few basic options.  The Mumble web site is the preferred starting point for further information.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><em>Audio Input and Output Devices</em><br />
+A range of devices that are specific to each individual system will be available to choose from.  Often the lists will include a default device.  Selecting such a device will usually produce a working result, but it may not be the optimum choice.  Try the other devices and monitor the difference in CPU demand.  It might be possible to obtain a working result that uses fewer resources.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><em>Positional Audio</em><br />
+In a conversation between two people this is of little use and may be disabled.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><em>Text to Speech</em><br />
+In a two person session it is preferable to disable this and use sounds instead.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><em>Transmission</em><br />
+The most convenient option is to choose to transmit continuously.  This produces the highest demand for CPU.  Prefer the Voice Activity option to reduce the demand.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><em>Overlay</em><br />
+In a conversation between two people this is of little use and may be disabled.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><em>Unwanted Instance of Murmur</em><br />
+Installing mumble-server (Murmur) by default starts Murmur as part of the boot-up routine.  This is not needed nor used by 1-to-1 Voice.  If you are not providing another independent Murmur service on this system, you can reduce the otherwise wasted CPU and RAM usage by preventing this automatic action.</p></div>
+<div class="paragraph"><p>In a system that uses sysVinit, running the following the commands in a terminal will respectively</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Disable automatic startup of a stock mumble-server during bootup<br />
+</p>
+</li>
+<li>
+<p>
+Stop a running instance of a stock mumble-server
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">sudo update-rc.d mumble-server disable<br />
+sudo /etc/init.d/mumble-server stop</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Alternatively, run the first command, then reboot the system.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_superuser_account">SuperUser Account</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The SuperUser account is the inbuilt administrative account for Murmur.  This is the application that 1-to-1 Voice uses to provide the service for a caller.  It is different from the administrative account for your operating system which is usually called root, but occasionally may be referred to using the generic term superuser.</p></div>
+<div class="paragraph"><p>The SuperUser account is not required to provide a 1-to-1 Voice service.  Because it is not needed nor used by 1-to-1 Voice, the default setting is for it to be switched off.  The facility to activate it is provided only as a convenience for interested users. Any changes made via the SuperUser account are deemed to be beyond the scope of the 1-to-1 Voice project.</p></div>
+<div class="paragraph"><p>The SuperUser account accesses Murmur via the Mumble interface. You can activate the account by changing the settings in the appropriate configuration file.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">Settings are held in a hidden file in your home folder<br />
+.config/1-to-1_voice/mumble.conf</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">A simple way to open mumble.conf for editing is<br />
+1. Switch your file manager to show hidden files<br />
+2. Browse to .config/1-to-1_voice/mumble.conf<br />
+3. Select the file and open it in your text editor</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>In the file, find the section that enables to account.  The default setting is for it to be left empty (blank).  Simply enter the letter y and save the file.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Example setting to enable the SuperUser account</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># Enable or disable the superuser account built into the mumble application
+# It does not need to enabled for 1-to-1 Voice to work
+# Leave empty to disable, or answer y to enable
+# Example
+#   ENABLE_SUPERUSER=
+#   ENABLE_SUPERUSER=y
+# Default: ENABLE_SUPERUSER=
+ENABLE_SUPERUSER=y</code></pre>
+</div></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>Each time 1-to-1 Voice is started to provide a service, a window opens asking how to handle the SuperUser password</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/1-to-1_voice/p_select_mode_superuser_password.jpg" alt="1-to-1_voice/p_select_mode_superuser_password.jpg" />
+</span></p></div>
+<div class="paragraph"><p>If a button is not pressed, <em>Existing</em> is automatically started after a timeout.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>The first time you run provide mode a window opens asking you to set the SuperUser password</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/1-to-1_voice/p_superuser_password_specify.jpg" alt="1-to-1_voice/p_superuser_password_specify.jpg" />
+</span></p></div>
+<div class="paragraph"><p>Type your preferred password</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>When the Mumble window is displayed you may sign in using SuperUser account.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary_of_files">Summary of Files</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Call Mode</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Configuration file is located in /home/USERNAME/.config/Mumble/Mumble.conf
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Provide Mode</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Configuration file for murmur server is located in /home/USERNAME/.config/1-to-1_voice/murmur.ini
+</p>
+</li>
+<li>
+<p>
+Log file is located in /home/USERNAME/.config/1-to-1_voice/murmur.log
+</p>
+</li>
+<li>
+<p>
+Configuration file for 1-to-1 Voice options is located in /home/USERNAME/.config/1-to-1_voice/mumble.conf
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Executable files are located in /usr/local/bin/</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+1-to-1_voice.sh is the launcher script
+</p>
+</li>
+<li>
+<p>
+1-to-1_voice_call.sh is the wrapper script for mumble
+</p>
+</li>
+<li>
+<p>
+1-to-1_voice_provide.sh is the wrapper script for mumble-server (murmur) plus mumble
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Menu file is located in /usr/share/applications/antix/</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+1-to-1_voice.desktop
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Icon files are located in /usr/share/pixmaps/</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+1-to-1_voice.png
+</p>
+</li>
+<li>
+<p>
+cross_red.png
+</p>
+</li>
+<li>
+<p>
+key_yellow.png
+</p>
+</li>
+<li>
+<p>
+questionmark_yellow.png
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references">References</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Mumble and Murmur<br />
+<a href="http://wiki.mumble.info/wiki/Main_Page">http://wiki.mumble.info/wiki/Main_Page</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_video">Video</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>antiX 15 - 1-to-1 Voice by runwiththedolphin
+<a href="https://www.youtube.com/watch?v=ED_9MUSjO1s">https://www.youtube.com/watch?v=ED_9MUSjO1s</a></p></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2016-06-21 17:01:51 EEST
+</div>
+</div>
+</div>
+</body>
+</html>

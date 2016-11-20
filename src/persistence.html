@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ Persistence Options</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="persistence.html">Persistence</a></td><td>&#187;</td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Persistence Options</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">What is Persistence?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_four_kinds_of_persistence">Four Kinds of Persistence</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#_home_persistence">Home Persistence</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_root_persistence">Root Persistence</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_static_root_persistence">Static Root Persistence</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_frugal">frugal Installation</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_remastering">Remastering</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="#_how_does_it_work">How does it Work?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_how_do_I_create_persistence_files">How do I Create Persistence Files?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_using_the_antix2usb_gui_app">Using the antix2usb gui app</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_video">Video</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">What is Persistence?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div>
+<span class="image">
+<img src="images/persistence.jpg"" alt="persistence.jpg"" />
+</span></p></div>
+<div class="paragraph"><p>Persistence is a hybrid between a LiveCD/USB and a full install.  One
+of the beauties of a LiveCD is that it allows you to boot Linux
+without touching any hard drives so you can have a "test-drive" without
+fear of altering your current system.  Another feature of a LiveCD is
+that once it is burned, it is close to impossible for it to get infected
+with a virus or a Trojan horse. Every time you boot it, you start off
+with a system that is clean and pristine.</p></div>
+<div class="paragraph"><p>Persistence gives you a way of remembering things between boots.  In
+order to do so, it needs access to a read-write device, typically
+either a hard drive or a USB stick.  If you are only using one
+machine that is yours then you can put the persistence file(s)s on one
+of your hard drives.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_four_kinds_of_persistence">Four Kinds of Persistence</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>The <span class="antix-text">anti<span class="antix-x">X</span></span> distribution offers up to four different forms of persistence on
+our Live Media (LiveCD/DVD/USB, etc).  Remastering is only available on
+writable media such as a LiveUSB  or a LiveHD (frugal install)  <em>not</em> a CD or
+DVD.  All four forms can be used together if desired.  They each have
+different strengths and weakness which are important to understand in order
+choose the right method or methods for your purposes.</p></div>
+<div class="sect2">
+<h3 id="_home_persistence">Home Persistence</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Home persistence is the simplest and safest.  The <code>homefs</code> persistence file
+is mounted at <code>/home</code>.  Any changes made to files under <code>/home</code> are (nearly)
+instantly stored on <code>homefs</code> filesystem.  It is good if you want to save
+settings (such as bookmarks or changes to your desktop) but it doesn&#8217;t save
+changes made to the system (such as installing packages).  Generally, if you
+need the root password to do it then it is not saved.  Home persistence is
+also ideal if you want to download and save a lot of data.   It is the safest
+precisely because you can&#8217;t save any system changes with it.  Even if your
+system gets compromised, it will be very difficult for the bad guys to make
+any permanent changes to your system.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_root_persistence">Root Persistence</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Root persistence allows you to save changes to the system <em>in addition</em> to
+saving personal settings.  It has two significant limitations.  These
+limitations are due to the fact that as the system is running the changes are
+stored in RAM and will be lost unless they are specifically copied back to the
+<code>rootfs</code> file.  If your computer crashes before the changes are copied back
+then your changes will be lost.  The other limitation is that the amount of
+new information you can store is limited by how much free RAM you have.</p></div>
+<div class="paragraph"><p>Dynamic root persistence saves file system changes in RAM (just like a normal LiveCD/USB).
+The persist-save program must be run to copy these changes to the rootfs file so
+they can be remembered across reboots. Use persist-config to have the program run
+automatically on shutdown/reboot.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_static_root_persistence">Static Root Persistence</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Static root persistence is another way to use persistence. Static root persistence saves file system
+changes directly in the rootfs file. It does not use any RAM so the only size limit
+is the size of the rootfs file. This makes it good for doing an "apt-get upgrade"
+or for installing a bunch of packages. It is usually best to follow up with a Live
+remaster to consolidate the file system changes into the compressed squashfs file.
+On many systems, static root persistence can be annoyingly slow. You are free to
+switch between static and dynamic root persistence each time you boot.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_frugal_installation">Frugal Installation</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>If you have access to a hard drive, you may wish to run antiX from it <em>live</em> with or
+without persistence. Using persistence is recommended. The main advantage of running
+frugally is that it is very fast and saves space since it uses the compressed squashfs
+(linuxfs) which is typically 4 times smaller than installed to hard drive.
+antiX has made setting up frugal very easy. Just press F5 at the boot menu and choose
+the frugal option. See How do I Create Persistence Files? below for further details.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_remastering">Remastering</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>We include remastering as a form of persistence for purposes of comparison.
+The <a href="remaster.html">Remastering page</a> contains implementation details.  If
+root persistence is like using a piton while climbing up a cliff, remastering
+is more like setting up a camp or bivouac site.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_does_it_work">How does it Work?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>The information for both root and home persistence is stored in two files
+called <code>rootfs</code> and <code>homefs</code>.  Unlike previous versions of antiX, there is no longer
+an option to use a entire partition for root or home persistence.  The default
+location for these files is right next to the squashfs file, on the same
+device and in the same directory.  We suggest that you use this default
+location whenever possible, but sometimes it is not possible (such as when
+booting from a LiveCD or LiveDVD).  For these cases you can specify which
+device the persistence files are on.  You can also specify a different
+directory.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_create_persistence_files">How do I Create Persistence Files?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="sect2">
+<h3 id="_automatically">Automatically</h3>
+<div class="paragraph"><p>The <code>homefs</code> and <code>rootfs</code> persistence files can be created when booting at
+the live desktop menu. Press F5, choose the persist option and on boot you
+will be prompted to set it up. You will be first asked where you want to save
+the persistent file(s). You just need to decide how large you want
+to make the file(s). The ext4 file system will be used.
+Once the <code>homefs</code> and <code>rootfs</code> files have been created, you will be prompted to
+make changes to the root and user passwords. This is for security.
+The final step will ask you how you want to set the save mode for root
+persistence. Options include: Automatic, Semi_Automatic and Manual Save.
+On reboot/halt any changes will be saved.</p></div>
+<div class="paragraph"><p>Note: If you have your persistence file(s) on a separate device to the one you
+boot from, you must specify your persistence device. You can use the following:
+* pdev=sda1 ie persist device
+* plab=antiX-Persist ie label of the device where persistence files are kept
+* puuid=xxxxxxx ie the uuid of the device.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_manually_by_using_the_antix2usb_gui_app">Manually by Using the antix2usb gui app</h3>
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>You can run antiX live from a usb stick.
+To install to usb stick you can use our tool antix2usb or UNetbootin.
+Both will work, but our tool enables users to also set up persistence prior to running.
+If using UNetbootin you will have to set up persistence once running from the stick/device.</p></div>
+<div class="paragraph"><p>Using antix2usb gui.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Plugin your usb stick.
+</p>
+</li>
+<li>
+<p>
+If it auto-mounts, unmount it.
+</p>
+</li>
+<li>
+<p>
+Open antix2usb from antixcc &#8594; disks -antiX2usb
+</p>
+</li>
+<li>
+<p>
+Select ISO file.
+Navigate to where the ISO file is and click Open.
+</p>
+</li>
+<li>
+<p>
+Install to USB device should automatically detect your usb device
+and show how much space is available.
+</p>
+</li>
+<li>
+<p>
+System partition.
+antix2usb allows users to either use the full disk or part of the disk space
+by creating a partition.
+If you do not want to use persistence, then minimum recommended size for a partition
+is shown below.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+antiX-full:1GB
+</p>
+</li>
+<li>
+<p>
+antiX-base:700MB
+</p>
+</li>
+<li>
+<p>
+antiX-core:350MB
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+You can set the language here or at the boot menu.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Options:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Format.
+This refers to the usb device partition.
+ext4 is recommended.
+</p>
+</li>
+<li>
+<p>
+Bootloader.
+This gets installed into the MBR of the usb device.
+syslinux is only used with fat32.
+</p>
+</li>
+<li>
+<p>
+Persistence.
+There are four options here.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+No persistence - just leave as default.
+</p>
+</li>
+<li>
+<p>
+home persistence - check home and select size
+</p>
+</li>
+<li>
+<p>
+root persistence - check root and select size
+</p>
+</li>
+<li>
+<p>
+Both home and root persistence - check both home and root and select sizes.
+<div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div>
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_video">Video</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><code>by runwiththedolphin</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2016-06-21 17:22:49 EEST
+</div>
+</div>
+</div>
+</body>
+</html>

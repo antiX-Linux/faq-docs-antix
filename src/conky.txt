@@ -1,0 +1,133 @@
+= Guide to Conky
+:con-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[First look]
+*  link:#_basic_configuration[Basic Configuration]
+*  link:#_basic_operation[Basic Operation]
+*  link:#_basic_customization[Basic Customization]
+*  link:#_advanced[Advanced]
+*  link:#_links[Links]
+
+
+[[under-toc]]
+== First look
+{top}
+image:conky.jpg"[]
+
+.What is this stuff I see in the upper right corner?
+
+That is the output of Conky, a powerful system monitor loaded by default 
+in antiX.
+
+.What's it good for?
+
+Conky can display just about anything you want to keep track of, either on 
+your desktop or in its own window.
+
+.Can you give me some examples?
+
+Sure: disk space, system load, wireless status, battery status, network 
+download and upload speed, Internet connections by protocol, RAM usage, 
+swap usage, running processes, weather report, etc.
+
+== Basic Configuration
+{top}
+
+.How do I set it up?
+
+Conky comes already installed and configured by default in antiX to display 
+basic system information. Open ~/.conkyrc in a text editor or 
+antiX CC --> Desktop --> Edit System Monitor (which does that for you) and 
+study the file. You will see that there are already some options set up 
+for laptop users (like battery monitoring) which are commented out and if 
+you want them displayed, just uncomment them and save.
+
+== Basic Operation
+{top}
+
+.How do I turn it off?
+
+* IceWM: right click  on Menu --> Desktop--> Settings--> Conky on/off  
+Repeat to turn it back on.
+
+* Fluxbox:right click on Menu --> Desktop --> Conky on/off
+
+* JWM:right click on Menu --> Desktop --> Conky on/off
+
+== Basic Customization
+{top}
+
+.How do I change Conky's look or information?
+
+Follow these steps:
+
+* Open antiX CC --> Desktop --> Edit System Monitor. This will bring up 
+a text editor with your default .conkyrc script.
+* Before you start editing, save a copy of your default conky script under 
+a different name such as “conkyrc_default”. That way if you make a mistake 
+or don't like your changes you can just reload your default script.
+* Make any changes you would like to the conky setup, save and exit, then 
+click Menu --> Desktop --> Settings--> Conky on/off twice to toggle it off 
+and back on to see your changes. The options section in the .conkyrc file 
+in your home folder supplies some useful tips.
+
+.Can I use the terminal to do this?
+
+You can edit the Conky config file in a terminal by typing (substitute your 
+actual username): nano /home/yourusername/.conkyrc
+
+This will bring up the config file in Nano.
+
+.That's a long file: where do I put my changes?
+
+All style changes go above the word “TEXT” (toward the bottom), content 
+changes go below.
+
+== Advanced
+{top}
+
+.What extra features does Conky have?
+
+See this long list of the possible variables here or open a terminal and 
+enter: man conky.
+
+.How can I make style changes such as color, boxes, etc?
+
+Available style variables are listed here. or open a terminal and 
+enter: man conky.
+
+.Can you give me a couple of examples of advanced use?
+
+Sure, you might want to try these to begin with, changing colors as you wish
+------------------------------------------------------------------------
+     * Monitor top processes:
+${color white} Top processes (PID CPU% MEM%)
+${color green}${top name 1}${color white} ${top pid 1} ${top cpu 1} ${top mem 1}
+
+${color red}${top name 2}${color white} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color red}${top name 3}${color white} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color red}${top name 4}${color white} ${top pid 4} ${top cpu 4} ${top mem 4}
+     * Monitor a laptop battery:
+${color red}battery state:${color white} ${battery}
+${color red}battery strength:${color green} ${battery_bar 7,50}
+     * Add a wireless section (adjust interface as necessary):
+${color white}Wireless:
+${color green}essid: ${wireless_essid wlan0}
+${color red}IP:${color white} ${addr wlan0}
+${color red}link strength: ${color white} ${wireless_link_bar 7,50 wlan0}
+------------------------------------------------------------------------
+For more examples, follow the links below and search the internet.
+
+== Links
+{top}
+
+* {ob}link:http://conky.sourceforge.net/[Conky home page]{cb}.
+* {ob}link:http://conky.sourceforge.net/screenshots.html[Conky examples with some scripts]{cb}.
+* {ob}link:http://ubuntuforums.org/showthread.php?t=281865[Variety of individual Conky config files]{cb}.
+* {ob}link:http://linuxowns.wordpress.com/2008/04/04/create-a-custum-conky-setup/[Conky setup for weather, gmail and audio]{cb}.
+* {ob}link:http://crunchbanglinux.org/wiki/conky[Conky wiki at #! Linux]{cb}.
+ 

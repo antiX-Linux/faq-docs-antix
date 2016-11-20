@@ -1,0 +1,13 @@
+++++++++++
+<pre><div class="code-example"><span style="color:aqua">Welcome to </span><span style="color:yellow">antiX-13</span><span style="color:white"> Luddite! </span><span style="color:aqua">!</span>
+<span style="color:aqua">   Total Memory </span><span style="color:fuchsia">  991</span><span style="color:aqua"> M</span>
+<span style="color:aqua">    Free Memory </span><span style="color:fuchsia">  963</span><span style="color:aqua"> M</span>
+<span style="color:aqua">Linux kernel: </span><span style="color:yellow">3.6.11-antix.1-486-smp</span>
+<span style="color:aqua">CPU: </span><span style="color:yellow">AMD Athlon(tm) 64 X2 Dual Core Processor 3600+</span>
+<span style="color:aqua">Scanning devices for:</span><span style="color:yellow"> antiX/linuxfs</span>
+<span style="color:lime">Mounted </span><span style="color:lime">/dev/sr0</span><span style="color:lime"> at </span><span style="color:blue">/boot-dev</span>
+
+<span style="color:aqua">The /init bootstrap is done.</span>
+<span style="color:aqua">======================================================================</span>
+</div></pre>
+++++++++++

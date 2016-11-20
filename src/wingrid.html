@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ Wingrid User Guide</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="wingrid.html">Wingrid</a></td><td>&#187;</td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Wingrid User Guide</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">Conventions</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_what_is_wingrid">What is Wingrid?</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_placing_a_window_into_the_grid">Placing a Window into the Grid</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_fine_tuning">Fine Tuning</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_changing_the_key_combinations">Changing the Key Combinations</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_summary_of_files">Summary of Files</a>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">Conventions</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">This is additional information</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Note" />
+</td>
+<td class="content">This is a tip</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">This is an example configuration or setting</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_wingrid">What is Wingrid?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>It is a convenient and speedy way to place the active window into a predetermined position and size on screen.</p></div>
+<div class="paragraph"><p>When working with multiple open windows, you often need to drag them around the desktop to put them into optimal locations.  Wingrid can help by automating the relocation.</p></div>
+<div class="paragraph"><p>The screen is notionally divided into 4 equally sized invisible rectangles in a 2x2 grid. Via a key press, the active window is moved within the grid.  Each window may occupy any 1, any 2 adjacent, or all 4 rectangles.  You can choose whether the window is to be at the top, bottom, left, or right of the screen, or maximized.  You can also change the position and size of any window at any time.</p></div>
+<div class="paragraph"><p>This flexibility enables you to put multiple windows into a layout that suits your way of working.  It is easy to have one layout for your current task and a different one when you switch to your next task.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_placing_a_window_into_the_grid">Placing a Window into the Grid</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>The window to be acted upon is always the active window.  It is sometimes known as the window that has the focus.</p></div>
+<div class="paragraph"><p>Placing the window into the grid is done by a combined key press, i.e. the control key (Ctrl) and a number key (1-9).<br />
+Each number key represents a different placement within the grid as shown in the following diagram.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/wingrid/ctrl1-9.jpg" alt="wingrid/ctrl1-9.jpg" />
+</span></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>Various permutations can be created to suit your preferred layout, for example</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/wingrid/ctrl-permutations.jpg" alt="wingrid/ctrl-permutations.jpg" />
+</span></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">If your vertically stacked windows overlap,<br />
+refer to the section named Fine Tuning</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>You may also gracefully close a window</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/wingrid/ctrl0.jpg" alt="wingrid/ctrl0.jpg" />
+</span></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fine_tuning">Fine Tuning</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>You can control Wingrid by changing its settings.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">Settings are held in a single hidden file in your home folder<br />
+.config/wingrid/wingrid.conf</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>In any layout in which windows are stacked vertically, they might be slightly misaligned and produce overlap.  This can be corrected by increasing/reducing the height of the windows in wingrid.conf.  Adjustments are usually set-and-forget.  Once they have been done to your satisfaction, they will work for all window layouts that Wingrid stacks vertically.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">A simple way to open wingrid.conf for editing is<br />
+1. Switch your file manager to show hidden files<br />
+2. Browse to .config/wingrid/wingrid.conf<br />
+3. Select the file and open it in your text editor</td>
+</tr></table>
+</div>
+<div class="sect2">
+<h3 id="_correcting_overlapping_windows">Correcting Overlapping Windows</h3>
+<div class="paragraph"><p>The method uses two windows stacked vertically via Ctrl3 and Ctrl4 respectively.<br />
+In wingrid.conf</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Change WINHEIGHT_LESS from zero to a value of your choice
+</p>
+</li>
+<li>
+<p>
+Save the change
+</p>
+</li>
+<li>
+<p>
+Click on the top window in the stack to make it active
+</p>
+</li>
+<li>
+<p>
+Press Ctrl3 to refresh the window<br />
+<em>The bottom edge of the top window has moved up the screen</em>
+</p>
+</li>
+<li>
+<p>
+Change WINHEIGHT_MORE from zero to a value of your choice
+</p>
+</li>
+<li>
+<p>
+Save the change
+</p>
+</li>
+<li>
+<p>
+Click on the bottom window in the stack to make it active
+</p>
+</li>
+<li>
+<p>
+Press Ctrl4 to refresh the window<br />
+<em>The top edge of the bottom window has moved up the screen</em>
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>Repeat the adjustment process using refined values if neccessary until the windows abut correctly.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+<div class="sect2">
+<h3 id="_example_adjustment_of_window_heights">Example Adjustment of Window Heights</h3>
+<div class="paragraph"><p>On the author&#8217;s system the following creates top and bottom windows of equal height</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">
+<div class="paragraph"><p>wingrid.conf</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># All adjustment values below are pixels
+
+# Reduce Window Height
+# The top edge of the window remains unchanged
+# The bottom edge of the window moves towards the top edge
+# Applies when putting a window in the following grid positions
+#   Bottom
+#   Bottom Left
+#   Bottom Right
+#   Top
+#   Top Left
+#   Top Right
+# Default: WINHEIGHT_LESS=0
+WINHEIGHT_LESS=35
+
+
+# Increase Window Height
+# The bottom edge of the window remains unchanged
+# The top edge of the window moves away from the bottom edge
+# Applies when putting a window in the following grid positions
+#   Bottom
+#   Bottom Left
+#   Bottom Right
+# Default: WINHEIGHT_MORE=0
+WINHEIGHT_MORE=10
+
+
+# Increase Gap from Top Edge of Screen to Top Edge of Top Window
+# The window dimensions remain unchanged
+# The entire window moves vertically down the screen
+# Applies when putting a window in the following grid positions
+#   Top
+#   Top Left
+#   Top Right
+# Default: GAPTOP=0
+GAPTOP=0
+
+
+# Increase Gap from Left Edge of Screen to Left Edge of Left Window
+# The window dimensions remain unchanged
+# The entire window moves horizontally across the screen
+# Applies when putting a window in the following grid positions
+#   Left
+#   Left Top
+#   Left Bottom
+# Default: GAPLEFT=0
+GAPLEFT=0</code></pre>
+</div></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changing_the_key_combinations">Changing the Key Combinations</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>The assignment of a combined keypress is handled by the window manager.  In your antiX system this will often be one of the following  Fluxbox, IceWM, or JWM.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">Key assignments are held in a hidden file in your home folder<br />
+.fluxbox/keys<br />
+.icewm/keys<br />
+.jwm/keys</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Each of them assigns combined keystrokes in its own way. Changing assignments is best done after referring to the user manual of the your chosen window manager.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary_of_files">Summary of Files</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Configuration file is located in /home/USERNAME/.config/wingrid/</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+wingrid.conf is the default configuration file
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Executable files are located in /usr/local/bin/</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+wingrid-left.sh
+</p>
+</li>
+<li>
+<p>
+wingrid-right.sh
+</p>
+</li>
+<li>
+<p>
+wingrid-top.sh
+</p>
+</li>
+<li>
+<p>
+wingrid-bottom.sh
+</p>
+</li>
+<li>
+<p>
+wingrid-topleft.sh
+</p>
+</li>
+<li>
+<p>
+wingrid-topright.sh
+</p>
+</li>
+<li>
+<p>
+wingrid-bottomleft.sh
+</p>
+</li>
+<li>
+<p>
+wingrid-bottomright.sh
+</p>
+</li>
+<li>
+<p>
+wingrid-maximize.sh
+</p>
+</li>
+<li>
+<p>
+wingrid-close.sh
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2015-10-23 19:42:53 EEST
+</div>
+</div>
+</div>
+</body>
+</html>
