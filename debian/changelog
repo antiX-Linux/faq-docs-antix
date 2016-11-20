@@ -1,3 +1,9 @@
+faq-docs-antix (0.4.8) unstable; urgency=medium
+
+  * Corrected broken links on Rox page
+
+ -- anticapitalista <antix@operamail.com>  Sun, 20 Nov 2016 13:05:57 +0200
+
 faq-docs-antix (0.4.7) unstable; urgency=medium
 
   * Minor changes to show antiX-16 verions of firefox-esr etc
