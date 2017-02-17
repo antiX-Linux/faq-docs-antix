@@ -1,3 +1,10 @@
+faq-docs-antix (0.4.9) unstable; urgency=medium
+
+  * Removed 1-to-1_assistance.html packaged in 1-to-1-assistance-antix
+  * Removed 1-to-1_voice.html - packaged in 1-to-1_voice-antix
+
+ -- anticapitalista <antix@operamail.com>  Sat, 11 Feb 2017 12:39:50 +0200
+
 faq-docs-antix (0.4.8) unstable; urgency=medium
 
   * Corrected broken links on Rox page
