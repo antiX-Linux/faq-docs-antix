@@ -1,0 +1,25 @@
+= Install to Hard drive
+:install-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[Install to Hard drive]
+
+**  link:#_how_it_works[How it Works]
+
+
+[[under-toc]]
+== Install
+{top}
+image:control_centre-Desktop-thumb.jpg"[]
+
+
+
+== How it Works
+{top}
+
+
+
+

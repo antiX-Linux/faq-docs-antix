@@ -1,0 +1,37 @@
+= Guide to Poor Man's Radio Player
+:pmrp-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[What is PMRP?]
+*  link:#_links[Links]
+
+
+[[under-toc]]
+== What is pmrp?
+{top}
+image:pmrp/pmrp.jpg"[]
+
+pmrp (Poor Man's Radio Player) is an Internet radio player script written in bash by hakerdefo.
+
+== Features:
+
+* 350 hand-picked radio stations.
+* Music, news, talk-shows, interviews, comedy, plays and much much more.
+* Easy menu system to browse-navigate between different radio stations.
+* Now playing information.
+* Very low memory footprint.
+* No configuration required. Ready to play from the word go.
+
+== Usage:
+
+Under Applications > Sound and Video and follow the instructions.
+
+== Links
+{top}
+
+* {ob}link:https://github.com/hakerdefo/pmrp[pmrp homepage]{cb}.
+
+

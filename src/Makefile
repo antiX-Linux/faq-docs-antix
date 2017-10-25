@@ -2,7 +2,7 @@
 EDITOR  := gvim -p
 BROWSER := firefox
 
-FILES := conky fluxbox icewm smxi rox spacefm index jwm persistence remaster snapshot streamlight boot-params connectshares droopy 1-to-1_assistance 1-to-1_voice wingrid 
+FILES := conky net fluxbox icewm smxi rox spacefm index jwm persistence remaster snapshot control_centre cli_aptix antiX-cli-cc mpsyt pmrp streamlight boot-params connectshares droopy 1-to-1_assistance 1-to-1_voice wingrid 
 FILES := $(FILES) 
 
 HTML_FILES := $(FILES:%=%.html)
@@ -118,6 +118,30 @@ droopy.html: droopy.txt $(DEPS)
 	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
 
 wingrid.html: wingrid.txt $(DEPS)
+	@echo "asciidoc [...] -o $@"
+	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
+
+control_centre.html: control_centre.txt $(DEPS)
+	@echo "asciidoc [...] -o $@"
+	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
+
+cli_aptix.html: cli_aptix.txt $(DEPS)
+	@echo "asciidoc [...] -o $@"
+	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
+
+antiX-cli-cc.html: antiX-cli-cc.txt $(DEPS)
+	@echo "asciidoc [...] -o $@"
+	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
+
+mpsyt.html: mpsyt.txt $(DEPS)
+	@echo "asciidoc [...] -o $@"
+	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
+
+pmrp.html: pmrp.txt $(DEPS)
+	@echo "asciidoc [...] -o $@"
+	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
+
+net.html: net.txt $(DEPS)
 	@echo "asciidoc [...] -o $@"
 	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
 

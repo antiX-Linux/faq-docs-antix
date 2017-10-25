@@ -1,0 +1,35 @@
+= Control Centre
+:controlcentre-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[Control Centre]
+
+[[under-toc]]
+== Control Centre
+{top}
+image:control_centre/control_centre-Desktop.jpg"[]
+
+The Control Centre in antiX is a centralized application for configuring 
+and administering various system tools, making it easier for a user to 
+do the many different chores required for the maintenance and use of a Linux box.
+
+It is divided into 10 sections.
+
+* Desktop
+* System
+* Network
+* Shares
+* Session
+* Live (only appears when running live)
+* Disks
+* Hardware
+* Drivers
+* Maintenance
+
+Simply click on the icon to open the application you want to use.
+
+{top}
+image:control_centre/control_centre-Live.jpg"[]

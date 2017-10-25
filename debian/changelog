@@ -1,3 +1,16 @@
+faq-docs-antix (0.4.11) unstable; urgency=medium
+
+  * Show in Applications menu as antiX Help
+  * antiX-17 version
+
+ -- anticapitalista <antix@operamail.com>  Sat, 07 Oct 2017 18:08:18 +0300
+
+faq-docs-antix (0.4.10) unstable; urgency=medium
+
+  * Removed stray 'F' in Boot_Menu documentation
+
+ -- anticapitalista <antix@operamail.com>  Wed, 05 Apr 2017 21:51:48 +0300
+
 faq-docs-antix (0.4.9) unstable; urgency=medium
 
   * Removed 1-to-1_assistance.html packaged in 1-to-1-assistance-antix

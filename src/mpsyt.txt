@@ -1,0 +1,76 @@
+= Guide to mps-youtube
+:mpsyt-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[What is mps-youtube?]
+*  link:#_features[Features]
+*  link:#_how_do_you_use_it[How do you use it?]
+*  link:#_links[Links]
+
+
+[[under-toc]]
+== What is mps-youtube?
+{top}
+image:mpsyt/mpsyt1.jpg"[]
+
+This project is based on mps, a terminal based program to search, stream and download music. 
+
+This implementation uses YouTube as a source of content and can play and download video as well as audio. 
+
+== Features
+{top}
+
+* Search and play audio/video from YouTube
+* Search tracks of albums by album title
+* Search and import YouTube playlists
+* Create and save local playlists
+* Download audio/video
+* Convert to mp3 & other formats (requires ffmpeg or avconv)
+* View video comments
+* Requires mplayer or mpv
+
+== How do you use it?
+{top}
+* Audio (default)
+
+* Type mpsyt in a terminal
+
+image:mpsyt/mpsyt1.jpg"[] 
+
+* Type /name of the artist eg /the who
+
+image:mpsyt/mpsyt2.jpg"[]
+
+* Type the number of the song
+
+image:mpsyt/mpsyt4.jpg"[]
+
+* Audio should play
+
+image:mpsyt/mpsyt5.jpg"[] 
+
+* Video
+
+* Type help config
+
+image:mpsyt/mpsyt7.jpg"[] 
+
+* Type or highlight set show_video true
+
+image:mpsyt/mpsyt8.jpg"[]
+
+* Type name of artist/song as before
+
+image:mpsyt/mpsyt9.jpg"[] 
+
+* Video should now play
+
+image:mpsyt/mpsyt11.jpg"[]
+
+== Links
+{top}
+
+* {ob}https://github.com/mps-youtube/mps-youtube[mps-youtube homepage]{cb}.

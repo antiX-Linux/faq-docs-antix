@@ -23,7 +23,7 @@ image:conky.jpg"[]
 That is the output of Conky, a powerful system monitor loaded by default 
 in antiX.
 
-.What's it good for?
+.What is it good for?
 
 Conky can display just about anything you want to keep track of, either on 
 your desktop or in its own window.
@@ -129,5 +129,4 @@ For more examples, follow the links below and search the internet.
 * {ob}link:http://conky.sourceforge.net/screenshots.html[Conky examples with some scripts]{cb}.
 * {ob}link:http://ubuntuforums.org/showthread.php?t=281865[Variety of individual Conky config files]{cb}.
 * {ob}link:http://linuxowns.wordpress.com/2008/04/04/create-a-custum-conky-setup/[Conky setup for weather, gmail and audio]{cb}.
-* {ob}link:http://crunchbanglinux.org/wiki/conky[Conky wiki at #! Linux]{cb}.
  

@@ -15,7 +15,7 @@
 [[under-toc]]
 == First look
 {top}
-image:jwm.jpg"[]
+image:wm/jwm.jpg"[]
 
 .What is this?
 
@@ -46,7 +46,7 @@ the workspace, open applications, background applications and the date/time.
 .How do I set up a wireless connection?
 
 There are 4 options, all found in the antiX Control Centre (CC): Wicd (full only), wpa_supplicant, 
-GPRS/UMTS and ceni.
+GPRS/UMTS and ceni. antiX developers recommend ceni.
 
 == Basic Operation
 {top}

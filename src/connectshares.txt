@@ -293,7 +293,7 @@ Connecting can be done in two ways
 
 === On-Demand
 From the antiX menu select +
-image:connectshares.png[]^Connectshares^
+image:connectshares/connectshares.png[]^Connectshares^
 
 === Automatically
 From the antiX menu select +
@@ -342,11 +342,11 @@ to make the connection you can continue to use your system as usual.
 
 To provide easy access to the shares, a shortcut link is created in your 
 home directory named either with the IP address or name of the remote system. +
-image:home-dirs.png[]
+image:connectshares/home-dirs.png[]
 
 Selecting the link in your file manager or other application displays
 each of the connected shares. +
-image:connected-shares.png[]
+image:connectshares/connected-shares.png[]
 
 {nbsp}
 
@@ -366,7 +366,7 @@ Disconnecting can be done in two ways
 
 === On-Demand 
 From the antiX menu select +
-image:disconnectshares.png[]^Disconnectshares^
+image:connectshares/disconnectshares.png[]^Disconnectshares^
 
 [icon="./images/icons/tip2.png"]
 [TIP]

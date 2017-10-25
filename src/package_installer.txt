@@ -1,0 +1,31 @@
+= Package Installer
+:pkins-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[About Package Installer]
+*  link:#_how_do_you_use_it[How do you use it?]
+*  link:#_links[Links]
+
+
+[[under-toc]]
+== About Package Installer
+image
+{top}
+
+
+
+== How do you use it?
+{top}
+
+
+== Links
+{top}
+
+* {ob}link:https://code.google.com/p/wmii/[wmii homepage]{cb}.
+* {ob}link:https://wiki.archlinux.org/index.php/wmii[archlinux wiki wmii]{cb}.
+* {ob}link:http://wiki.debian.org/Wmii/[Debian wmii]{cb}.
+* {ob}link:http://linuxbbq.org/wiki/index.php?title=Wmii[LinuxBBQ Wiki wmii]{cb}.
+

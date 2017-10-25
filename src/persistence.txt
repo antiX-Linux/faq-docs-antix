@@ -17,7 +17,7 @@
 
 *  link:#_how_do_I_create_persistence_files[How do I Create Persistence Files?]
 
-*  link:#_using_the_antix2usb_gui_app[Using the antix2usb gui app]
+*  link:#_using_the_liveusbmaker_app[Using the live-usb-maker app]
 *  link:#_video[Video] 
 
 
@@ -148,54 +148,11 @@ boot from, you must specify your persistence device. You can use the following:
 * puuid=xxxxxxx ie the uuid of the device.
 
 
-=== Manually by Using the antix2usb gui app
+=== Manually by Using the live-usb-maker app
 {top}
 
 You can run antiX live from a usb stick.
-To install to usb stick you can use our tool antix2usb or UNetbootin.
-Both will work, but our tool enables users to also set up persistence prior to running.
-If using UNetbootin you will have to set up persistence once running from the stick/device.
-
-Using antix2usb gui.
-
-* Plugin your usb stick.
-* If it auto-mounts, unmount it.
-* Open antix2usb from antixcc -> disks -antiX2usb
-* Select ISO file.
-Navigate to where the ISO file is and click Open.
-
-* Install to USB device should automatically detect your usb device
-and show how much space is available.
-
-* System partition.
-antix2usb allows users to either use the full disk or part of the disk space
-by creating a partition.
-If you do not want to use persistence, then minimum recommended size for a partition
-is shown below.
-
- - antiX-full:1GB
- - antiX-base:700MB
- - antiX-core:350MB
-
-* You can set the language here or at the boot menu.
-
-Options:
-
-* Format.
-This refers to the usb device partition.
-ext4 is recommended.
-
-* Bootloader.
-This gets installed into the MBR of the usb device.
-syslinux is only used with fat32.
-
-* Persistence.
-There are four options here.
-
- - No persistence - just leave as default.
- - home persistence - check home and select size
- - root persistence - check root and select size
- - Both home and root persistence - check both home and root and select sizes.
+To install to usb stick you can use our tool live-usb-maker.
 {top}
 
 == Video

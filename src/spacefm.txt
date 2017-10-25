@@ -12,7 +12,7 @@
 [[under-toc]]
 == First look
 {top}
-image:space-icewm.jpg"[]
+image:wm/space-icewm.jpg"[]
 
 .What is this desktop?
 

@@ -16,7 +16,7 @@
 [[under-toc]]
 == First look
 {top}
-image:icewm.jpg"[]
+image:wm/icewm.jpg"[]
 
 .What is this?
 
@@ -43,8 +43,7 @@ you real-time information on various aspects of your computer.
 .And that bar at the bottom?
 
 That is called the toolbar or panel, and it displays (L --> R) the start 
-button, Show Desktop, Home Folder, Terminal, Browser, Volume, Control Centre, 
-Quit, Workspaces 1-4 (or desktops), and on the far right, the date/time.
+button, Show Desktop, Workspaces 1-2 (or desktops), and on the far right, Volume and the date/time.
 
 (Note:  If you hover your mouse pointer over the items in the toolbar you 
 will see the names, and we will refer to the start button as Menu, or Favourite 
@@ -54,13 +53,10 @@ Applications or start button.)
 .How do I set up a wireless connection?
 
 There are 4 options, all found in the antiX Control Centre: Wicd (full only), wpa_supplicant, 
-GRPS/UMTS and ceni.
+GRPS/UMTS and ceni. antiX developers recommend ceni.
 
 * In  Control Centre --> Network --> you will find the wireless frontend 
 Wicd that antiX uses to make its wireless connection.
-Hints on its use can be found here.  See also the detailed discussion in 
-the MEPIS Wiki for more information, and search the MEPIS Community Forum  
-for particular cards.
 * The command-line (CLI) tool Ceni from the aptosid developers is a wrapper 
 that is very efficient for setting up a connection: Choose under Hardware 
 interfaces either your wired or wireless connection, click on your choice 
@@ -89,8 +85,8 @@ database.
 
 .How do I set up an HP printer?
 
-The easiest method is to use the MetaPackage-Installer, located 
-in the antiX CC -->System--> Meta Package-installer, then click on the 
+The easiest method is to use the Package-Installer, located 
+in the antiX CC -->System--> Package-installer, then click on the 
 arrow for Office and tick the check box for HP_printing, then Install.
 
 If you prefer to do it yourself, then do the following, (Warning! This may 
@@ -163,11 +159,12 @@ to manipulate your images with the program of your choice.
 
 .How do I install nvidia/ATI driver for antiX?
 
-The best way to do this is via the smxi script.
+The best way to do this is via the included app available in the control centre.
+Alternatively, use the smxi script.
 
 .Can I use a webcam?
 
-Many web cams will work with antiX, see the discussion in the Mepis Wiki.
+Many web cams will work with antiX.
 
 guvcview webcam application is located Applications-->Sound & Video-->guvcview
 
@@ -210,10 +207,6 @@ up to a full-featured one. Two are available by clicking Menu --> Tools -->  Edi
 
 * Nano is a command-line application run by control keys listed at the 
 bottom of the screen. Press Ctrl-G to access the help file.
-* Ted was designed to make it possible to edit rich text documents on 
-Unix/Linux in a wysiwyg way. RTF files from Ted are fully compatible with 
-MS-Word. Additionally, Ted also is an RTF to PostScript and an RTF to Acrobat 
-PDF converter.
 * To get to Leafpad simply click Menu --> Editor . 
 It's a simple graphical application that includes essential features and 
 uses familiar pull-down menus.
@@ -222,7 +215,7 @@ fast editor with basic features of an integrated development environment
 like syntax highlighting etc.
 * LibreOffice  (Menu -->Applications --> Office --> LibreOffice Writer) 
 LibreOffice is a power-packed free, libre and open source personal productivity 
-suite for Windows, Macintosh and GNU/Linux. antiX-15 comes with five of its feature-rich 
+suite for Windows, Macintosh and GNU/Linux. antiX comes with five of its feature-rich 
 applications for all your document production and data processing needs: Writer, Calc, 
 Impress, Draw and Math.
 
@@ -242,8 +235,7 @@ of which are the command-line application Apt and the graphical user interface
 for it known as Synaptic.
 
 * To get to Apt just click Menu --> Terminal and become root (type su 
-followed by root's password). For setup and use see the MEPIS Wiki or the 
-Apt Howto.
+followed by root's password). 
 * To get to Synaptic, which is sometimes easier for a newbie, open a root 
 terminal as just described, then just type in the word synaptic. It is 
 also found in the antiX CC --> System, called Manage Packages.
@@ -259,11 +251,11 @@ apt-get update
 Do not use Synaptic for a system upgrade! To upgrade software you will have 
 to use the terminal, either with Apt, Aptitude (needs installing) or smxi.
 
-antiX is based on the Debian Testing repositories. So to update the system (in a 
+antiX is based on the Debian Stable repositories. So to update the system (in a 
 root terminal) type: apt-get update (followed by) apt-get dist-upgrade
 
 If you receive any kind of error messages during the update, check antiX 
-forums at http://antix.freeforums.org or at MEPIS Community Forum to see 
+forums at https://www.antixforum.com to see 
 if someone already posted a solution for it. If not, please don't be shy 
 and ask for help.
 
@@ -273,7 +265,7 @@ man sources.list etc.
 
 .After installing new programs do they appear in the menu?
 
-* Yes. This is a new feature included in antiX-15. Menus are automatically updated.
+* Yes. This is a new feature included originally in antiX-15. Menus are automatically updated.
 
 .How can I get my email?
 
@@ -283,18 +275,27 @@ application and filling in the blanks with the information for your email accoun
 
 .What does antiX offer for web browsing?
 
-The default browser is the full-featured Iceweasel, a debranded version of Firefox. 
+The default browser is the full-featured Firefox-esr. 
 Click Menu -->Web Browser or the taskbar icon to launch it. 
 It's compatible with many Firefox extensions. 
 
-Two other lightweight browsers are also included under Menu --> Applications --> Internet --> Dillo 
-is a fast, minimalistic multi-platform web browser that is highly secure, 
-while the elinks browser is a graphics and text mode web browser that is 
+Three other lightweight browsers are also included under Menu --> Applications --> Internet.
+Dillo is a fast, minimalistic multi-platform web browser that is highly secure, 
+while the links2 browser is a graphics and text mode web browser that is 
 also very fast and safe and has pull-down menus available by clicking on 
 the top bar.
+Finally elinks is a text mode browser.
 
-By launching the script exoodles from a root terminal it's possible to install 
-Google Chrome, Opera and Swiftfox browsers, among other multi-media options.
+There are many other browsers available for download. 
+Just have a look in the package-installer.
+
+If you have low RAM (1GB and less), antiX users recommend 
+one of the following for a lighter and faster experience than 
+that offerred by the default browser Firefox-esr. 
+
+* Palemoon
+* Seamonkey
+* Slimjet
 
 .Can I chat with antiX?
 
@@ -382,7 +383,7 @@ by dragging the lower right corner.
 .What applications are available for standard office use?
 
 All office applications are found by clicking Menu --> Applications-->Office. 
-antiX-15 comes with LibreOffice.
+antiX comes with LibreOffice.
 
 Other office apps include a gui PDF reader, a cli PDF reader and a calculator.
 
@@ -424,7 +425,7 @@ workspacenames
 
 Change the entry as you would like; for instance, it could read:
 
-WorkspaceNames=" 1 ", " 2 "
+WorkspaceNames=" 1 ", " 2 "," 3 "
 * Get the mailbox icon to work: click on Search on the menu bar, and enter
 
  mailbox

@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ cli-aptiX</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="net.html">Internet</a></td><td> </td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="control_centre.html">Control Centre</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="cli_aptix.html">cli-aptiX</a></td><td>&#187;</td></tr>
+  <tr><td><a href="antiX-cli-cc.html">aptiX-cli-cc</a></td><td> </td></tr>
+  <tr><td><a href="mpsyt.html">mpsyt</a></td><td> </td></tr>
+  <tr><td><a href="pmrp.html">pmrp</a></td><td> </td></tr>
+  <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">cli-aptiX</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">cli-aptiX</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">cli-aptiX</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div>
+<span class="image">
+<img src="images/cli-aptiX/cli-aptiX.jpg"" alt="cli-aptiX/cli-aptiX.jpg"" />
+</span></p></div>
+<div class="paragraph"><p>This is a command line wrapper around the basic "apt-get", "apt-cache", and related commands.  It is designed to make it easy to search for and install Debian
+packages.  In some ways it is similar to the GUI based Synaptic program. If you been wanting something like Synaptic that works in the command line then
+"cli-aptiX" might be what you&#8217;ve been looking for</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_search_for_packages">Search for Packages</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>After the initial "apt-get update" you will normally perform a search to
+look for packages by name. You can use "*" to match one or more
+characters and "?" to match single characters but these are often not
+needed unless you want to match more than one part of a package name as in:</p></div>
+<div class="paragraph"><p>*linux-image*antix</p></div>
+<div class="paragraph"><p>which matches all of the antiX kernels. Most regular expression meta-characters
+are also supported but they are seldom needed.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_search_results">Search Results</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>For any search term you enter, there will be four different sets of
+results: exact name match, leading name match, any name match, and
+description match.  After you enter a search term you will be shown the
+number of results in each of four sets before you have to select which set
+you want to see.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exact_name_match">Exact Name Match</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The most restrictive set of results is the exact name match.  Only
+package names that exactly match your search term are listed here.
+There can be more than one package in this list if you have used the
+"*" or "?" wildcard characters but normally there will be at most one
+match.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_leading_name_match">Leading Name Match</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>This includes all packages names that start with a match for your
+seach term.  For example, if you use the search term "abc" then you
+will get a Leading Name Match result list that looks like:</p></div>
+<div class="paragraph"><p>*1) (I) abcde - A Better CD Encoder
+*2) abcm2ps - Translates ABC music description  &#8230;
+*3) abcmidi - converter from ABC to MIDI format &#8230;</p></div>
+<div class="paragraph"><p>The "(I)" on the first line indicates that package is already
+installed. Notice that all three names begin with search term "abc".</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_any_name_match">Any Name Match</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>This list includes all packages with names that have a portion that
+matches your search term.  If the search term is "abc" then the any
+name match results will be something like:</p></div>
+<div class="paragraph"><p>*1) (I) abcde - A Better CD Encoder
+*2) abcm2ps - Translates ABC music description  &#8230;
+*3) abcmidi - converter from ABC to MIDI format &#8230;
+*4) berkeley-abc - ABC - A System for Sequentia &#8230;
+*5) grabc - simple program to determine the col &#8230;
+*6) libakonadi-kabc4 - Akonadi address book acc &#8230;
+*7) libkabc4 - library for handling address boo &#8230;
+*8) python-backports-abc - Backport of the "col &#8230;</p></div>
+<div class="paragraph"><p>Notice that this list contains all the package names from the previous
+list plus packages that contain "abc" later on in the name.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_name_or_description_match">Name or Description Match</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>This list contains all of the packages from the previous list plus any
+packages that contain your search term in their description.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_selecting_a_package_from_a_search_result_list">Selecting a Package from a Search Result List</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>As long as the entire list fits on the screen, this is straightforward,
+just type in the number associated with the package you want to install.
+But if the list is too long to all fit on the screen at once then you will
+need to scroll through the list using "Up-Arrow" and "Down-Arrow" and
+&lt;Page-Up&gt; and "Page-Down" to scroll the list (and even "Left-Arrow" and
+"Right-Arrow" to scroll sideways).  Scroll the list so the package you
+want to select is near the bottom of the screen and then press <em>q</em>.  You
+will be asked to enter the number for the package you want.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installing_a_package">Installing a Package</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Once you have selected a package from the search list, you will be given
+the chance to install it.  If the package was already installed then you
+will be given more options (in progress).</p></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2017-10-21 17:06:59 EEST
+</div>
+</div>
+</div>
+</body>
+</html>

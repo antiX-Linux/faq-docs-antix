@@ -6,7 +6,7 @@
 [[toc]]
 [compact]
 *  link:#under-toc[Synopsis]
-*  link:#_new_for_antix_15[New for antiX-15!]
+*  link:#_new_since_antix_15[New since antiX-15!]
 *  link:#_boot_livecd_usb[Boot LiveCD/USB]
 ** link:#_the_boot_device[The Boot Device]
 ** link:#_the_boot_directory[The Boot Directory]
@@ -40,7 +40,7 @@ setting some of the options documented here.  Use the cheat:F12: key
 in the bootloader to see what boot options are selected by your
 current menu choices.
 
-== New for antiX-15!
+== New since antiX-15!
 
 These boot parameters have been recently added.
 
@@ -160,7 +160,7 @@ to specify which device we look on to find the +linuxfs+ file.
 
  * cheat:buuid=<uuid>: The UUID of the boot device.
 
-**New for antiX-15:** the cheat:buuid: option accepts simple wildcards
+**New since antiX-15:** the cheat:buuid: option accepts simple wildcards
 such as cheat:*: and cheat:?:.  For example: cheat:buuid:1234*" will
 instruct us to look on all partitions that have a UUID that starts
 with "1234".
@@ -279,7 +279,7 @@ use the default LiveCD persistence device) then you can make use
 persistence on a LiveCD.  In this case, the changes will have to be
 saved on some other device that allows for read-write access.
 
-**New for antiX-15:** If you enable persistence on a LiveCD and and
+**New since antiX-15:** If you enable persistence on a LiveCD and and
 device with the label *antiX-Persist* is not found then we will give
 you a list of partitions to choose from and offer to give that device
 the label *antiX-Persist*.  If a form of persistence is *required* but
@@ -374,7 +374,7 @@ directory as the +linuxfs+ file.
 == Frugal Install
 {top}
 
-**New for antiX-15!**  Automatically do a frugal install from a LiveCD
+**New since antiX-15!**  Automatically do a frugal install from a LiveCD
 or LiveUSB to a hard drive or a usb drive.  Persistence files can also
 be created automatically so you can literally create and boot into an
 installed system in just a minute or two (depending on the speed of
@@ -569,7 +569,7 @@ will all be carried over to the hard drive when you install.
    and will use Rox to handle desktop icons.  The only other icon
    manager available is SpaceFM.  So cheat:desktop=space-fluxbox: will
    use Fluxbox as the window manager and use SpaceFM to handle desktop
-   icons.  **New for antiX-15::** a cheat:min-: prefix is allowed.
+   icons.  **New since antiX-15::** a cheat:min-: prefix is allowed.
    This turns off the icon manager and all extra goodies (such as
    conky) so you get just the bare-bones window manager.  
 
@@ -608,7 +608,7 @@ are available in the bootloader menus.
 This option will disable some startup services for faster booting and
 less memory consumption.
 
- * cheat:disable_srv=|antiX=|aX=:
+ * cheat:disable=|antiX=|aX=:
 
 Valid values are a combination of the following letters:
 

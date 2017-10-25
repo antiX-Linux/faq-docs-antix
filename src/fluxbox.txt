@@ -15,7 +15,7 @@
 [[under-toc]]
 == First look
 {top}
-image:rox-fluxbox.jpg"[]
+image:wm/rox-fluxbox.jpg"[]
 
 .Where do I start? I don't see a Start or Menu button.
 
@@ -53,7 +53,7 @@ the workspace, open applications, background applications and the date/time.
 .How do I set up a wireless connection?
 
 There are 4 options, all found in the antiX Control Centre (CC): Wicd (full only), wpa-supplicant, 
-GPRS/UMTS and ceni.
+GPRS/UMTS and ceni. antiX developers recommend ceni.
 
 == Basic Operation
 {top}

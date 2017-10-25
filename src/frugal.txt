@@ -1,0 +1,15 @@
+= Frugal Boot
+:frugal-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[Frugal Boot]
+
+[[under-toc]]
+== Frugal Boot
+{top}
+image:frugal.jpg"[]
+
+

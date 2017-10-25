@@ -1,0 +1,88 @@
+= Guide to herbstluftwm
+:hlwm-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[What is herbstlutfwm?]
+*  link:#_how_do_you_use_hlwm[How do you use hlwm?]
+*  link:#_links[Links]
+
+
+[[under-toc]]
+== What is hlwm?
+{top}
+
+
+  
+The following tips are intended to help the user get started with hlwm. 
+
+== How do you use hlwm?
+{top}
+
+To make it easier for new users to wmii to get started, antiX comes with a very basic hlwm setup.
+If you want to start from scratch all on your own, simply delete the ~/.condig/herbstluftwm folder.
+
+.How do I start hlwm?
+
+If you are running live, simply choose herbstlutfwm at the F6 boot menu.
+If you are booted into IceWM, fluxbox or JWM, logout and toggle F1 to see herbstluftwm login entry.
+
+.WTF?
+
+Yes, bare isn't it.
+Don't panic, some keybindings have been set up to help. Feel free to change.
+
+When you don't know tiling, it's not really easy to start working with it. 
+You have to learn hotkeys to launch programs and move or resize windows. 
+By default in antiX, the "Mod" key is the 'Windows' key also known as "Mod4". 
+The hotkeys to learn at the beginning are:
+
+    Mod4+Enter -> Terminal (lxterminal)
+
+    Mod4+p -> menu : a menu appears, just type the start of the name of an application to open it
+
+    Mod4+d -> default layout : screen space is divided among the windows
+
+    Mod4+s -> stacked layout : the selected window takes up all the screen, you see only the title bar of the others
+
+    Mod4+j -> select the window below
+
+    Mod4+k -> select the window above
+
+    Shift+Mod4+j -> move the window down
+
+    Shift+Mod4+k -> move the window up
+
+    Mod4+a -> Actions menu : choose "quit" to quit 
+
+.Are any applications set up to open?
+
+Yes, the following come with antiX.
+
+    Mod4+n -> iceweasel : Starts the internet browser.
+    Mod4+r -> rox : Opens the default rox filer.
+    Mod4+e -> sudo rox : sudo rox needs to be set up for this to work. See /etc/sudoers.d/antixers.
+    Mod4+x -> xmms : Opens xmms audio player.
+    Mod4+l -> leafpad : Opens a basic text editor.
+    Mod4+Shift+l -> xlock : Locks the screen.
+    Mod4+Shift+x -> reboot : 
+
+.How do I open a new workspace/desktop/view?
+
+Views are based on the same principle of desktops/workspaces in others window managers. 
+They are automatically created when you move a window in them. 
+Hotkeys also follow the same principle:
+
+    Mod4+Shift+2 : move selected window to the view "2"
+    Mod4+2 : go to view "2" 
+
+The same applies for all numbers from 0 to 9. 
+
+
+== Links
+{top}
+
+
+

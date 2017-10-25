@@ -11,14 +11,14 @@
 *  link:#_installation[Installation]
 *  link:#_post_installation[Post Installation]
 *  link:#_some_great_features_in_antix[Some Great Features in antiX]
-*  link:#_antix16[antiX-16]
+*  link:#_antix17[antiX-17]
 *  link:#_links[Links]
 
 
 [[under-toc]]
 == Introduction
 {top}
-image:default_desktop.png"[]
+image:wm/default_desktop.jpg"[]
 
 If you're a first-time user of antiX  — welcome!
 
@@ -27,15 +27,17 @@ managers to control what the end-user can see and do. We hope these
 FAQs will give you a basic orientation to antiX and its window
 managers, and provide the means to explore further on your own.
 
-antiX comes in three flavours for 32 and 64 bit boxes.
-antiX comes as a 'full' distro (<700MB), 
-a 'base' distro (c520MB) and a 'core' distro (<200MB) all with a kernel 
-that will boot "antique" PII, PIII computers as well as the latest 
-"modern" processors. 
+antiX comes in four flavours for 32 and 64 bit boxes.
+antiX comes as a 'full' distro (<800MB), 
+a 'base' distro (<700MB), 
+a 'core' distro (c310MB) 
+and a 'net' distro (c150MB) 
+all with a kernel that will boot "antique" PII, PIII computers as well as the latest "modern" processors. 
+
+NOTE: The 'full' flavour will not fit on a cd. The 'base' version fits on a cd, but does not include libroffice.
  
-By default, antiX loads into a Rox-IceWM desktop ('antiX-base' into a
-Rox-fluxbox desktop) with a few icons on the desktop. Use 'F6' at the boot menu
-screen to choose your desktop. 
+By default, antiX loads into a Rox-IceWM desktop with a few icons on the desktop. 
+Use 'F6' at the boot menu screen to choose your desktop. 
 What you choose running live will automatically transfer if/when installed.
 
 antiX is a very flexible linux distribution. You can run it live from a
@@ -52,7 +54,7 @@ experience. antiX can be used as a 'rolling release' distro ie you should be abl
 to keep your applications up to date by regularly upgrading. If you
 wish you can enable the Debian testing or unstable repositories and live on the
 'bleeding-edge'! For those that prefer stability, keep to the Debian
-Stable/jessie repositories.
+Stable/stretch repositories.
 
 A further feature of antiX is that you can install kernels from a
 variety of sources including Debian, siduction, aptosid and liquorix. 
@@ -69,14 +71,15 @@ Don't forget - antiX is systemd free!
 antiX should run on most computers, ranging from 192MB old PII systems with 
 pre-configured 128MB swap to the latest powerful boxes. 
 
-'antiX-core' and 'antiX-base' will run with '128MB RAM plus swap', but don't expect miracles!
+'antiX-core' and 'antiX-net' will run with '128MB RAM plus swap', but don't expect miracles!
 
 '192MB RAM' is the 'recommended minimum' for antiX. 
 '256MB RAM' and above is 'preferred' especially for 'antiX-full'.
 
-'antiX-full' needs a '2.8GB' minimum hard disk size. 
-'antiX-base' needs '1.6GB' and 
-'antiX-core' needs '0.7GB.'
+'antiX-full' needs a '3.8GB' minimum hard disk size. 
+'antiX-base' needs '2.6GB' and 
+'antiX-core' needs '1.0GB.'
+'antiX-net' needs '0.7GB.'
 
 == Pre-Installation.
 {top}
@@ -90,7 +93,10 @@ If you have a very old desktop/laptop with less than 256MB RAM (PII, PIII), or y
 a desktop with "the basics", it is probably best to use 'antiX-base'.
 
 If you want complete control over what applications to install and know the Debian
-system fairly well, then use 'antiX-core'.
+system fairly well, then use 'antiX-core' or 'antiX-net' since both these do not include X.
+
+NOTE: 'antiX-core' is no longer using a libre kernel and includes non-free firmware,
+which means that most wireless is supported.
 
 
 === Why are there so many 'F' options in the boot menu?
@@ -136,15 +142,15 @@ Yes, in fact this is the best way to install your 'localised' antiX.
 Set your options via the 'F2' and 'F3' keys and if you use a writable device, use 'F8' to save your choices.
 
 Alernatively, you can do this manually by setting a variety of 'cheats'. For example: 'lang=en'  
-'kbd=us,gr'  'tz=Europe/Athens' will give a US English desktop, a toggled Greek, English keyboard 
+'kbd=gb,gr'  'tz=Europe/Athens' will give a US English desktop, a toggled Greek, British English keyboard 
 and the timezone set to Athens, Greece.
 
 == Post Installation.
 {top}
 
-=== How to Setup nvidia/ATI graphics drivers? 
+=== How to Setup nvidia graphics drivers? 
 
-antiX suggests using the 'smxi' tools. See smxi section.
+antiX suggests using the gui app found in the control centre or 'smxi' tools. See smxi section.
 
 
 === How to autologin?
@@ -212,11 +218,12 @@ Open Control Centre--> Network--> Manage Firewall
 
 === How do I find which applications to install?
 
-Both 'antiX-full' and 'antiX-base' come with 'metapackage-installer', which makes it easy to install
+Both 'antiX-full' and 'antiX-base' come with 'package-installer', which makes it easy to install
 popular applications. See below for more information.
 
-'antiX-full' comes with 'synaptic' so searching for applications is easy.
-To search for applications in 'antiX-base' and 'antiX-core' use 'apt-cache search' in a terminal.
+'antiX-full' and 'antiX-base' also come with 'synaptic' so searching for applications is easy.
+
+To search for applications in 'antiX-net' and 'antiX-core' use our new tool 'cli-aptiX' or use 'apt-cache search' in a terminal
 
 For example:  'apt-cache search video player'
 
@@ -225,7 +232,8 @@ For example:  'apt-cache search video player'
 
 antiX is set up using 'Debian Stable' repositories by default. This allows 
 users to keep their system up to date with regular upgrades. antiX recommends
-using 'apt-get update' followed by 'apt-get dist-upgrade'. Alternatively, use smxi.
+using 'apt-get update' followed by 'apt-get dist-upgrade' in a terminal. Alternatively, use smxi. 
+Synaptic is also available for those that prefer a gui tool.
 
 
 === DVD videos don't play. How come?
@@ -237,7 +245,7 @@ the command line.
  * apt-get update
  * apt-get install libdvdcss2
 
-The easiest way is to use the 'metapackage-installer' application as it automatically does the above for you.
+The easiest way is to use the 'package-installer' application as it automatically does the above for you.
 
 antiX strongly advises users not to keep the deb-multimedia repository enabled as there may be
 conflicts.
@@ -245,11 +253,11 @@ conflicts.
 
 === What window managers are available in antiX?
 
-These window manager options come installed and ready to use (no IceWM in 'antiX-base'):
+These window manager options come installed and ready to use in antiX-full and antiX-base:
 
-* the lightweight Rox-IceWM (default) ('antiX-full' only)
-* the lightweight IceWM ('antiX-full' only)
-* the lightweight SpaceFM-IceWM ('antiX-full' only)
+* the lightweight Rox-IceWM (default) 
+* the lightweight IceWM 
+* the lightweight SpaceFM-IceWM 
 * the minimalist manager Rox-Fluxbox
 * the minimalist manager Fluxbox
 * the minimalist manager SpaceFM-Fluxbox
@@ -261,7 +269,7 @@ All window managers can be run with or without the ROX or SpaceFM Desktop
 environment that provides drag-and-drop functionality or the Conky 
 system monitor that displays real-time information.
 
-antiX also comes with 'herbstluftwm', a manual tiling window manager .
+antiX also comes with 'herbstluftwm', a manual tiling window manager.
 
 
 === What are the 'min-' options?
@@ -314,19 +322,15 @@ there are several options including shutdown.
 == Some Great Features in antiX
 {top}
 
-=== antiX2usb:     
+=== live-usb-maker    
 
-For those familiar with the option in Puppy for persistent home via live USB, 
-liveCD or fromiso: welcome! antiX now has a similar feature called antiX2usb 
-and it is found in Control Centre--> Disks.
-You can use fromiso live to install antiX to a USB stick via antiX2usb and 
-you can choose to have a liveusb with persistence.
-You can do the same from a live cd/live usb or an installed system using 
-an antiX, MEPIS or Debian iso file.
+Install the downloaded or newly created iso file to a portable usb stick nd take your antiX with you in your pocket!
+Includes an option to encrypt the usb device for security.
+This tool inludes a basic gui front end, but the cli version offers more options and is easy to use.
 
-=== Metapackage-installer:
+=== package-installer:
 
-Located in Menu--> Applications-->System Tools --> metapackage-installer 
+Located in Menu--> Applications-->System Tools --> package-installer 
 You can install packages for Disk-Recovery, Web Browsers, Graphics, Kids, Language, LaTex, 
 Network, Non-free, Office, Server, WindowManager . . . simply choose the package you want, and 
 the installer will do the rest. (internet connection required)
@@ -370,7 +374,7 @@ for future live boots!
 
 === I don't like that splash image. It takes up too much of my small screen space. How do I boot without it?  
 
-Easy. Just press 'F7' console ('F6' on core) and choose the 'default' option.
+Easy. Just press 'F7' console ('F6' on core or net) and choose the 'default' option.
 
 
 === What do you mean by Safe Video Mode and Failsafe in the menu?
@@ -384,22 +388,27 @@ In addition to forcing safe video, also load all drivers early in the boot proce
 Try this option if the system does not boot at all. 
 
 
-== antiX-16 
+== antiX-17 
 {top}
 
-=== So, what's in antiX-16?
+=== So, what's new in antiX-17?
 
 Lots! Explore!
 
-* Based on Debian Jessie, but without systemd nor systemd-shim.
-* Customised 4.4.10 LTS kernel with fbcondecor splash
-* libreoffice 4.3.3-2
-* firefox-esr 45.2.0
-* claws-mail 3.13.0
+* Based on Debian Stretch, but without systemd and libsystemd0.
+* eudev 3.2-4 replaces udev
+* Customised 4.10.5 kernel with fbcondecor splash
+* libreoffice 5.2.7-1
+* firefox-esr 52.4.0esr
+* claws-mail 3.14.1-3+b1
+* systemd-free cups for printing
 * xmms -for audio
 * gnome-mplayer - for playing video
-* smtube 16.3.0 - play youtube videos without a using a browser
+* smtube - play youtube videos without a using a browser
 * streamlight-antix - stream videos with very low RAM usage.
+* evince 3.22.1-3 - pdf reader
+* adobe-flashplugin 20170808.1
+* arc-theme 
 
 File managers and desktop:
 
@@ -413,8 +422,8 @@ Convert your video and audio files with:
 
 Connect to the net with:
 
-* wicd  
-* ceni
+* ceni  
+* wicd
 * or gnome-ppp if you are still on dial-up
 
 Editors:
@@ -427,8 +436,13 @@ Tools for remastering and creating snapshots of installed system:
 
 * iso-snapshot
 * remaster tools
-* Unetbootin
-* antix2usb
+
+General tools:
+
+* bootrepair
+* codecs installer 
+* broadcom-manager 
+* ddm-mx - install nvidia drivers
 
 Others:
 
@@ -441,9 +455,11 @@ Others:
 * Xfburn for burning cd/dvd 
 * connectshares-antix for network shares
 * droopy-antix - an easy way to transfer files over the net. 
-* flashplugin-nonfree - flash video
-* install-meta-antix - install applications easily and safely
+* mirage - image viewer
+* package-installer - install applications easily and safely
 * antiX Control Centre - an easy way to do just about anything!
+* streamtuner2 - listen to streaming radio
+* cherrytree - note taking application
 
 Why not try out our included 'cli' apps:
 
@@ -451,11 +467,30 @@ Why not try out our included 'cli' apps:
 * Newsreader: newsbeuter
 * Chat: irssi
 * Audio player: mocp
+* Radio: pmrp
 * Video player: mpv
+* Youtube video: mps-youtube
 * Audio ripper: abcde
 * Torrent: rtorrent
 * Cd burner: cdw
 * Writer: Wordgrinder
+
+**NEW**
+
+* cli-aptiX
+* live-kernel-updater
+* lxkeymap
+* fskbsetting
+* backlight-brightness
+* antiX-cli-cc
+
+
+Cool in-house antiX apps available in the repos:
+
+* 1-to-1-voice-antix - Voice chat between two pcs via encrypted mumble
+* 1-to-1-assistance-antix - Remote access help application
+* ssh-conduit - Remote resouces via an ssh encypted connection
+
 
 === Tell me more about those Desktop Settings
 
@@ -484,32 +519,28 @@ Notification dialog "false"
 5.Logout and log back in to your customised desktop. They will be saved on reboot.
 
 
-=== What kernel is antiX-16 using? 
+=== What kernel is antiX-17 using? 
 
-A customised 4.4.10 version.
+A customised 4.10.5 version.
 
-There are several other kernels available via the 'metapackage-installer' application. Such as:
+There are several other kernels available via the 'package-installer' application. Such as:
 
-* custom-4.6.2 non-PAE and PAE for both stable and testing/sid
+* custom-4.13.4 for 64 bit processors
+* custom older kernels such as 4.4.10 for 64/32 bit, pae and non-pae.
 * various non-PAE and PAE 'libre' kernels for both stable and testing/sid
 
 
 === Does flash work?
 
-Yes, OOTB! For some PII/PIII boxes, you may need to use an older version of flashplugin.
+Yes, OOTB! For some PII/PIII/PIV boxes, you may need to use an older version of flashplugin.
+If the default browser firefox-esr crashes, remove flash.
 
-
-=== The default Debian repository is set to jessie. Does this mean antiX is no longer based on Debian Testing?
-
-antiX remains a 'rolling' release distro based on Debian Testing. Since jessie/Stable has just been released
-we have decided to give our users the option of sticking to Stable with this release or upgrading to Testing or
-Sid. Future releases will default to Debian Testing.
 
 == Links
 {top}
 
-* {ob}link:http://antix.mepis.com/[antiX home page]{cb}.
-* {ob}link:http://antix.freeforums.org/[antiX forum]{cb}.
+* {ob}link:https://antixlinux.com/[antiX Home]{cb}.
+* {ob}link:https://www.antixforum.com/[antiX forum]{cb}.
 
 Users really should have a look at the absolutely wonderful videos made by dev team member dolphin_oracle. 
 

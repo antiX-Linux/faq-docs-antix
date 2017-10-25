@@ -28,10 +28,16 @@
   <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
   <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
   <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="net.html">Internet</a></td><td> </td></tr>
   <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
   <tr class="chosen"><td><a href="persistence.html">Persistence</a></td><td>&#187;</td></tr>
   <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
   <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="control_centre.html">Control Centre</a></td><td> </td></tr>
+  <tr><td><a href="cli_aptix.html">cli-aptiX</a></td><td> </td></tr>
+  <tr><td><a href="antiX-cli-cc.html">aptiX-cli-cc</a></td><td> </td></tr>
+  <tr><td><a href="mpsyt.html">mpsyt</a></td><td> </td></tr>
+  <tr><td><a href="pmrp.html">pmrp</a></td><td> </td></tr>
   <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
   <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
   <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
@@ -104,7 +110,7 @@
 </li>
 <li>
 <p>
-<a href="#_using_the_antix2usb_gui_app">Using the antix2usb gui app</a>
+<a href="#_using_the_liveusbmaker_app">Using the live-usb-maker app</a>
 </p>
 </li>
 <li>
@@ -244,119 +250,11 @@ boot from, you must specify your persistence device. You can use the following:
 * puuid=xxxxxxx ie the uuid of the device.</p></div>
 </div>
 <div class="sect2">
-<h3 id="_manually_by_using_the_antix2usb_gui_app">Manually by Using the antix2usb gui app</h3>
+<h3 id="_manually_by_using_the_live_usb_maker_app">Manually by Using the live-usb-maker app</h3>
 <div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
 <div class="paragraph"><p>You can run antiX live from a usb stick.
-To install to usb stick you can use our tool antix2usb or UNetbootin.
-Both will work, but our tool enables users to also set up persistence prior to running.
-If using UNetbootin you will have to set up persistence once running from the stick/device.</p></div>
-<div class="paragraph"><p>Using antix2usb gui.</p></div>
-<div class="ulist"><ul>
-<li>
-<p>
-Plugin your usb stick.
-</p>
-</li>
-<li>
-<p>
-If it auto-mounts, unmount it.
-</p>
-</li>
-<li>
-<p>
-Open antix2usb from antixcc &#8594; disks -antiX2usb
-</p>
-</li>
-<li>
-<p>
-Select ISO file.
-Navigate to where the ISO file is and click Open.
-</p>
-</li>
-<li>
-<p>
-Install to USB device should automatically detect your usb device
-and show how much space is available.
-</p>
-</li>
-<li>
-<p>
-System partition.
-antix2usb allows users to either use the full disk or part of the disk space
-by creating a partition.
-If you do not want to use persistence, then minimum recommended size for a partition
-is shown below.
-</p>
-<div class="ulist"><ul>
-<li>
-<p>
-antiX-full:1GB
-</p>
-</li>
-<li>
-<p>
-antiX-base:700MB
-</p>
-</li>
-<li>
-<p>
-antiX-core:350MB
-</p>
-</li>
-</ul></div>
-</li>
-<li>
-<p>
-You can set the language here or at the boot menu.
-</p>
-</li>
-</ul></div>
-<div class="paragraph"><p>Options:</p></div>
-<div class="ulist"><ul>
-<li>
-<p>
-Format.
-This refers to the usb device partition.
-ext4 is recommended.
-</p>
-</li>
-<li>
-<p>
-Bootloader.
-This gets installed into the MBR of the usb device.
-syslinux is only used with fat32.
-</p>
-</li>
-<li>
-<p>
-Persistence.
-There are four options here.
-</p>
-<div class="ulist"><ul>
-<li>
-<p>
-No persistence - just leave as default.
-</p>
-</li>
-<li>
-<p>
-home persistence - check home and select size
-</p>
-</li>
-<li>
-<p>
-root persistence - check root and select size
-</p>
-</li>
-<li>
-<p>
-Both home and root persistence - check both home and root and select sizes.
-<div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div>
-</p>
-</li>
-</ul></div>
-</li>
-</ul></div>
+To install to usb stick you can use our tool live-usb-maker.
+<div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
 </div>
 </div>
 </div>
@@ -373,7 +271,7 @@ Both home and root persistence - check both home and root and select sizes.
 <div id="footer">
 <div id="footer-text">
 Version: 0.2.0
-Last updated 2016-06-21 17:22:49 EEST
+Last updated 2017-10-20 20:55:07 EEST
 </div>
 </div>
 </div>

@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ Getting Connected</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr class="chosen"><td><a href="net.html">Internet</a></td><td>&#187;</td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="control_centre.html">Control Centre</a></td><td> </td></tr>
+  <tr><td><a href="cli_aptix.html">cli-aptiX</a></td><td> </td></tr>
+  <tr><td><a href="antiX-cli-cc.html">aptiX-cli-cc</a></td><td> </td></tr>
+  <tr><td><a href="mpsyt.html">mpsyt</a></td><td> </td></tr>
+  <tr><td><a href="pmrp.html">pmrp</a></td><td> </td></tr>
+  <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Getting Connected</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">#under-toc</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_apps">Connect to the net</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_ceni">Ceni</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_wicd">Wicd</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_dialup">Dialup</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_links">Links</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">Connect to the Internet</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>antiX should automatically connect you to the Internet
+if you are using a wired (ethernet) connection.
+For wireless, you will have to configure your network connection.
+antiX provides 2 tools for this; ceni and wicd.
+antiX devs recommend ceni because it uses a lot less RAM.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ceni">Ceni</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="paragraph"><p>Ceni is the default network manager used on antiX.
+It is a CLI application, which allows users to configure
+/etc/network/interfaces through a command-line interface.
+It supports wired and wireless connections.</p></div>
+<div class="paragraph"><p>The screenshots below show the procedure for a WPA wireless set up.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/ceni/ceni1.jpg"" alt="ceni/ceni1.jpg"" />
+</span>
+<span class="image">
+<img src="images/ceni/ceni2.jpg"" alt="ceni/ceni2.jpg"" />
+</span>
+<span class="image">
+<img src="images/ceni/ceni4.jpg"" alt="ceni/ceni4.jpg"" />
+</span>
+<span class="image">
+<img src="images/ceni/ceni5.jpg"" alt="ceni/ceni5.jpg"" />
+</span>
+<span class="image">
+<img src="images/ceni/ceni6.jpg"" alt="ceni/ceni6.jpg"" />
+</span>
+<span class="image">
+<img src="images/ceni/ceni7.jpg"" alt="ceni/ceni7.jpg"" />
+</span>
+<span class="image">
+<img src="images/ceni/ceni8.jpg"" alt="ceni/ceni8.jpg"" />
+</span></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wicd">Wicd</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div>
+image of wicd</p></div>
+<div class="paragraph"><p>antiX also ships with wicd on antiX-full and antiX-base.
+Default boot from live media has wicd DISABLED!
+If you prefer it over ceni, then you MUST enable it
+at the live boot menu by pressing F4 &gt; wicd.</p></div>
+<div class="paragraph"><p>Wicd is probably the better choice if you use wireless <em>on the go</em> on a laptop
+eg from various cafes, hotels etc.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dialup">Dialup</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div>
+image of dialup</p></div>
+<div class="paragraph"><p>Some may wonder why we still include this option.
+It is because so many parts of the world only have dialup.
+antiX ships with gnome-ppp as it is light and simple to configure.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links">Links</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+&#91;<a href="https://code.google.com/p/wmii/">wmii homepage</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="https://wiki.archlinux.org/index.php/wmii">archlinux wiki wmii</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="http://wiki.debian.org/Wmii/">Debian wmii</a>&#93;.
+</p>
+</li>
+<li>
+<p>
+&#91;<a href="http://linuxbbq.org/wiki/index.php?title=Wmii">LinuxBBQ Wiki wmii</a>&#93;.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2017-10-21 17:06:57 EEST
+</div>
+</div>
+</div>
+</body>
+</html>

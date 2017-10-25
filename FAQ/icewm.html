@@ -28,10 +28,16 @@
   <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
   <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
   <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="net.html">Internet</a></td><td> </td></tr>
   <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
   <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
   <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
   <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="control_centre.html">Control Centre</a></td><td> </td></tr>
+  <tr><td><a href="cli_aptix.html">cli-aptiX</a></td><td> </td></tr>
+  <tr><td><a href="antiX-cli-cc.html">aptiX-cli-cc</a></td><td> </td></tr>
+  <tr><td><a href="mpsyt.html">mpsyt</a></td><td> </td></tr>
+  <tr><td><a href="pmrp.html">pmrp</a></td><td> </td></tr>
   <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
   <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
   <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
@@ -93,7 +99,7 @@
 <div class="sectionbody">
 <div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div>
 <span class="image">
-<img src="images/icewm.jpg"" alt="icewm.jpg"" />
+<img src="images/wm/icewm.jpg"" alt="wm/icewm.jpg"" />
 </span></p></div>
 <div class="paragraph"><div class="title">What is this?</div><p>The desktop is run by IceWM, a lightweight window manager for the X Window
 System whose goal is speed, simplicity, and not getting in the user&#8217;s way.</p></div>
@@ -107,8 +113,7 @@ below the line: ## Set desktop icons</p></div>
 <div class="paragraph"><div class="title">What&#8217;s that stuff in the upper right corner?</div><p>That is the output of Conky, a light-weight system monitor that gives
 you real-time information on various aspects of your computer.</p></div>
 <div class="paragraph"><div class="title">And that bar at the bottom?</div><p>That is called the toolbar or panel, and it displays (L -&#8594; R) the start
-button, Show Desktop, Home Folder, Terminal, Browser, Volume, Control Centre,
-Quit, Workspaces 1-4 (or desktops), and on the far right, the date/time.</p></div>
+button, Show Desktop, Workspaces 1-2 (or desktops), and on the far right, Volume and the date/time.</p></div>
 <div class="paragraph"><p>(Note:  If you hover your mouse pointer over the items in the toolbar you
 will see the names, and we will refer to the start button as Menu, or Favourite
 Applications or start button.)</p></div>
@@ -118,15 +123,12 @@ Applications or start button.)</p></div>
 <h2 id="_basic_configuration">Basic Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph"><div class="title">How do I set up a wireless connection?</div><p>There are 4 options, all found in the antiX Control Centre: Wicd (full only), wpa_supplicant,
-GRPS/UMTS and ceni.</p></div>
+GRPS/UMTS and ceni. antiX developers recommend ceni.</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
 In  Control Centre -&#8594; Network -&#8594; you will find the wireless frontend
 Wicd that antiX uses to make its wireless connection.
-Hints on its use can be found here.  See also the detailed discussion in
-the MEPIS Wiki for more information, and search the MEPIS Community Forum
-for particular cards.
 </p>
 </li>
 <li>
@@ -174,8 +176,8 @@ database.
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><div class="title">How do I set up an HP printer?</div><p>The easiest method is to use the MetaPackage-Installer, located
-in the antiX CC -&#8594;System-&#8594; Meta Package-installer, then click on the
+<div class="paragraph"><div class="title">How do I set up an HP printer?</div><p>The easiest method is to use the Package-Installer, located
+in the antiX CC -&#8594;System-&#8594; Package-installer, then click on the
 arrow for Office and tick the check box for HP_printing, then Install.</p></div>
 <div class="paragraph"><p>If you prefer to do it yourself, then do the following, (Warning! This may
 be incomplete due to subsequent changes in packages —use at your own risk!)</p></div>
@@ -224,8 +226,9 @@ and available as an entry in the directory /media. You can either click
 Menu -&#8594; Files to examine and move or delete the contents, or click
 Menu -&#8594; Applications -&#8594; Graphics and choose to bring up Gtkam or Mirage
 to manipulate your images with the program of your choice.</p></div>
-<div class="paragraph"><div class="title">How do I install nvidia/ATI driver for antiX?</div><p>The best way to do this is via the smxi script.</p></div>
-<div class="paragraph"><div class="title">Can I use a webcam?</div><p>Many web cams will work with antiX, see the discussion in the Mepis Wiki.</p></div>
+<div class="paragraph"><div class="title">How do I install nvidia/ATI driver for antiX?</div><p>The best way to do this is via the included app available in the control centre.
+Alternatively, use the smxi script.</p></div>
+<div class="paragraph"><div class="title">Can I use a webcam?</div><p>Many web cams will work with antiX.</p></div>
 <div class="paragraph"><p>guvcview webcam application is located Applications-&#8594;Sound &amp; Video-&#8594;guvcview</p></div>
 </div>
 </div>
@@ -262,14 +265,6 @@ bottom of the screen. Press Ctrl-G to access the help file.
 </li>
 <li>
 <p>
-Ted was designed to make it possible to edit rich text documents on
-Unix/Linux in a wysiwyg way. RTF files from Ted are fully compatible with
-MS-Word. Additionally, Ted also is an RTF to PostScript and an RTF to Acrobat
-PDF converter.
-</p>
-</li>
-<li>
-<p>
 To get to Leafpad simply click Menu -&#8594; Editor .
 It&#8217;s a simple graphical application that includes essential features and
 uses familiar pull-down menus.
@@ -286,7 +281,7 @@ like syntax highlighting etc.
 <p>
 LibreOffice  (Menu -&#8594;Applications -&#8594; Office -&#8594; LibreOffice Writer)
 LibreOffice is a power-packed free, libre and open source personal productivity
-suite for Windows, Macintosh and GNU/Linux. antiX-15 comes with five of its feature-rich
+suite for Windows, Macintosh and GNU/Linux. antiX comes with five of its feature-rich
 applications for all your document production and data processing needs: Writer, Calc,
 Impress, Draw and Math.
 </p>
@@ -303,8 +298,7 @@ for it known as Synaptic.</p></div>
 <li>
 <p>
 To get to Apt just click Menu -&#8594; Terminal and become root (type su
-followed by root&#8217;s password). For setup and use see the MEPIS Wiki or the
-Apt Howto.
+followed by root&#8217;s password).
 </p>
 </li>
 <li>
@@ -322,10 +316,10 @@ it&#8217;s necessary to update the package database. Do this by opening Synaptic
 apt-get update</p></div>
 <div class="paragraph"><p>Do not use Synaptic for a system upgrade! To upgrade software you will have
 to use the terminal, either with Apt, Aptitude (needs installing) or smxi.</p></div>
-<div class="paragraph"><p>antiX is based on the Debian Testing repositories. So to update the system (in a
+<div class="paragraph"><p>antiX is based on the Debian Stable repositories. So to update the system (in a
 root terminal) type: apt-get update (followed by) apt-get dist-upgrade</p></div>
 <div class="paragraph"><p>If you receive any kind of error messages during the update, check antiX
-forums at <a href="http://antix.freeforums.org">http://antix.freeforums.org</a> or at MEPIS Community Forum to see
+forums at <a href="https://www.antixforum.com">https://www.antixforum.com</a> to see
 if someone already posted a solution for it. If not, please don&#8217;t be shy
 and ask for help.</p></div>
 <div class="paragraph"><p>For an off-line overview of Apt usage and resources open the terminal and
@@ -334,23 +328,44 @@ man sources.list etc.</p></div>
 <div class="ulist"><div class="title">After installing new programs do they appear in the menu?</div><ul>
 <li>
 <p>
-Yes. This is a new feature included in antiX-15. Menus are automatically updated.
+Yes. This is a new feature included originally in antiX-15. Menus are automatically updated.
 </p>
 </li>
 </ul></div>
 <div class="paragraph"><div class="title">How can I get my email?</div><p>Clicking Menu -&#8594;Applications-&#8594; Internet -&#8594;Claws Mail  You enter
 setup by following the wizard that pops up the first time you use the
 application and filling in the blanks with the information for your email account(s).</p></div>
-<div class="paragraph"><div class="title">What does antiX offer for web browsing?</div><p>The default browser is the full-featured Iceweasel, a debranded version of Firefox.
+<div class="paragraph"><div class="title">What does antiX offer for web browsing?</div><p>The default browser is the full-featured Firefox-esr.
 Click Menu -&#8594;Web Browser or the taskbar icon to launch it.
 It&#8217;s compatible with many Firefox extensions.</p></div>
-<div class="paragraph"><p>Two other lightweight browsers are also included under Menu -&#8594; Applications -&#8594; Internet -&#8594; Dillo
-is a fast, minimalistic multi-platform web browser that is highly secure,
-while the elinks browser is a graphics and text mode web browser that is
+<div class="paragraph"><p>Three other lightweight browsers are also included under Menu -&#8594; Applications -&#8594; Internet.
+Dillo is a fast, minimalistic multi-platform web browser that is highly secure,
+while the links2 browser is a graphics and text mode web browser that is
 also very fast and safe and has pull-down menus available by clicking on
-the top bar.</p></div>
-<div class="paragraph"><p>By launching the script exoodles from a root terminal it&#8217;s possible to install
-Google Chrome, Opera and Swiftfox browsers, among other multi-media options.</p></div>
+the top bar.
+Finally elinks is a text mode browser.</p></div>
+<div class="paragraph"><p>There are many other browsers available for download.
+Just have a look in the package-installer.</p></div>
+<div class="paragraph"><p>If you have low RAM (1GB and less), antiX users recommend
+one of the following for a lighter and faster experience than
+that offerred by the default browser Firefox-esr.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Palemoon
+</p>
+</li>
+<li>
+<p>
+Seamonkey
+</p>
+</li>
+<li>
+<p>
+Slimjet
+</p>
+</li>
+</ul></div>
 <div class="paragraph"><div class="title">Can I chat with antiX?</div><p>There are two chat programs that come installed with antiX, the first two
 are located under Menu -&#8594; Applications -&#8594; Internet -&#8594;</p></div>
 <div class="ulist"><ul>
@@ -441,7 +456,7 @@ synaptic, or of course the CLI.</p></div>
 Double-clicking the title bar restores/maximizes. You can also resize it
 by dragging the lower right corner.</p></div>
 <div class="paragraph"><div class="title">What applications are available for standard office use?</div><p>All office applications are found by clicking Menu -&#8594; Applications-&#8594;Office.
-antiX-15 comes with LibreOffice.</p></div>
+antiX comes with LibreOffice.</p></div>
 <div class="paragraph"><p>Other office apps include a gui PDF reader, a cli PDF reader and a calculator.</p></div>
 </div>
 </div>
@@ -474,7 +489,7 @@ that so it reads:</p></div>
 * Change the number of workspaces: click on Search on the menu bar, and enter:</p></div>
 <div class="paragraph"><p>workspacenames</p></div>
 <div class="paragraph"><p>Change the entry as you would like; for instance, it could read:</p></div>
-<div class="paragraph"><p>WorkspaceNames=" 1 ", " 2 "
+<div class="paragraph"><p>WorkspaceNames=" 1 ", " 2 "," 3 "
 * Get the mailbox icon to work: click on Search on the menu bar, and enter</p></div>
 <div class="literalblock">
 <div class="content">
@@ -546,7 +561,7 @@ Benchmark, and Htop, an interactive process viewer.</p></div>
 <div id="footer">
 <div id="footer-text">
 Version: 0.2.0
-Last updated 2016-06-21 16:28:50 EEST
+Last updated 2017-10-21 16:09:43 EEST
 </div>
 </div>
 </div>
