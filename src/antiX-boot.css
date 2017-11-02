@@ -19,7 +19,7 @@ a:hover {
     color:                               #a2cbff;
     color:                                 white;
     background:                             grey;
-    background-color:                    #98777B		;
+    background-color:                    #98777B;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -58,7 +58,7 @@ h1 {
 h2 {
     margin-top:                              1em;
     margin-bottom:                           0em;
-    margin-left: 2%;
+    margin-left:                              2%;
     font-size:                             1.4em;
     width:                                   95%;
     border-bottom:              2px solid silver;
@@ -110,7 +110,7 @@ div#left-col {
     top:                                     0px;
     width:                                 200px;
     height:                                 100%;
-    background-color:                          #a0b0d0;
+    background-color:                    #a0b0d0;
 }
 
 div#antix-logo {
@@ -118,12 +118,12 @@ div#antix-logo {
     top:                                     0px;
     left:                                    0px;
     width:                                 200px;
-    height:								   111px;
+    height:                                111px;
     background-color:                    #98777B;
     text-align: center;
 }
 div#antix-logo img {
-    height:								   111px;
+    height:	                           111px;
 }
 
 div#banner-text {
@@ -131,7 +131,7 @@ div#banner-text {
     top:                                     0px;
     width:                                  100%;
     height:                                111px;
-    background-color:                    #98777B;		;
+    background-color:                    #98777B;
     color:                               #a2cbff;
     text-align:                             left;
     font-family:
@@ -146,12 +146,12 @@ div#banner-text {
 
 #banner-subtitle {
     padding:                    0px 0px 0px 20px;
-    margin: 0px;
+    margin:                                  0px;
     font-size:                             1.4em;
 }
 
 div#right-col {
-    margin-top: 120px;
+    margin-top:                            120px;
     padding-left:                          200px;
 }
 
@@ -164,13 +164,13 @@ div#body-text {
 /* ----- Menu on Left-Hand Side -------------- */
 
 div#main-menu {
-    position: fixed !important;
-    z-index: 1;
-    overflow: auto;
+    position:                   fixed !important;
+    z-index:                                   1;
+    overflow:                               auto;
     left:                                    0px;
     top:                                   111px;
-    width: 200px;
-    height: 100%;
+    width:                                 200px;
+    height:                                  80%;
 }
 
 table#menu-table {
@@ -447,7 +447,7 @@ td.option a {
 
 td.option a:visited {
     color:                               #006090;
-    color:                               #98777B		;
+    color:                               #98777B;
 }
 
 
@@ -910,7 +910,7 @@ div#toctitle {
 span.cheat {
     font-weight:                            bold;
     font-family:    'DejaVu Sans Mono',monospace;
-    color:                               #98777B		;
+    color:                               #98777B;
     color:                               #006080;
 }
 
