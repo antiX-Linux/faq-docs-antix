@@ -2,7 +2,7 @@
 EDITOR  := gvim -p
 BROWSER := firefox
 
-FILES := conky net fluxbox icewm smxi rox spacefm index jwm persistence remaster snapshot control_centre cli_aptix antiX-cli-cc mpsyt pmrp streamlight boot-params connectshares droopy 1-to-1_assistance 1-to-1_voice wingrid 
+FILES := conky net fluxbox icewm smxi rox spacefm index jwm persistence remaster snapshot control_centre cli_aptix antiX-cli-cc mpsyt pmrp streamlight boot-params connectshares droopy 1-to-1_assistance 1-to-1_voice ssh-conduit wingrid 
 FILES := $(FILES) 
 
 HTML_FILES := $(FILES:%=%.html)
@@ -114,6 +114,10 @@ droopy.html: droopy.txt $(DEPS)
 	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
 
 1-to-1_voice.html: 1-to-1_voice.txt $(DEPS)
+	@echo "asciidoc [...] -o $@"
+	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
+
+ssh-conduit.html: ssh-conduit.txt $(DEPS)
 	@echo "asciidoc [...] -o $@"
 	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
 

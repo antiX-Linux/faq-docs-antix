@@ -1,3 +1,15 @@
+faq-docs-antix (0.5.1) unstable; urgency=medium
+
+  * Corrected antiX-boot.css for firefox
+
+ -- anticapitalista <antix@operamail.com>  Thu, 02 Nov 2017 19:39:54 +0200
+
+faq-docs-antix (0.5.0) unstable; urgency=medium
+
+  * Moved images for ssh-conduit, 1-1 apps out
+
+ -- anticapitalista <antix@operamail.com>  Sun, 29 Oct 2017 11:26:37 +0200
+
 faq-docs-antix (0.4.11) unstable; urgency=medium
 
   * Show in Applications menu as antiX Help

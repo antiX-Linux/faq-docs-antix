@@ -1,7 +1,7 @@
 
 body {
     background-color:                    #e0e0e0;
-    font-size:                              125%;
+    font-size:                              16px;
     margin:                                  0px;
     font-family:      
        'DejaVu Sans', Arial,Helvetica,sans-serif;
@@ -19,7 +19,7 @@ a:hover {
     color:                               #a2cbff;
     color:                                 white;
     background:                             grey;
-    background-color:                    #98777B		;
+    background-color:                    #98777B;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -58,8 +58,9 @@ h1 {
 h2 {
     margin-top:                              1em;
     margin-bottom:                           0em;
+    margin-left:                              2%;
     font-size:                             1.4em;
-    width:                                  25em;
+    width:                                   95%;
     border-bottom:              2px solid silver;
     border-top:                 2px solid silver;
     background:                          #e0e0ff;
@@ -100,29 +101,36 @@ h5 {
     margin-bottom:                         -.5em;
     font-size:                             0.9em;
     font-weight:                            bold;
-
 }
-
 
 div#left-col {
     position:                              fixed;
     top:                                     0px;
+    width:                                 200px;
+    height:                                 100%;
+    background-color:                    #a0b0d0;
 }
 
 div#antix-logo {
     position:                              fixed;
     top:                                     0px;
     left:                                    0px;
-    width:                                 138px;
+    width:                                 200px;
     height:                                111px;
-    background-color:                    #98777B		;
+    background-color:                    #98777B;
+    text-align:                           center;
+}
+
+div#antix-logo img {
+    height:	                           111px;
 }
 
 div#banner-text {
+    #position:                              fixed;
     top:                                     0px;
     width:                                  100%;
     height:                                111px;
-    background-color:                    #98777B		;
+    background-color:                    #98777B;
     color:                               #a2cbff;
     text-align:                             left;
     font-family:
@@ -137,32 +145,36 @@ div#banner-text {
 
 #banner-subtitle {
     padding:                    0px 0px 0px 20px;
-    margin: 0px;
+    margin:                                  0px;
     font-size:                             1.4em;
 }
 
 div#right-col {
-    padding-left:                          138px;
+    #margin-top:                            120px;
+    padding-left:                          200px;
 }
 
 div#body-text {
     padding-left:                            1em;
     padding-right:                           1em;
+    padding-top:                            10px;
 }
 
 
 /* ----- Menu on Left-Hand Side -------------- */
 
 div#main-menu {
-    position:                              fixed;
+    position:                   fixed !important;
+    z-index:                                   1;
+    overflow:                               auto;
     left:                                    0px;
     top:                                   111px;
-    width:                                 128px;
+    width:                                 200px;
+    height:                                  80%;
 }
 
 table#menu-table {
     border-collapse:                    collapse;
-    background:                          #a0b0d0;
 }
 
 #menu-table tr {
@@ -177,7 +189,7 @@ table#menu-table {
     font-weight:                          normal;
     color:                                  grey;
     text-align:                            right;
-    width:                                 138px;
+    width:                                 180px;
     font-family:
               'DejaVu Sans',Helvetica,sans-serif;
 }
@@ -435,7 +447,7 @@ td.option a {
 
 td.option a:visited {
     color:                               #006090;
-    color:                               #98777B		;
+    color:                               #98777B;
 }
 
 
@@ -898,7 +910,7 @@ div#toctitle {
 span.cheat {
     font-weight:                            bold;
     font-family:    'DejaVu Sans Mono',monospace;
-    color:                               #98777B		;
+    color:                               #98777B;
     color:                               #006080;
 }
 
