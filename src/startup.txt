@@ -1,0 +1,76 @@
+= Guide to application autostart
+:startup-page:
+
+{start-toc}
+
+[[toc]]
+[compact]
+*  link:#under-toc[Startup Notes]
+*  link:#_startup_file[Startup from file]
+*  link:#_startup_wmfile[Startup from file (Window Manager)]
+*  link:#_startup_xdg[Xdg startup]
+
+[[under-toc]]
+== Startup Notes
+{top}
+
+. How do I run an application at startup?
+There are several ways to start an application at the startup of a desktop session.
+Below are three ways that are typically used.
+
+== Startup from file
+{top}
+
+antiX allows you to specify to startup an application for all desktop sessions. 
+This is handled via a startup file (startup) found in the hidden directory (.desktop-session)
+which can be found in your user's home directory. (~/.desktop-session/startup)
+You can find this via the control center under:
+Menu --> Control Center --> Session --> User Desktop-Session
+
+This startup file is handled as a script; Therefor most typically you would want to start your application as:
+my-app &
+Where my-app is the executable name of your app and the & means start as a background proccess.
+
+This can also be altered to more complex startup routines such as:
+sleep 5 && my-app &
+Where the app will be started with a five second delay.
+
+Some standard apps that are added to this file later on (Ex: Wicd) are present in the file already but commented out.
+
+== Startup from file (Window Manager)
+{top}
+
+This is the same as Startup from File. 
+The only difference is that the app will only be started for one window manager, not the rest.
+Therefor the naming convention used would show as replacing "desktop-session" with the window manager.
+fluxbox:
+~/.fluxbox/startup
+~/.icewm/startup
+~/.jwm/startup
+These can also be accessed throught the control center via:
+Menu --> Control Center --> Desktop --> Window Manager Settings
+An example usage case for this would be to have tint2 panel start in fluxbox but not icewm or jwm.
+For this you would edit ~/.fluxbox/startup adding:
+tint2 &
+or 
+sleep 2 && tint2 &
+to give the window manager time to start before running the panel.
+
+== Xdg startup
+{top}
+
+The third option is to enable xdg autostart.
+This seems to be the standard way that Desktop Environments handle startup applications.
+It is also most typically the way an application handles enabling / disabling autostart within the app.
+Auto start is handled this way via a desktop file in the users home directory under the config/autostart directory.
+(~/.config/autostart/my-app.desktop)
+
+However as the preinstalled window managers in antiX do not support xdg autostart this is handled by desktop-session.
+To enable this you will need to set the XDG_AUTOSTART= parameter to "true" (XDG_AUTOSTART="true").
+This is found in the desktop-session.conf file under the users home directory in the desktop-session directory.
+(~/.desktop-session/desktop-session.conf)
+You can also find this file under 
+Menu --> Control Center --> Session --> User Desktop-Session
+
+Once the XDG_AUTOSTART parameter is set to true logout and log back in to make it function.
+Adding / Editing .desktop files enables / disables the application autostart.
