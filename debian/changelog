@@ -1,3 +1,9 @@
+faq-docs-antix (0.5.2) unstable; urgency=medium
+
+  * Changed help icon
+
+ -- anticapitalista <antix@operamail.com>  Sun, 21 Jan 2018 17:45:34 +0200
+
 faq-docs-antix (0.5.1) unstable; urgency=medium
 
   * Corrected antiX-boot.css for firefox
