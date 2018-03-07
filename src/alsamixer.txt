@@ -1,0 +1,188 @@
+= Alsamixer-Plus User Guide
+:alsmixer-plus-page:
+
+anchor:table_of_contents[]
+
+{start-toc}
+
+[[toc]]
+[compact]
+* link:#under-toc[Conventions]
+* link:#_what_is_alsamixer_plus[What is Alsamixer-Plus]
+* link:#_typical_use_cases[Typical Use Cases]
+* link:#_overview[Overview]
+* link:#_boosting_a_low_volume_level[Boosting a Low Volume Level]
+* link:#_setting_a_preferred_frequency_balance[Setting a Preferred Frequency Balance]
+* link:#_changing_the_defaults[Changing the Defaults]
+* link:#_summary_of_files[Summary of Files]
+
+{nbsp}
+
+
+
+
+[[under-toc]]
+== Conventions
+{top}
+[icon="./images/icons/info.png"]
+[NOTE]
+This is additional information
+
+[icon="./images/icons/tip2.png"]
+[NOTE]
+This is a tip
+
+[icon="./images/icons/settings.png"]
+[NOTE]
+This is an example configuration or setting
+
+<<table_of_contents,Table of Contents>>
+
+{nbsp}
+
+
+
+
+== What is Alsamixer-Plus
+
+It adds extra facilities to an alsamixer audio controller by providing a pre-amp and a frequency band equalizer.
+
+<<table_of_contents,Table of Contents>>
+
+{nbsp}
+
+
+
+
+== Typical Use Cases
+
+The local loudspeakers under or over emphasise some audio frequencies. +
+The equalizer can correct the imbalance. +
+{nbsp} +
+The local system outputs a low audio volume level. +
+The pre-amp can boost the overall volume level.
+
+<<table_of_contents,Table of Contents>>
+
+{nbsp}
+
+
+
+
+== Overview
+
+The audio signal passes from the default ALSA device along a chain which includes two signal processing stages.
+
+*Stage 1: Equalizer* +
+Various frequency ranges in the signal can be boosted or cut. +
+Alternatively the signal can be left unchanged i.e. it remains flat.
+
+*Stage 2: Pre-Amp* +
+The entire signal level may be boosted or cut. +
+This adjusts the overall volume of both playback and recording.
+
+The last link in the chain passes the audio signal to the local loudspeakers or to an external audio system.
+
+[icon="./images/icons/info.png"]
+[NOTE]
+The effect of the stages is cumulative and works in conjunction with changes you make to other alsamixer controls.
+
+[icon="./images/icons/tip2.png"]
+[TIP]
+Both the equalizer and pre-amp may be operated from within the usual alsamixer interface. +
+You can switch between them by using the F6 key on your keyboard.
+
+<<table_of_contents,Table of Contents>>
+ 
+{nbsp}
+
+
+
+
+== Boosting a Low Volume Level
+
+Open alsamixer +
+If neccesary use the -> key on your keyboard to scroll to the Pre-Amp control usually located at the extreme right of alsamixer. 
+
+image:alsamixer-plus/pre-amp.jpg[]
+
+The pre-amp level can be adjusted in the usual way by the up/down arrow keys on your keyboard.
+[icon="./images/icons/info.png"]
+[NOTE]
+Using an excessively high level may overload your loudspeakers, which is usually heard as distorted sound, and may result in damage.
+Set the lowest level of boost that gives you an acceptable volume level.
+ 
+<<table_of_contents,Table of Contents>>
+
+{nbsp}
+
+
+
+
+== Setting a Preferred Frequency Balance
+
+Open alsamixer +
+Press the F6 key on your keyboard to _Select sound card_. 
+
+{nbsp}
+
+image:alsamixer-plus/equalizer_f6.jpg[] +
+Use the up/down arrows on your keyboard to highlight _enter device name..._ and press the return key.
+
+{nbsp}
+ 
+image:alsamixer-plus/equalizer_device_name.jpg[] +
+Enter _equalizer_ and press the return key.
+
+{nbsp}
+
+image:alsamixer-plus/equalizer.jpg[] +
+The frequency band levels can be adjusted in the usual way by the up/down arrow keys on your keyboard.
+
+{nbsp}
+
+Press the _F6_ key to return to the previous alsamixer window or the _ESC_ key to close alsamixer.
+
+<<table_of_contents,Table of Contents>>
+
+{nbsp}
+
+
+
+
+== Changing the Defaults
+
+Usually the default settings do not have to be changed, they work with most kit.
+
+If your hardware requires different settings they may be changed in the file _/etc/asound.conf_.
+
+[icon="./images/icons/settings.png"]
+[NOTE]
+==== 
+Use root privileges to edit the settings in your preferred text editor
+----
+# Audio card/chip and device to use and control
+# In most cases these settings should remain commented (#)
+# When commented, card and device 0 are usually automatically selected
+# When uncommented, the item corresponding to the number is selected
+#defaults.pcm.card 0
+#defaults.pcm.device 0
+#defaults.ctl.card 0
+----
+====
+
+<<table_of_contents,Table of Contents>>
+
+{nbsp}
+ 
+
+
+
+== Summary of Files
+
+/etc +
+└── asound.conf
+
+<<table_of_contents,Table of Contents>>
+
+{nbsp}

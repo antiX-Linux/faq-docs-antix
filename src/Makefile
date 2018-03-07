@@ -2,7 +2,7 @@
 EDITOR  := gvim -p
 BROWSER := firefox
 
-FILES := conky net fluxbox icewm smxi rox spacefm index jwm persistence remaster snapshot control_centre cli_aptix antiX-cli-cc mpsyt pmrp streamlight boot-params connectshares droopy 1-to-1_assistance 1-to-1_voice ssh-conduit wingrid 
+FILES := conky net fluxbox icewm smxi rox spacefm index jwm persistence remaster snapshot control_centre cli_aptix antiX-cli-cc mpsyt pmrp streamlight alsamixer boot-params connectshares droopy 1-to-1_assistance 1-to-1_voice ssh-conduit wingrid 
 FILES := $(FILES) 
 
 HTML_FILES := $(FILES:%=%.html)
@@ -138,6 +138,10 @@ antiX-cli-cc.html: antiX-cli-cc.txt $(DEPS)
 	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
 
 mpsyt.html: mpsyt.txt $(DEPS)
+	@echo "asciidoc [...] -o $@"
+	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
+
+alsamixer.html: alsamixer.txt $(DEPS)
 	@echo "asciidoc [...] -o $@"
 	@$(ASCIIDOC) $(HTML_OPTS) -o $@ $<
 

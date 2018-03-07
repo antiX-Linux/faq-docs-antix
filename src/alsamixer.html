@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
+<title>antiX-FAQ Alsamixer-Plus User Guide</title>
+<link rel="stylesheet" href="./antiX-boot.css" type="text/css" />
+</head>
+<body>
+
+<div id="left-col">
+<div id="antix-logo">
+  <a href="#banner-text">
+  <img src="images/antix-logo-3.png" width="138" height="111" title="antiX: lean and mean!"
+  border="0" alt="antiX"/>
+  </a>
+</div>
+
+<div id="main-menu">
+
+<table id="menu-table" border="0">
+<tr class="top"><td></td></tr>
+  <tr><td><a href="index.html">Home</a></td><td> </td></tr>
+  <tr><td><a href="icewm.html">IceWM</a></td><td> </td></tr>
+  <tr><td><a href="fluxbox.html">Fluxbox</a></td><td> </td></tr>
+  <tr><td><a href="jwm.html">jwm</a></td><td> </td></tr>
+  <tr><td><a href="rox.html">Rox</a></td><td> </td></tr>
+  <tr><td><a href="spacefm.html">SpaceFM</a></td><td> </td></tr>
+  <tr><td><a href="wingrid.html">Wingrid</a></td><td> </td></tr>
+  <tr><td><a href="conky.html">Conky</a></td><td> </td></tr>
+  <tr><td><a href="net.html">Internet</a></td><td> </td></tr>
+  <tr><td><a href="persistence.html">Persistence</a></td><td> </td></tr>
+  <tr><td><a href="remaster.html">Remaster</a></td><td> </td></tr>
+  <tr><td><a href="snapshot.html">Snapshot</a></td><td> </td></tr>
+  <tr><td><a href="control_centre.html">Control Centre</a></td><td> </td></tr>
+  <tr><td><a href="cli_aptix.html">cli-aptiX</a></td><td> </td></tr>
+  <tr><td><a href="antiX-cli-cc.html">aptiX-cli-cc</a></td><td> </td></tr>
+  <tr><td><a href="mpsyt.html">mpsyt</a></td><td> </td></tr>
+  <tr><td><a href="pmrp.html">pmrp</a></td><td> </td></tr>
+  <tr><td><a href="streamlight.html">Streamlight</a></td><td> </td></tr>
+  <tr><td><a href="connectshares.html">Connectshares</a></td><td> </td></tr>
+  <tr><td><a href="droopy.html">Droopy</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_assistance.html">1-to-1 Assistance</a></td><td> </td></tr>
+  <tr><td><a href="1-to-1_voice.html">1-to-1 Voice</a></td><td> </td></tr>
+  <tr><td><a href="ssh-conduit.html">SSH Conduit</a></td><td> </td></tr>
+  <tr><td><a href="smxi.html">Smxi</a></td><td> </td></tr>
+  <tr><td><a href="alsamixer.html">Alsamixer</a></td><td> </td></tr>
+  <tr><td><a href="boot-params.html">Boot Params</a></td><td> </td></tr>
+<tr><td></td> </tr>
+
+</table>
+</div>
+</div>
+
+<div id="right-col">
+<div id="banner-text">
+  <div id="banner-title">antiX-FAQ</div>
+  <div id="banner-subtitle">Alsamixer-Plus User Guide</div>
+</div>
+<div id="body-text">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><a id="table_of_contents"></a></p></div>
+<div class="paragraph"><p><div class="start-toc">On this page:</div></p></div>
+<div class="ulist compact" id="toc"><ul>
+<li>
+<p>
+<a href="#under-toc">Conventions</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_what_is_alsamixer_plus">What is Alsamixer-Plus</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_typical_use_cases">Typical Use Cases</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_overview">Overview</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_boosting_a_low_volume_level">Boosting a Low Volume Level</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_setting_a_preferred_frequency_balance">Setting a Preferred Frequency Balance</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_changing_the_defaults">Changing the Defaults</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#_summary_of_files">Summary of Files</a>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="under-toc">Conventions</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><div class="top-link">[<a class="top-link" href="#banner-text">top</a>]</div></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">This is additional information</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Note" />
+</td>
+<td class="content">This is a tip</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">This is an example configuration or setting</td>
+</tr></table>
+</div>
+<div class="paragraph"><p><a href="#table_of_contents">Table of Contents</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_alsamixer_plus">What is Alsamixer-Plus</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>It adds extra facilities to an alsamixer audio controller by providing a pre-amp and a frequency band equalizer.</p></div>
+<div class="paragraph"><p><a href="#table_of_contents">Table of Contents</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_typical_use_cases">Typical Use Cases</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The local loudspeakers under or over emphasise some audio frequencies.<br />
+The equalizer can correct the imbalance.<br />
+&nbsp;<br />
+The local system outputs a low audio volume level.<br />
+The pre-amp can boost the overall volume level.</p></div>
+<div class="paragraph"><p><a href="#table_of_contents">Table of Contents</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview">Overview</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The audio signal passes from the default ALSA device along a chain which includes two signal processing stages.</p></div>
+<div class="paragraph"><p><strong>Stage 1: Equalizer</strong><br />
+Various frequency ranges in the signal can be boosted or cut.<br />
+Alternatively the signal can be left unchanged i.e. it remains flat.</p></div>
+<div class="paragraph"><p><strong>Stage 2: Pre-Amp</strong><br />
+The entire signal level may be boosted or cut.<br />
+This adjusts the overall volume of both playback and recording.</p></div>
+<div class="paragraph"><p>The last link in the chain passes the audio signal to the local loudspeakers or to an external audio system.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">The effect of the stages is cumulative and works in conjunction with changes you make to other alsamixer controls.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip2.png" alt="Tip" />
+</td>
+<td class="content">Both the equalizer and pre-amp may be operated from within the usual alsamixer interface.<br />
+You can switch between them by using the F6 key on your keyboard.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p><a href="#table_of_contents">Table of Contents</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_boosting_a_low_volume_level">Boosting a Low Volume Level</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Open alsamixer<br />
+If neccesary use the &#8594; key on your keyboard to scroll to the Pre-Amp control usually located at the extreme right of alsamixer.</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/alsamixer-plus/pre-amp.jpg" alt="alsamixer-plus/pre-amp.jpg" />
+</span></p></div>
+<div class="paragraph"><p>The pre-amp level can be adjusted in the usual way by the up/down arrow keys on your keyboard.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/info.png" alt="Note" />
+</td>
+<td class="content">Using an excessively high level may overload your loudspeakers, which is usually heard as distorted sound, and may result in damage.
+Set the lowest level of boost that gives you an acceptable volume level.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p><a href="#table_of_contents">Table of Contents</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_a_preferred_frequency_balance">Setting a Preferred Frequency Balance</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Open alsamixer<br />
+Press the F6 key on your keyboard to <em>Select sound card</em>.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/alsamixer-plus/equalizer_f6.jpg" alt="alsamixer-plus/equalizer_f6.jpg" />
+</span><br />
+Use the up/down arrows on your keyboard to highlight <em>enter device name&#8230;</em> and press the return key.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/alsamixer-plus/equalizer_device_name.jpg" alt="alsamixer-plus/equalizer_device_name.jpg" />
+</span><br />
+Enter <em>equalizer</em> and press the return key.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="images/alsamixer-plus/equalizer.jpg" alt="alsamixer-plus/equalizer.jpg" />
+</span><br />
+The frequency band levels can be adjusted in the usual way by the up/down arrow keys on your keyboard.</p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="paragraph"><p>Press the <em>F6</em> key to return to the previous alsamixer window or the <em>ESC</em> key to close alsamixer.</p></div>
+<div class="paragraph"><p><a href="#table_of_contents">Table of Contents</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changing_the_defaults">Changing the Defaults</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Usually the default settings do not have to be changed, they work with most kit.</p></div>
+<div class="paragraph"><p>If your hardware requires different settings they may be changed in the file <em>/etc/asound.conf</em>.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/settings.png" alt="Note" />
+</td>
+<td class="content">
+<div class="paragraph"><p>Use root privileges to edit the settings in your preferred text editor</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code># Audio card/chip and device to use and control
+# In most cases these settings should remain commented (#)
+# When commented, card and device 0 are usually automatically selected
+# When uncommented, the item corresponding to the number is selected
+#defaults.pcm.card 0
+#defaults.pcm.device 0
+#defaults.ctl.card 0</code></pre>
+</div></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p><a href="#table_of_contents">Table of Contents</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary_of_files">Summary of Files</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>/etc<br />
+└── asound.conf</p></div>
+<div class="paragraph"><p><a href="#table_of_contents">Table of Contents</a></p></div>
+<div class="paragraph"><p>&nbsp;</p></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version: 0.2.0
+Last updated 2018-03-06 22:51:15 EET
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -204,20 +204,17 @@ frugal install.
 </p>
 
 <p>
-<em>checkmd5</em> ............ Check integrity of the install media<br/>
-<em>checkfs</em> .............. Check integrity of the LivUSB and persistent file systems<br/>
-<em>toram</em> .................. Copy the compressed file system to RAM<br/>
+<em>checkmd5</em> ............ Check integrity of the install media.<br/>
+<em>checkfs</em> .............. Check integrity of the LivUSB and persistent file systems.<br/>
+<em>toram</em> .................. Copy the compressed file system to RAM. <br/>
 <em>from=usb</em> ............ Sets default booting device to a LiveUSB<br/>
-<em>nousb2</em> ................ Disable all usb-2 devices.  This helps a few older systems boot<br/>
-<em>acpi=off</em> ............. Disable acpi.  This helps on some older laptops<br/>
+<em>nousb2</em> ................ Disable all usb-2 devices.  This helps a few older systems boot.<br/>
+<em>acpi=off</em> ............. Disable acpi.  This helps on some older laptops.<br/>
 <em>hwclock=ask</em> ..... Have the system help determine the clock setting<br/>
 <em>hwclock=utc</em> ...... Use UTC for hardware clock (Linux-only systems)<br/>
 <em>hwclock=local</em> .. Use localtime for hardware clock (Windows systems)<br/>
-<em>password</em> .............. Change default root and demo passwords before booting for increased security<br/>
-<em>wicd</em> ................ Turn on gui wicd - best if using multiple wifi spots<br/>
-<em>nowicd</em> .............. Turn off gui wicd - best if using single wifi spot or wired<br/>
-<em>conwidth=x</em> ......... Set the width of the console<br/>
-<em>nostore</em> ......... Disable LiveUSB-Storage feature<br/>
+<em>private</em> .............. Change default root and demo passwords before booting for increased security<br/>
+<em>nostore</em> ......... Disable LiveUSB-Storage feature.<br/>
 <em>bootchart</em> .......... Create /var/log/bootchart.tgz<br/>
 <em>savestate</em> .......... Save some files across reboots eg alsa sound, networking (LiveUSB only)<br/>
 <em>nosavestate</em> ......  Don't save files across reboots (LiveUSB only)<br/>
@@ -483,9 +480,6 @@ Return to the <a href="#main">Main Menu</a>
     Disable KMS (kernel mode set) video drivers and force the use
     of the <em>vesa</em> video driver.  Try this option of
     the system seems to boot but the screen is blank.
-
-    <br/><br/> <em>VirtualBox Video</em><br/>
-    Convenient option to use if booting in VitualBox.
 
     <br/><br/> <em>Failsafe Boot</em><br/>
     In addition to forcing safe video, also load all drivers
@@ -769,7 +763,8 @@ CD or ISO images that contain many quality Linux applications.
 <p>
 antiX is compiled to work with Pentium-class Intel and AMD
 processors or better. antiX will not work with 386 and 486 class
-processors. To install antiX on a hard drive, a minimum of 5 GB is recommended.
+processors. To install antiX on a hard drive, at least 1.5 GB of
+free space is required and a minimum of 2.5 GB is recommended.
 
 </p>
 

@@ -1,3 +1,9 @@
+faq-docs-antix (0.5.3) unstable; urgency=medium
+
+  * added alsamixer faq
+
+ -- anticapitalista <antix@operamail.com>  Tue, 06 Mar 2018 22:44:35 +0200
+
 faq-docs-antix (0.5.2) unstable; urgency=medium
 
   * Changed help icon
